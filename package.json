@@ -1,0 +1,18 @@
+{
+  "name": "design-system-github-stats",
+  "description": "GOV.UK Design System usage stats from github",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphagov/design-system-github-stats.git"
+  },
+  "author": "GOV.UK Design System team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alphagov/design-system-github-stats/issues"
+  },
+  "homepage": "https://github.com/alphagov/design-system-github-stats#readme",
+  "devDependencies": {
+    "octokit": "^4.0.2",
+    "semver": "^7.6.2"
+  }
+}

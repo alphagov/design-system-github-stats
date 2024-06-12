@@ -4,3 +4,6 @@
 
 # Node.js modules
 node_modules/
+
+# Files generated during data collection
+raw-deps.json

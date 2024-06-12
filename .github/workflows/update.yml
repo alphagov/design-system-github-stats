@@ -1,0 +1,43 @@
+name: Update
+run-name: Update deps list
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  Get-latest-dependent-data:
+    name: Get latest dependent data
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.0.2
+
+        with:
+          cache: npm
+          check-latest: true
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+
+      - name: Install github-dependents-info
+        run: pip install -U github-dependents-info
+
+      # Getting the data this way is pretty gunky, especially as github-dependents-info
+      # has a github action. However the way we're using gdi isn't really how it's
+      # intended to be used. We're using it to gather and analyse info where as
+      # gdi was built as a documentation tool. This is especially true of the
+      # github action which doesn't give us the option to output this data as
+      # something like json which we can programmatically interogate.
+      - name: Pipe our deps to a json file
+        run: github-dependents-info --repo alphagov/govuk-frontend --sort stars --json > raw-deps.json

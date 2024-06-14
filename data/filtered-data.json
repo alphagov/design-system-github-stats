@@ -1,0 +1,4214 @@
+[
+  {
+    "repoOwner": "UKHSA-Internal",
+    "repoName": "coronavirus-dashboard",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "co-cddo",
+    "repoName": "api-catalogue",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "govuk_publishing_components",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "x-govuk",
+    "repoName": "govuk-eleventy-plugin",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "digital-form-builder",
+    "frontendVersion": "2.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "notifications-admin",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ONSdigital",
+    "repoName": "sdg-indicators",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "department-for-transport-BODS",
+    "repoName": "bods",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "apply-for-teacher-training",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dwp",
+    "repoName": "govuk-casa",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "moj-frontend",
+    "frontendVersion": "5.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "govuk-rails-boilerplate",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "Claim-for-Crown-Court-Defence",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "x-govuk",
+    "repoName": "govuk-services-list",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "teaching-vacancies",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pay-selfservice",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "gds-nodejs-boilerplate",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "paas-admin",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "tamato",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dvsa",
+    "repoName": "front-end",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "great-cms",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOfficeForms",
+    "repoName": "hof",
+    "frontendVersion": "3.15",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dwp",
+    "repoName": "design-system",
+    "frontendVersion": "4.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "tech-docs-gem",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "get-into-teaching-app",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-apply-for-legal-aid",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "forms-admin",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "claim-additional-payments-for-teaching",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "rpx-xui-webapp",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "cmc-citizen-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "moj-design-system",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "register-trainee-teachers",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "cookie-compliance-for-wordpress",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "sscs-submit-your-appeal",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "digitalmarketplace-supplier-frontend",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pay-toolbox",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "publish-teacher-training",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "help-with-prison-visits-external",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "product-page-example",
+    "frontendVersion": "3.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pay-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "correspondence_tool_staff",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "forms-product-page",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "authentication-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pay-tech-docs",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFID",
+    "repoName": "devtracker-from-api",
+    "frontendVersion": "3.10.2",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "bat-design-history",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "schools-experience",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "data-hub-frontend",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "hapi-web-boilerplate",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmrc",
+    "repoName": "hmrc-frontend",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "billing-transaction-monitoring",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "communitiesuk",
+    "repoName": "pkg_gov_uk_dashboards",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "di-account-management-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "calculate-release-dates",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dvsa",
+    "repoName": "cvs-app-vtm",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pay-products-ui",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "opg-modernising-lpa",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-court-data-ui",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "digital-prison-services",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "rpx-xui-manage-organisations",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "crown-marketplace",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "govwifi-admin",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "design-system",
+    "frontendVersion": "3.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "i-dot-ai",
+    "repoName": "consultation-analyser",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "ucd-manual",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "service-header",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "find-teacher-training",
+    "frontendVersion": "4.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "forms-runner",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "re-rotas",
+    "frontendVersion": "3.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "onboarding-product-page",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "book-a-prison-visit-staff-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hale",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "emergency-alerts-govuk",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "early-years-foundation-reform",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "rpa-jui-webapp",
+    "frontendVersion": "2.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "market-access-python-frontend",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "re-request-an-aws-account",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "govwifi-tech-docs",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "communitiesuk",
+    "repoName": "epb-frontend",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "beis-report-official-development-assistance",
+    "frontendVersion": "3.13.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "prepare-a-case",
+    "frontendVersion": "5.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "OfficeForProductSafetyAndStandards",
+    "repoName": "product-safety-database",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pay-product-page",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "cla_public",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-book-secure-move-frontend",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "use-of-force",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "rpx-xui-approve-org",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "help-with-prison-visits-internal",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "opal-frontend",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "ccd-case-ui-toolkit",
+    "frontendVersion": "4.2.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "publish-teacher-training-2022",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-prisoner-profile",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ukgov-equality-hub",
+    "repoName": "smc-son",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "LandRegistry",
+    "repoName": "hmlr-frontend",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "apply-for-qualified-teacher-status",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "overseas-entities-web",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "communitiesuk",
+    "repoName": "ukraine-sponsor-resettlement",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "openregister",
+    "repoName": "registers-frontend",
+    "frontendVersion": "1.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "digital-land.info",
+    "frontendVersion": "4.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-template-typescript",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "early-careers-framework",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "buy-for-your-school",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "digital-workspace-v2",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "div-petitioner-frontend",
+    "frontendVersion": "2.11.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "energy-label-service",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "water-abstraction-ui",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "digitalmarketplace-admin-frontend",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "find-moj-data",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "selling-online-overseas",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "great-international-ui",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-community-accommodation-tier-2-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-visits-internal-admin-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "govuk_feature_flags",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-apply-for-criminal-legal-aid",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "LandRegistry",
+    "repoName": "hmlr-design-system",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "easy-google-analytics",
+    "frontendVersion": "1.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "find-a-lost-trn",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "civil-citizen-ui",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "communitiesuk",
+    "repoName": "submit-social-housing-lettings-and-sales-data",
+    "frontendVersion": "5.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "waste-permits",
+    "frontendVersion": "4.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "npq-registration",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-grants-frontend",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "ccs-scale-cat-buyer-ui",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "paas-product-pages",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "expressjs-template",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "rpx-xui-common-lib",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "flood-app",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "DataSubmissionServiceAPI",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmrc",
+    "repoName": "design-system",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "correspondence_tool_public",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "rails-starter-app",
+    "frontendVersion": "2.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "fb-editor-console-electron",
+    "frontendVersion": "3.8.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "tax-tribunals-datacapture",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "emergency-alerts-admin",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOffice",
+    "repoName": "business-data-manager",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "snl-frontend",
+    "frontendVersion": "2.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-temporary-accommodation-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-review-criminal-legal-aid",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "look-and-feel",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-check-client-qualifies",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "fb-components",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "make-recall-decision-ui",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "department-for-transport-BODS",
+    "repoName": "abods-frontend",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "early-years-foundation-recovery",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-uk-passport-front",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-core-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "regulated-professions-register",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "moving-people-safely",
+    "frontendVersion": "2.5.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmrc",
+    "repoName": "add-taxes-frontend",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "juror-public-frontend",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "conclave-ssso-ui",
+    "frontendVersion": "3.13.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "export-support",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "manage-key-workers",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "ch-account-ui",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "digitalmarketplace-buyer-frontend",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "fala",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "document-download-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "certificates.orders.web.ch.gov.uk",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "ia-aip-frontend",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "fws-app",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "data-hub-helpcentre",
+    "frontendVersion": "3.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "govwifi-product-page",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "ccs-frontend",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ukgov-equality-hub",
+    "repoName": "ethnicity-facts-and-figures",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOffice",
+    "repoName": "modern-slavery",
+    "frontendVersion": "2.7.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "SkillsFundingAgency",
+    "repoName": "sfs-sitedesign",
+    "frontendVersion": "2.5.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "offender-categorisation",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "offender-management-allocation-manager",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "SkillsFundingAgency",
+    "repoName": "das-frontend",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "DataSubmissionService",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "ccd-admin-web",
+    "frontendVersion": "1.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "sscs-cor-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOffice",
+    "repoName": "hocs-frontend",
+    "frontendVersion": "4.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "cabinetoffice",
+    "repoName": "github-requests-app",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "verify-self-service",
+    "frontendVersion": "3.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "cabinetoffice",
+    "repoName": "node-web-template",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "orchestration-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-kbv-hmrc-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-education-and-work-plan-ui",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "check-childrens-barred-list",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "gds-technical-documentation-template",
+    "frontendVersion": "4.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "design",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "beis-orp-application",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "darts-portal",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-book-a-prison-visit-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "defencedigital",
+    "repoName": "moduk-service-toolkit",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-fee-calculator-user-interface",
+    "frontendVersion": "4.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-cic-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "isf-assess-the-strength-of-your-checks-rails",
+    "frontendVersion": "2.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "communitiesuk",
+    "repoName": "digital-form-builder",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "refer-serious-misconduct",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOffice",
+    "repoName": "callisto-ui",
+    "frontendVersion": "4.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "defencedigital",
+    "repoName": "moduk-service-manual",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "accessibility-monitoring-platform",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "dfe-complete-conversions-transfers-and-changes",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "fmp-app",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "curriculum-materials",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "frontend",
+    "frontendVersion": "3.10.2",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "prl-citizen-frontend",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-nomis-sync-dashboard",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "design-system",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "fis-ds-web",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "local-scorecard",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-address-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "et-sya-frontend",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "send-legal-mail-to-prisons",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmcts-common-platform-mock-api",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dwp",
+    "repoName": "idt-ei-ui",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "adoption-web",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "manage-a-workforce-ui",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "pre-sentence-service",
+    "frontendVersion": "4.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmrc",
+    "repoName": "corporation-tax-frontend",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmrc",
+    "repoName": "vat-frontend",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-restricted-patients",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "network-access-control-admin",
+    "frontendVersion": "3.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmrc",
+    "repoName": "tracking-consent-frontend",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfi-map-web",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "opg-sirius-supervision-workflow",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "sdd-design-history",
+    "frontendVersion": "3.10.2",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "trade-tariff",
+    "repoName": "trade-tariff-duty-calculator",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "trade-tariff",
+    "repoName": "trade-tariff-frontend",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "transparency-db-admin-portal",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "nfdiv-frontend",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "transparency-db-publicsearch-portal",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-interventions-ui",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "prison-services-feedback-and-support",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "formbuilder-product-page",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "prisoner-content-hub-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "waste-export-controls-tool",
+    "frontendVersion": "3.9.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "lfp-appeals-frontend",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "dit-contact-forms",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "hwf-staffapp",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "communitiesuk",
+    "repoName": "foi-submissions",
+    "frontendVersion": "3.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "buying-for-schools-v2",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "div-decree-absolute-frontend",
+    "frontendVersion": "3.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "div-decree-nisi-frontend",
+    "frontendVersion": "2.11.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "beis-spl-planner",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "em-media-viewer",
+    "frontendVersion": "4.2.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "check-my-diary",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "npd-find-and-explore",
+    "frontendVersion": "3.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dvsa",
+    "repoName": "olcs-static",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOffice",
+    "repoName": "frontend-toolkit",
+    "frontendVersion": "1.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "moj-express-skeleton",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-assess-risks-and-needs-oastub-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-sentence-plan-ui",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-crime-equinity-historical-data-frontend",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "cdp-uploader",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfd-messages",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfd-landing-page",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-resettlement-passport-person-on-probation-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "juror-bureau",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "improve-workload-and-wellbeing-for-school-staff",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "verify-product-page",
+    "frontendVersion": "3.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ffd-frontend-poc",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "analytics-platform-control-panel-public",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-dpr-tools-ui",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "itt-mentor-services",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-future-grants-tech-evaluation",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ffd-auth",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ffd-landing-page",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "aphw-ddi-portal",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-dpr-fake-dps-service-ui",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hale-dash",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-digital-prison-reporting-frontend",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-send-legal-mail-staff-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pay-dependabot-stats",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-digital-prison-services",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-resettlement-passport-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-micro-frontend-components",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "accounts-filing-web",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHSA-Internal",
+    "repoName": "data-dashboard-frontend",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "sentence-planning",
+    "frontendVersion": "3.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "apply-the-service-standard-in-dfe",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-digital-prison-reporting-mi-ui",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-ciag-careers-induction-ui",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-launchpad-home-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-submit-crime-forms",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "node-review-web-starter-ts",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-f2f-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-assure-hmrc-data",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "access-your-teaching-qualifications",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "cabinetoffice",
+    "repoName": "gap-find-web",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "co-cddo",
+    "repoName": "api-spec-linter",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-uk-passport-front-v1",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "tech-docs-assets",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-techspike-authentication",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "teach-in-further-education",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "manage-my-prison",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "ccfr-fees-register-admin-web",
+    "frontendVersion": "4.3.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "form-app-starter",
+    "frontendVersion": "2.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-mpdp-frontend",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-dl-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-historical-prisoner",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-approved-premises-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "fis-ds-update-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "bichard7-next-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "trade-tariff-reference",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-fraud-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "DIT-design-history",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "approval-firebreak",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "sic-code-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "rails-7-boilerplate",
+    "frontendVersion": "3.13.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "govwifi-dashboard",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pay-direct-debit-frontend",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-kbv-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-incentives-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "improving-children-and-family-services-through-digital-technology",
+    "frontendVersion": "3.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "lau-frontend",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "trade-tariff",
+    "repoName": "trade-tariff-admin",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "idam-user-dashboard",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "opg-sirius-supervision-firm-deputy-hub",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-manage-adjudications",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "jml",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "vuejs-json-dashboardify",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOffice",
+    "repoName": "incident-report",
+    "frontendVersion": "2.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "create-and-vary-a-licence",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "opg-sirius-user-management",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "pip-frontend",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "bichard7-next-user-service",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "teaching-vacancies-design-history",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "UKForeignOffice",
+    "repoName": "lists",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "conversions-design-history",
+    "frontendVersion": "3.10.2",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "res-design-history",
+    "frontendVersion": "3.10.2",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "fb-components-core",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "data-explorer",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "academy-transfers-frontend",
+    "frontendVersion": "3.9.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "reportmi-static-error-pages",
+    "frontendVersion": "1.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "rails-lambda-spike",
+    "frontendVersion": "2.9.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfi-frontend",
+    "frontendVersion": "3.10.2",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "fact-admin",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "lite-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "eapim-developer-hub",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKForeignOffice",
+    "repoName": "loi-payment-service",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "digitalmarketplace-briefs-frontend",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "staff-device-dns-dhcp-admin",
+    "frontendVersion": "3.8.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "early-careers-framework-gov-templates",
+    "frontendVersion": "3.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dvsa",
+    "repoName": "dvsa-design-system",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "strike-off-objections-web",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFEAGILEDEVOPS",
+    "repoName": "SFB.SAD.UI",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFEAGILEDEVOPS",
+    "repoName": "SFB.EF.UI",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "restricted-word-web",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "enquiry-mgmt-tool",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "orders.web.ch.gov.uk",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "promise-to-file-web",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "SkillsFundingAgency",
+    "repoName": "das-qna-config",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "cabinetoffice",
+    "repoName": "national-leadership-centre-website",
+    "frontendVersion": "3.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "probate-caveats-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "fb-runner",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "buying-for-schools-admin",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "analytics-platform-control-panel",
+    "frontendVersion": "3.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "beis-spl-eligibility-tool",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "fn4g-tool",
+    "frontendVersion": "2.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "communitiesuk",
+    "repoName": "stakeholder-engagement-frontend",
+    "frontendVersion": "2.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "digital-form-builder-engine",
+    "frontendVersion": "2.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pe-charts",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "CMpExampleApp1",
+    "frontendVersion": "2.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "international-waste-shipments-frontend-training",
+    "frontendVersion": "2.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-record-a-recall",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "acsp-confirm-client-id-verfication-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "crai-techspike-data-evalutions",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "crai-cffld-feedback-web",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "rpa-mit-manual-templates",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfd-queries",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "architecture-manual",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-sentence-plan-ui-old",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-challenge-support-intervention-plan-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "dfe-frontend",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "waste-tracking-service",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "sa-concept",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "trade-tariff",
+    "repoName": "trade-tariff-dev-hub-frontend",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "book-live-animal-inspection-ui",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "request-personal-information",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "phi-frontend",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-book-a-video-link-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "eutd-mmo-business-continuity",
+    "frontendVersion": "3.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "accessibility-manual",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "cabinetoffice",
+    "repoName": "fb-editor",
+    "frontendVersion": "4.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "cabinetoffice",
+    "repoName": "formbuilder-product-page",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "coreai-techspike-document-analysis",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfd-auth",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-jobs-board-ui",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "coreai-mcu-frontend",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfd-business",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "cdp-portal-frontend",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "LandRegistry",
+    "repoName": "search-local-land-charges-ui",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfd-ahwp-stub",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfd-permissions",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "ddt-job-descriptions",
+    "frontendVersion": "5.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-alerts-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "labs-apps-njs",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "fcp-find-ai-frontend",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "cdp-example-node-frontend",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-manage-a-supervision-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "dv-frontend-app-dev",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "kv-frontend-app-dev",
+    "frontendVersion": "5.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "LandRegistry",
+    "repoName": "dps-verification-ui",
+    "frontendVersion": "2.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "co-cddo",
+    "repoName": "esda-builder",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "bh-frontend-app-dev",
+    "frontendVersion": "5.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "aqie-front-end",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "sptribs-dss-update-case-web",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "local-plans-timetable",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "opg-sirius-supervision-pro-deputy-hub",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "bh-example-frontend-app-dev",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "mcu-techspike-ai-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ffd-ahwr-stub",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-prisoner-location",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "help-for-early-years-providers",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "trade-exports-packinglistai-ui",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ncea-frontend",
+    "frontendVersion": "5.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-locations-inside-prison",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "npq-registration-maintenance-page",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-custody-manager-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "data-platform-firebreak-annual-leave",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "acsp-web",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "govspeak-visual-editor",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "your-companies-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "book-manage-assure-services",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "presenter-account-web",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "holiday-tracker-ui",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-find-sfi-checker",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-incident-reporting",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "design-code-explorer",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hale-components",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-tier-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-grants-laying-hens-web",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ffd-business",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "psc-verification-web",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-change-someones-cell",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ahwr-dashboard",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "analytical-platform-dashboard",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "forms-runner",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "dps-incident-hub",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "c100-application",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-bav-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "user-research-new-manual",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-subject-access-request-ui",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "juror-public",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "aphw-ddi-compensation-scheme",
+    "frontendVersion": "4.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "cdp-node-frontend-template",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "lpa-data-validator-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "support-for-early-career-teachers",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "pre-ams",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-check-hmrc-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "access-your-teaching-profile",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-tcg-rules-engine",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "aphw-ddi-register",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "frontend-analytics",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-auth-self-service",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-future-grants-apply",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "bng-register-web",
+    "frontendVersion": "4.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "manage-recalls-ui",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "digital-form-builder",
+    "frontendVersion": "3.13.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "co-eu-transition-dashboard",
+    "frontendVersion": "3.9.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "defra-design",
+    "repoName": "bng-digital",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "pre-portal",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-remand-and-sentencing",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-assess-crime-forms",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "bng-public-register",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "buy-digital-technology-for-childrens-social-care",
+    "frontendVersion": "3.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "education-skills-work-employment",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "help-with-child-arrangements",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "probation-search-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "brookhouse",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "dluhc-datasets",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "bng-credits-estimator",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "team-metrics-frontend",
+    "frontendVersion": "2.3.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "co-cddo",
+    "repoName": "data-marketplace",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "d365-design-manual",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "market-access-frontend",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-authorization",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-tcg-back-office",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-tcg-apply",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-tcg-portal",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "planning-application-poc",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "bng-techspike-payment",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "template-frontend-manual",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "teacher-pay-calculator",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "standards",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "cites-pegasus",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "teaching-school-hub-finder",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "co-cddo",
+    "repoName": "dea-register-frontend",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-developer-portal",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-electronic-monitoring-data-platform-ui",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-arn-forms-ui",
+    "frontendVersion": "4.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "labs-rhodrif-nodejs",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "labs-jordanhoey96-nodejs",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-identify-remand-periods",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-adjustments",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-non-associations",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "labs-sonny-hmcts-nodejs",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "cui-ra",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "govuk-one-login",
+    "repoName": "ipv-cri-toy-front",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "tax-tribunals-datacapture",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "cnp-plum-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "get-a-teacher-relocation-payment",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "design-history",
+    "frontendVersion": "5.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "sds-toffee-frontend",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "registered-email-address-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "labs-zc-hmcts-nodejs-3",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-strengths-based-needs-assessments-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "psc-filing-web",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "data-standards",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "ecf-gov-guidance",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "node-review-web-starter-js",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-accredited-programmes-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "tech-docs-gem",
+    "frontendVersion": "4.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "renovate-typescript-poc",
+    "frontendVersion": "4.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "grc-app",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "officer-filing-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "labs-ozzyib-nodejs",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "labs-louisehuyton-nodejs",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "find-unclaimed-court-money",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "public-register-of-documents-frontend",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "standards-manager",
+    "frontendVersion": "4.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "et_gds_design_system",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "hwf-publicapp",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "financial-sanctions-search",
+    "frontendVersion": "1.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "account-validator-web",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "cet-frontend",
+    "frontendVersion": "2.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "pui-jeg",
+    "frontendVersion": "0.0.32",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "jui-jeg",
+    "frontendVersion": "0.0.32",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "poc-ccd-intergration",
+    "frontendVersion": "2.5.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "webappclonejui",
+    "frontendVersion": "1.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "POC-feature-toggling",
+    "frontendVersion": "2.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "fpl-adoption-frontend",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "adoption-frontend",
+    "frontendVersion": "3.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "unspec-rpa-pact-cli",
+    "frontendVersion": "3.9.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "design-system-2.0",
+    "frontendVersion": "3.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "elsa-relevant-search",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "planet-fm",
+    "frontendVersion": "2.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "prepare-probation-courtcases",
+    "frontendVersion": "2.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "circle-radiator",
+    "frontendVersion": "3.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-techspike-rules-engine",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "eui-poc",
+    "frontendVersion": "4.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "dtsse-ardoq-adapter",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "di-accounts-pds-hackathon",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-techspike-customer-registry-web",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "pfs-hub-fe",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-lnr-map-web",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "water-abstraction-system",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmrc",
+    "repoName": "accessibility-site",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "labs-timja-nodejs",
+    "frontendVersion": "4.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-activities-management",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-grants-cattle-housing-web",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ce-admin-web",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ce-web",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "pfs-hub-asset-fe",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ahwr-farmer-claim",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ahwr-farmer-apply",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-pay-statement-web",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "wts-front-office",
+    "frontendVersion": "4.3.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "wts-identity-app",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "ndelius-new-tech",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "vcf-sw-career-development-design-history",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "govuk-formly-templates",
+    "frontendVersion": "2.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "cmc-cookies-manager",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-education-employment-ui",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ahwr-backoffice",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOfficeForms",
+    "repoName": "hof-guide",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-grants-slurry-web",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "nsi-digital-service-admin",
+    "frontendVersion": "3.13.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "nsi-digital-service-main",
+    "frontendVersion": "3.13.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "sptribs-frontend",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-it-incident-hub",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "incident-response-frontend",
+    "frontendVersion": "4.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "lau-case-frontend",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "admin.orders.web.ch.gov.uk",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "interventions-design-history",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "chemicals-admin-ui",
+    "frontendVersion": "3.9.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOffice",
+    "repoName": "lev-web-ui",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "data-science-frontend",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "sicsearch",
+    "frontendVersion": "1.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "lau-idam-frontend",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "prd-pui-registration",
+    "frontendVersion": "2.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-manage-assess-risks-and-needs",
+    "frontendVersion": "3.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "ttg-site",
+    "frontendVersion": "2.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-ruby-learning-film-db",
+    "frontendVersion": "2.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "prisoner-categorisation-tool-ruby",
+    "frontendVersion": "2.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "opg-sirius-lpa-frontend",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sgs-admin",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sgs-frontend",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "notifications-dependancies-dependabot",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "rpts-frontend",
+    "frontendVersion": "5.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-manage-offences",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-ahwr-frontend",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "config-manager",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "pay-user-support",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "prisoner-transactions",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "bat-ops-dashboard",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-pay-request-editor",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "design-history-cms",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmrc",
+    "repoName": "tech-docs-gem",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "tailspend-idam",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "rpr-design-history",
+    "frontendVersion": "4.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "opg-sirius-maintenance",
+    "frontendVersion": "4.4.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-audit-ui",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "interventions-catalogue-ui",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "moj-nodejs-boilerplate",
+    "frontendVersion": "3.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "govuk-knowledge-graph-search",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "content-frontend",
+    "frontendVersion": "3.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "service-manual-drafts",
+    "frontendVersion": "3.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "makerecalldecisions-design-history",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "hmrc",
+    "repoName": "play-frontend-pta",
+    "frontendVersion": "3.13.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-grants-addvalue-web",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-audit-poc-ui",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "ccpay-paymentoutcome-web",
+    "frontendVersion": "3.9.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "opg-sirius-supervision-deputy-hub",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "content-site",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-welcome-people-into-prison-ui",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ea-wq-incident-web",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-pay-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "CCS-Frontend-Kit",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dwp",
+    "repoName": "ui-fitnote-frontend",
+    "frontendVersion": "4.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-book-video-link",
+    "frontendVersion": "5.3.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfi-processing-web",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "opg-sirius-lpa-dashboard",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-grants-productivity-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "defra-ruby-template",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfi-agreement-viewer",
+    "frontendVersion": "3.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dwp",
+    "repoName": "ui-ds1500-frontend",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "gwa-web",
+    "frontendVersion": "3.13.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfi-apply-web",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "manage-pom-cases-design-history",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "flood-xws-alert-web",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "flood-xws-contact-web",
+    "frontendVersion": "4.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKForeignOffice",
+    "repoName": "loi-user-service",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "confirmation-statement-web",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "dfe.ui.toolkit",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "get-help-with-remote-education-cms",
+    "frontendVersion": "3.10.2",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dvsa",
+    "repoName": "ftts-booking-app",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "teach-in-further-education-design-history",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ivory",
+    "frontendVersion": "4.0.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-pr-calculator",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-sfi-pocs",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-grants-fe",
+    "frontendVersion": "3.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-registers",
+    "frontendVersion": "5.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dvsa",
+    "repoName": "hvt-atf-availability",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "national-professional-qualification",
+    "frontendVersion": "3.10.2",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "wmt-web",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "fb-editor",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "bankrupt-officer-search-web",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "eduk-cms-spike",
+    "frontendVersion": "2.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dvsa",
+    "repoName": "hvt-nearest-atf",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "team-metrics",
+    "frontendVersion": "2.3.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "Covid-complaints",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "pmp-idam",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "SkillsFundingAgency",
+    "repoName": "myesf-doc-ex-internal-design-history",
+    "frontendVersion": "3.9.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "transaction-search-tool",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "laa-great-ideas",
+    "frontendVersion": "2.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "get-into-teaching-design-history",
+    "frontendVersion": "3.9.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "dwp",
+    "repoName": "ms-ui-submission",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "childrens-social-care-placement",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKForeignOffice",
+    "repoName": "loi-application-service",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKGovernmentBEIS",
+    "repoName": "Covid-ventilators",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "digital-land",
+    "repoName": "frontend",
+    "frontendVersion": "3.9.1",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-risk-assessment-ui",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "hmpps-manage-users",
+    "frontendVersion": "5.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "data-hub-helpdesk",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "OfficeForProductSafetyAndStandards",
+    "repoName": "beis-opss-shared-web",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "Interactive-Probation-Map",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "defra.github.io",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "data-store-uploader",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "digitalmarketplace-user-frontend",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "digitalmarketplace-brief-responses-frontend",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKForeignOffice",
+    "repoName": "verify-apostille-service",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "fact-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "market-access-public-frontend",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-grants-eoi",
+    "frontendVersion": "3.8.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "suppression-web",
+    "frontendVersion": "3.10.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-digital-form-builder",
+    "frontendVersion": "2.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "Crown-Commercial-Service",
+    "repoName": "crown-marketplace-legacy",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "applications.developer.web.ch.gov.uk",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "rpa-em-bundling-webapp",
+    "frontendVersion": "1.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "cabinetoffice",
+    "repoName": "co-cookie-consent",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "get-help-with-tech-design-history",
+    "frontendVersion": "3.7.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "dissolution-web",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "alphagov",
+    "repoName": "paas-submit",
+    "frontendVersion": "3.5.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "data-store-service",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "c100-application",
+    "frontendVersion": "4.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "uktrade",
+    "repoName": "fft",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "manage-courses-support",
+    "frontendVersion": "3.3.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dwp",
+    "repoName": "digiman",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "LandRegistry",
+    "repoName": "dps-ulapd-ui",
+    "frontendVersion": "3.1.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "communitiesuk",
+    "repoName": "funding-service-design-team",
+    "frontendVersion": "3.9.1",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "pcq-frontend",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "search.web.ch.gov.uk",
+    "frontendVersion": "3.14.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "LandRegistry",
+    "repoName": "digital-street-3d-ui",
+    "frontendVersion": "2.10.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "extensions-web",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "companieshouse",
+    "repoName": "node-web-starter",
+    "frontendVersion": "3.6.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "UKHomeOffice",
+    "repoName": "hocs-management-ui",
+    "frontendVersion": "4.7.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ivory-services",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "probate-frontend",
+    "frontendVersion": "4.8.0",
+    "versionDoubt": true
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "single-place-for-education-frontend",
+    "frontendVersion": "2.12.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "get-help-to-retrain",
+    "frontendVersion": "3.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "ffc-elm-apply",
+    "frontendVersion": "3.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dwp",
+    "repoName": "gysp-agent-ui",
+    "frontendVersion": "3.11.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "dwp",
+    "repoName": "gysp-customer-frontend",
+    "frontendVersion": "4.2.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "ministryofjustice",
+    "repoName": "disclosure-checker",
+    "frontendVersion": "5.4.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DFE-Digital",
+    "repoName": "buying-for-schools",
+    "frontendVersion": "2.13.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "mmo-licence-checker",
+    "frontendVersion": "2.0.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "DEFRA",
+    "repoName": "rod-catch-returns-frontend",
+    "frontendVersion": "3.15.0",
+    "versionDoubt": false
+  },
+  {
+    "repoOwner": "hmcts",
+    "repoName": "ccpay-web-component",
+    "frontendVersion": "2.7.0",
+    "versionDoubt": true
+  }
+]

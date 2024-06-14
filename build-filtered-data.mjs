@@ -184,27 +184,39 @@ async function filterDeps() {
       // await writeFileSync('data/filtered-data.json', JSON.stringify(builtData, null, 2))
       console.log('Data updated')
 
+      reportProgress(repo)
+      await reportRateLimit()
     } catch (e) {
       if (e instanceof NoPackageJsonError) {
         console.log(`${repo.name} doesn't have a package.json and therefore isn't using GOV.UK Frontend directly.`)
         logRejection('noPackageJson', repo)
 
+        reportProgress(repo)
+        await reportRateLimit()
       } else if (e instanceof NameOrOwnerError) {
         console.log(`${repo.name} has been rejected by the owner/name checker.`)
         logRejection('nameOrOwner', repo)
 
+        reportProgress(repo)
+        await reportRateLimit()
       } else if (e instanceof CouldntReadPackageError) {
         console.log(`We couldn't find a direct dependencies list for ${repo.name} and therefore can't ascertain the version of GOV.UK Frontend used by this repo`)
         logRejection('couldntReadPackage', repo)
 
+        reportProgress(repo)
+        await reportRateLimit()
       } else if (e instanceof IndirectDependencyError) {
         console.log(`${repo.name} doesn't list GOV.UK Frontend in its dependencies and therefore isn't using GOV.UK Frontend directly.`)
         logRejection('indirectDependancy', repo)
 
+        reportProgress(repo)
+        await reportRateLimit()
       } else if (e instanceof PrototypeKitDependencyError) {
         console.log(`${repo.name} appears to be either using the prototype kit or using the prototype kit as a dependency, suggesting it is a prototype and therefore not a service.`)
         logRejection('prototypeKitDependency', repo)
 
+        reportProgress(repo)
+        await reportRateLimit()
       } else {
         throw (e)
       }
@@ -223,3 +235,12 @@ function logRejection(type, object) {
   rejections[type].push(object)
 }
 
+function reportProgress(repo) {
+  const index = rawDeps.all_public_dependent_repos.findIndex(item => item === repo)
+  console.log(`This was repo number ${index + 1} of ${rawDeps.all_public_dependent_repos.length}`)
+}
+
+async function reportRateLimit() {
+  const rateLimit = await octokit.rest.rateLimit.get()
+  console.log(`${rateLimit.data.rate.remaining} remaining on rate limit`)
+}

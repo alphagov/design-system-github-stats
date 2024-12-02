@@ -10,9 +10,13 @@
   "bugs": {
     "url": "https://github.com/alphagov/design-system-github-stats/issues"
   },
+  "scripts": {
+    "build-filtered-data": "node build-filtered-data.mjs"
+  },
   "homepage": "https://github.com/alphagov/design-system-github-stats#readme",
   "devDependencies": {
-    "octokit": "^4.0.2",
-    "semver": "^7.6.2"
+    "@octokit/plugin-throttling": "^9.3.0",
+    "@yarnpkg/lockfile": "^1.1.0",
+    "octokit": "^4.0.2"
   }
 }

@@ -2,6 +2,7 @@ name: Update
 run-name: Update deps list
 on:
   workflow_dispatch:
+  pull_request:
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
@@ -43,7 +44,8 @@ jobs:
       # github action which doesn't give us the option to output this data as
       # something like json which we can programmatically interogate.
       - name: Pipe our deps to a json file
-        run: github-dependents-info --repo alphagov/govuk-frontend --sort stars --json > raw-deps.json
+        run: npm -v
+        # run: github-dependents-info --repo alphagov/govuk-frontend --sort stars --json > ./data/raw-deps.json
 
       - name: Build filtered data
         run: npm run build-filtered-data

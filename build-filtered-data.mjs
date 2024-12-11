@@ -1,11 +1,12 @@
 import { writeFileSync } from 'fs'
 
-import { Octokit } from 'octokit'
+import { Octokit, RequestError } from 'octokit'
 import { throttling } from '@octokit/plugin-throttling';
 import * as yarnLock from '@yarnpkg/lockfile'
-import checkServiceName from './helpers/check-service-name.mjs'
+import checkDenyList from './helpers/check-deny-list.mjs'
+import checkServiceOwner from './helpers/check-service-owner.mjs'
 
-import rawDeps from './raw-deps.json' assert {type: 'json'}
+import rawDeps from './data/raw-deps.json' assert {type: 'json'}
 
 const MyOctokit = Octokit.plugin(throttling)
 const octokit = new MyOctokit({
@@ -31,19 +32,9 @@ const octokit = new MyOctokit({
   }
 })
 
-const rejections = {
-  nameOrOwner: [],
-  noPackageJson: [],
-  couldntReadPackage: [],
-  indirectDependancy: [],
-  prototypeKitDependency: []
-}
-
-class NameOrOwnerError extends Error {}
 class NoPackageJsonError extends Error {}
 class CouldntReadPackageError extends Error {}
 class IndirectDependencyError extends Error {}
-class PrototypeKitDependencyError extends Error {}
 
 filterDeps()
 
@@ -52,20 +43,32 @@ async function filterDeps() {
 
   console.log('Analysis BEGIN')
   for (const repo of rawDeps.all_public_dependent_repos) {
-    try {
-      const repoOwner = repo.owner
-      const repoName = repo.repo_name
-      let frontendVersion
-      let lockfileType = null
-      let versionDoubt = false
+    const repoOwner = repo.owner
+    const repoName = repo.repo_name
+    let builtByGovernment = false
+    let indirectDependency = false
+    let isPrototype = false
+    let frontendVersion = null
+    let lockfileType = null
+    let versionDoubt = false
+    let couldntAccess = false
 
+    try {
       console.log(`Analysing ${repo.name}...`)
 
-      if (!checkServiceName(repoName, repoOwner)) {
-        throw new NameOrOwnerError
+      if (checkDenyList(repoName, repoOwner)) {
+        console.log(`${repo.name} is on the 'deny' list and will not be processed`)
+        continue
       }
 
-      console.log(`${repo.name} has a name that looks like a GOV.UK service.`)
+      builtByGovernment = checkServiceOwner(repoOwner)
+
+      if (builtByGovernment) {
+        console.log(`${repo.name} looks like a GOV.UK service.`)
+      } else {
+        console.log(`${repo.name} looks like it ISN'T a GOV.UK service. This has been noted.`)
+      }
+
       console.log('Getting repo data...')
 
       const firstCommit = await octokit.rest.repos.listCommits({
@@ -80,11 +83,6 @@ async function filterDeps() {
         tree_sha: firstCommit.data[0].sha,
         recursive: true
       })
-
-      // 
-      if (repoTree.data.tree.find(file => file.path == 'lib/usage_data.js')) {
-        throw new PrototypeKitDependencyError
-      }
 
       if (!repoTree.data.tree.find(file => file.path == 'package.json')) {
         throw new NoPackageJsonError
@@ -111,8 +109,10 @@ async function filterDeps() {
         throw new CouldntReadPackageError
       }
 
-      if (('govuk-prototype-kit' in packageObject.dependencies)) {
-        throw new PrototypeKitDependencyError
+      isPrototype = (repoTree.data.tree.find(file => file.path == 'lib/usage_data.js') != undefined) || ('govuk-prototype-kit' in packageObject.dependencies)
+
+      if (isPrototype) {
+        console.log(`${repo.name} looks like an instance of the prototype kit. This has been noted.`)
       }
       
       if (!('govuk-frontend' in packageObject.dependencies)) {
@@ -171,76 +171,52 @@ async function filterDeps() {
 
         console.log(`GOV.UK Frontend version set to ${frontendVersion}`)
       }
-
-      builtData.push({
-        repoOwner,
-        repoName,
-        frontendVersion,
-        versionDoubt
-      })
-
-      console.log(`Analysis of ${repo.name} complete`)
-
-      // await writeFileSync('data/filtered-data.json', JSON.stringify(builtData, null, 2))
-      console.log('Data updated')
-
-      reportProgress(repo)
-      await reportRateLimit()
     } catch (e) {
       if (e instanceof NoPackageJsonError) {
-        console.log(`${repo.name} doesn't have a package.json and therefore isn't using GOV.UK Frontend directly.`)
-        logRejection('noPackageJson', repo)
-
-        reportProgress(repo)
-        await reportRateLimit()
-      } else if (e instanceof NameOrOwnerError) {
-        console.log(`${repo.name} has been rejected by the owner/name checker.`)
-        logRejection('nameOrOwner', repo)
-
-        reportProgress(repo)
-        await reportRateLimit()
+        console.log(`${repo.name} doesn't have a package.json at its project root. This makes it very difficult to know if this repo is using GOV.UK Frontend directly or at all.
+          We will presume that this repo is using GOV.UK Frontend indirectly.`)
+        indirectDependency = true
       } else if (e instanceof CouldntReadPackageError) {
-        console.log(`We couldn't find a direct dependencies list for ${repo.name} and therefore can't ascertain the version of GOV.UK Frontend used by this repo`)
-        logRejection('couldntReadPackage', repo)
-
-        reportProgress(repo)
-        await reportRateLimit()
+        console.log(`We couldn't find a direct dependencies list for ${repo.name} and therefore can't ascertain the version of GOV.UK Frontend used by this repo.
+          We will presume that this repo is using GOV.UK Frontend indirectly.`)
+        indirectDependency = true
       } else if (e instanceof IndirectDependencyError) {
-        console.log(`${repo.name} doesn't list GOV.UK Frontend in its dependencies and therefore isn't using GOV.UK Frontend directly.`)
-        logRejection('indirectDependancy', repo)
-
-        reportProgress(repo)
-        await reportRateLimit()
-      } else if (e instanceof PrototypeKitDependencyError) {
-        console.log(`${repo.name} appears to be either using the prototype kit or using the prototype kit as a dependency, suggesting it is a prototype and therefore not a service.`)
-        logRejection('prototypeKitDependency', repo)
-
-        reportProgress(repo)
-        await reportRateLimit()
+        console.log(`${repo.name} doesn't list GOV.UK Frontend in its dependencies and therefore isn't using GOV.UK Frontend directly.
+          We will note that this repo is using GOV.UK Frontend indirectly.`)
+        indirectDependency = true
+      } else if (e instanceof RequestError) {
+        console.log(`There was a problem accessing ${repo.name}, most likely due to security restrictions from that repo. See error for more details:
+          ${e}
+          We will still record this repo but we won't be able to record version`)
+        couldntAccess = true
+        versionDoubt = true
       } else {
         throw (e)
       }
     }
+
+    builtData.push({
+      repoOwner,
+      repoName,
+      couldntAccess,
+      frontendVersion,
+      versionDoubt,
+      builtByGovernment,
+      indirectDependency,
+      isPrototype
+    })
+
+    console.log(`Analysis of ${repo.name} complete`)
+
+    await writeFileSync('data/filtered-data.json', JSON.stringify(builtData, null, 2))
+    console.log('Data updated')
+
+    const index = rawDeps.all_public_dependent_repos.findIndex(item => item === repo)
+    console.log(`This was repo number ${index + 1} of ${rawDeps.all_public_dependent_repos.length}`)
+
+    const rateLimit = await octokit.rest.rateLimit.get()
+    console.log(`${rateLimit.data.rate.remaining} remaining on rate limit`)
   }
 
-  await writeFileSync('data/rejections.json', JSON.stringify(rejections, null, 2))
-  console.log('Rejections written to file')
-
   console.log(`We're done!`)
-  console.log(`From ${rawDeps.all_public_dependent_repos.length} repos, we extracted ${builtData.length} repos`)
-}
-
-function logRejection(type, object) {
-  console.log('This repo has been added to the rejections list.')
-  rejections[type].push(object)
-}
-
-function reportProgress(repo) {
-  const index = rawDeps.all_public_dependent_repos.findIndex(item => item === repo)
-  console.log(`This was repo number ${index + 1} of ${rawDeps.all_public_dependent_repos.length}`)
-}
-
-async function reportRateLimit() {
-  const rateLimit = await octokit.rest.rateLimit.get()
-  console.log(`${rateLimit.data.rate.remaining} remaining on rate limit`)
 }

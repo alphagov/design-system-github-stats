@@ -10,6 +10,10 @@ concurrency:
 env:
   GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   Get-latest-dependent-data:
     name: Get latest dependent data
@@ -57,3 +61,4 @@ jobs:
           commit-message: "Get latest filtered dependents data and rejections"
           title: "Get latest filtered dependents data and rejections"
           body: "Generated automatically by github action"
+          base: ${{ github.head_ref }}

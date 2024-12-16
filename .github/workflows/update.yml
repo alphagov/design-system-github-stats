@@ -59,3 +59,4 @@ jobs:
           commit-message: "Get latest filtered dependents data and rejections"
           title: "Get latest filtered dependents data and rejections"
           body: "Generated automatically by github action"
+          base: ${{ github.head_ref }}

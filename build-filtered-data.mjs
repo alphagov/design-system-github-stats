@@ -26,6 +26,51 @@ const currentDate = new Date()
 const yyyymmdd = currentDate.toISOString().split('T')[0]
 const timestamp = currentDate.getTime()
 
+async function filterDeps() {
+  const builtData = []
+  const batchSize = 500
+  let batchCounter = 0
+  console.log(`${performance.now()}: Analysis BEGIN`)
+
+  for (const repo of rawDeps.all_public_dependent_repos) {
+    try {
+      console.log(`${performance.now()}: Getting repo data...`)
+      const repoData = await analyseRepo(repo)
+      if (repoData) {
+        builtData.push(repoData)
+        batchCounter++
+      }
+      console.log(`${performance.now()}: Analysis of ${repo.name} complete`)
+
+      const index = rawDeps.all_public_dependent_repos.findIndex(
+        (item) => item === repo
+      )
+      console.log(
+        `This was repo number ${index + 1} of ${
+          rawDeps.all_public_dependent_repos.length
+        }`
+      )
+
+      const remaining = await getRemainingRateLimit()
+      console.log(`${remaining} remaining on rate limit`)
+    } catch (error) {
+      if (error instanceof RequestError) {
+        continue
+      }
+    }
+    if (batchCounter >= batchSize) {
+      await writeBatchToFiles(builtData)
+      builtData.length = 0
+      batchCounter = 0
+    }
+  }
+
+  if (builtData.length > 0) {
+    await writeBatchToFiles(builtData)
+  }
+  console.log(`${performance.now()}: We're done!`)
+}
+
 async function analyseRepo(repo) {
   // Output data columns
   const repoOwner = repo.owner
@@ -186,51 +231,6 @@ async function getExactFrontendVersion(
     console.log('There was a problem with processing the lockfile:', error)
   }
   return frontendVersion.replace('^', '').replace('~', '')
-}
-
-async function filterDeps() {
-  const builtData = []
-  const batchSize = 500
-  let batchCounter = 0
-  console.log(`${performance.now()}: Analysis BEGIN`)
-
-  for (const repo of rawDeps.all_public_dependent_repos) {
-    try {
-      console.log(`${performance.now()}: Getting repo data...`)
-      const repoData = await analyseRepo(repo)
-      if (repoData) {
-        builtData.push(repoData)
-        batchCounter++
-      }
-      console.log(`${performance.now()}: Analysis of ${repo.name} complete`)
-
-      const index = rawDeps.all_public_dependent_repos.findIndex(
-        (item) => item === repo
-      )
-      console.log(
-        `This was repo number ${index + 1} of ${
-          rawDeps.all_public_dependent_repos.length
-        }`
-      )
-
-      const remaining = await getRemainingRateLimit()
-      console.log(`${remaining} remaining on rate limit`)
-    } catch (error) {
-      if (error instanceof RequestError) {
-        continue
-      }
-    }
-    if (batchCounter >= batchSize) {
-      await writeBatchToFiles(builtData)
-      builtData.length = 0
-      batchCounter = 0
-    }
-  }
-
-  if (builtData.length > 0) {
-    await writeBatchToFiles(builtData)
-  }
-  console.log(`${performance.now()}: We're done!`)
 }
 
 async function writeBatchToFiles(builtData) {

@@ -24,5 +24,8 @@
     "eslint": "^9.17.0",
     "globals": "^15.13.0",
     "octokit": "^4.0.2"
+  },
+  "dependencies": {
+    "json-2-csv": "^5.5.7"
   }
 }

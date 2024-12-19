@@ -1,4 +1,5 @@
 import { writeFileSync } from 'fs'
+import { json2csv } from 'json-2-csv'
 
 import { Octokit, RequestError } from 'octokit'
 import { throttling } from '@octokit/plugin-throttling'
@@ -249,10 +250,14 @@ async function filterDeps() {
 
     const currentDate = new Date().toISOString().split('T')[0]
 
+    // Write JSON file
     await writeFileSync(
       `data/${currentDate}-filtered-data.json`,
       JSON.stringify(builtData, null, 2)
     )
+    // Write CSV file
+    const csv = json2csv(builtData)
+    await writeFileSync(`data/${currentDate}-filtered-data.csv`, csv)
     console.log('Data updated')
 
     const index = rawDeps.all_public_dependent_repos.findIndex(

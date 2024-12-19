@@ -1,11 +1,12 @@
 import { writeFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 
-import { Octokit, RequestError } from 'octokit'
+import { Octokit } from 'octokit'
 import { throttling } from '@octokit/plugin-throttling'
 import * as yarnLock from '@yarnpkg/lockfile'
 import checkDenyList from './helpers/check-deny-list.mjs'
 import checkServiceOwner from './helpers/check-service-owner.mjs'
+import { handleError } from './helpers/error-handling.mjs'
 
 import rawDeps from './data/raw-deps.json' assert { type: 'json' }
 
@@ -37,9 +38,23 @@ const octokit = new MyOctokit({
   },
 })
 
-class NoPackageJsonError extends Error {}
-class CouldntReadPackageError extends Error {}
-class IndirectDependencyError extends Error {}
+/**
+ * Gets repo metadata
+ *
+ * @param {string} repoOwner - The owner of the repo
+ * @param {string} repoName - The name of the repo
+ * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposGetResponse>>}
+ */
+async function getRepoMetaData(repoOwner, repoName) {
+  try {
+    return await octokit.rest.repos.get({
+      owner: repoOwner,
+      repo: repoName,
+    })
+  } catch (error) {
+    handleError(error, repoName)
+  }
+}
 
 filterDeps()
 

@@ -94,22 +94,19 @@ export async function getRepoTree(repoOwner, repoName, treeSha) {
 /**
  * Gets the contents of a file in a repo
  *
- * Currently set up to only handle JSON files
- *
  * @param {string} repoOwner - The owner of the repo
  * @param {string} repoName - The name of the repo
  * @param {string} filePath - The path to the file
- * @returns {Promise<Object|undefined>}
+ * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposGetContentResponse>>}
  */
 export async function getFileContent(repoOwner, repoName, filePath) {
   try {
-    const content = await octokit.rest.repos.getContent({
+    return await octokit.rest.repos.getContent({
       owner: repoOwner,
       repo: repoName,
       path: filePath,
       headers: { accept: 'application/vnd.github.raw+json' },
     })
-    return JSON.parse(content.data)
   } catch (error) {
     handleError(error, repoName)
   }

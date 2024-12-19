@@ -1,8 +1,8 @@
 import { RequestError } from 'octokit'
 
-class NoPackageJsonError extends Error {}
-class CouldntReadPackageError extends Error {}
-class IndirectDependencyError extends Error {}
+export class NoPackageJsonError extends Error {}
+export class CouldntReadPackageError extends Error {}
+export class IndirectDependencyError extends Error {}
 
 /**
  * Logs errors

@@ -1,4 +1,10 @@
 [
-  "govuk-frontend",
-  "govuk-design-system"
+  {
+    "name": "govuk-frontend",
+    "owner": "alphagov"
+  },
+  {
+    "name": "govuk-design-system",
+    "owner": "alphagov"
+  }
 ]

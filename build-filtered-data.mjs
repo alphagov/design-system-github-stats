@@ -42,7 +42,7 @@ async function filterDeps() {
   const builtData = []
 
   console.log('Analysis BEGIN')
-  for (const repo of rawDeps.all_public_dependent_repos.slice(0, 100)) {
+  for (const repo of rawDeps.all_public_dependent_repos.slice(0, 20)) {
     const repoOwner = repo.owner
     const repoName = repo.repo_name
     let builtByGovernment = false
@@ -52,6 +52,8 @@ async function filterDeps() {
     let lockfileType = null
     let versionDoubt = false
     let couldntAccess = false
+    let lastUpdated = null
+    let repoCreated = null
 
     try {
       console.log(`Analysing ${repo.name}...`)
@@ -75,11 +77,19 @@ async function filterDeps() {
 
       console.log('Getting repo data...')
 
+      const repoMetaData = await octokit.rest.repos.get({
+        owner: repoOwner,
+        repo: repoName,
+      })
+
       const firstCommit = await octokit.rest.repos.listCommits({
         owner: repoOwner,
         repo: repoName,
         per_page: 1,
       })
+
+      lastUpdated = repoMetaData.data.pushed_at
+      repoCreated = repoMetaData.data.created_at
 
       const repoTree = await octokit.rest.git.getTree({
         owner: repoOwner,
@@ -98,6 +108,7 @@ async function filterDeps() {
         lockfileType = 'yarn.lock'
       }
 
+      // TODO: account for multiple package files
       const packageFile = await octokit.rest.repos.getContent({
         owner: repoOwner,
         repo: repoName,
@@ -230,12 +241,16 @@ async function filterDeps() {
       builtByGovernment,
       indirectDependency,
       isPrototype,
+      lastUpdated,
+      repoCreated,
     })
 
     console.log(`Analysis of ${repo.name} complete`)
 
+    const currentDate = new Date().toISOString().split('T')[0]
+
     await writeFileSync(
-      'data/filtered-data.json',
+      `data/${currentDate}-filtered-data.json`,
       JSON.stringify(builtData, null, 2)
     )
     console.log('Data updated')

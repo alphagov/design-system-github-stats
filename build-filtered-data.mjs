@@ -195,36 +195,41 @@ async function filterDeps() {
   console.log(`${performance.now()}: Analysis BEGIN`)
 
   for (const repo of rawDeps.all_public_dependent_repos) {
-    console.log(`${performance.now()}: Getting repo data...`)
-    const repoData = await analyseRepo(repo)
-    if (repoData) {
-      builtData.push(repoData)
-      batchCounter++
+    try {
+      console.log(`${performance.now()}: Getting repo data...`)
+      const repoData = await analyseRepo(repo)
+      if (repoData) {
+        builtData.push(repoData)
+        batchCounter++
+      }
+      console.log(`${performance.now()}: Analysis of ${repo.name} complete`)
+
+      const index = rawDeps.all_public_dependent_repos.findIndex(
+        (item) => item === repo
+      )
+      console.log(
+        `This was repo number ${index + 1} of ${
+          rawDeps.all_public_dependent_repos.length
+        }`
+      )
+
+      const remaining = await getRemainingRateLimit()
+      console.log(`${remaining} remaining on rate limit`)
+    } catch (error) {
+      if (error instanceof RequestError) {
+        continue
+      }
     }
-    console.log(`${performance.now()}: Analysis of ${repo.name} complete`)
+    if (batchCounter >= batchSize) {
+      await writeBatchToFiles(builtData)
+      builtData.length = 0
+      batchCounter = 0
+    }
 
-    const index = rawDeps.all_public_dependent_repos.findIndex(
-      (item) => item === repo
-    )
-    console.log(
-      `This was repo number ${index + 1} of ${
-        rawDeps.all_public_dependent_repos.length
-      }`
-    )
-
-    const remaining = await getRemainingRateLimit()
-    console.log(`${remaining} remaining on rate limit`)
+    if (builtData.length > 0) {
+      await writeBatchToFiles(builtData)
+    }
   }
-  if (batchCounter >= batchSize) {
-    await writeBatchToFiles(builtData)
-    builtData.length = 0
-    batchCounter = 0
-  }
-
-  if (builtData.length > 0) {
-    await writeBatchToFiles(builtData)
-  }
-
   console.log(`${performance.now()}: We're done!`)
 }
 

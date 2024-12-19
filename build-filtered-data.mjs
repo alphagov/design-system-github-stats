@@ -225,10 +225,10 @@ async function filterDeps() {
       builtData.length = 0
       batchCounter = 0
     }
+  }
 
-    if (builtData.length > 0) {
-      await writeBatchToFiles(builtData)
-    }
+  if (builtData.length > 0) {
+    await writeBatchToFiles(builtData)
   }
   console.log(`${performance.now()}: We're done!`)
 }

@@ -248,16 +248,18 @@ async function filterDeps() {
 
     console.log(`Analysis of ${repo.name} complete`)
 
-    const currentDate = new Date().toISOString().split('T')[0]
+    const currentDate = new Date()
+    const yyyymmdd = currentDate.toISOString().split('T')[0]
+    const timestamp = currentDate.getTime()
 
     // Write JSON file
     await writeFileSync(
-      `data/${currentDate}-filtered-data.json`,
+      `data/${yyyymmdd}-${timestamp}-filtered-data.json`,
       JSON.stringify(builtData, null, 2)
     )
     // Write CSV file
     const csv = json2csv(builtData)
-    await writeFileSync(`data/${currentDate}-filtered-data.csv`, csv)
+    await writeFileSync(`data/${yyyymmdd}-${timestamp}-filtered-data.csv`, csv)
     console.log('Data updated')
 
     const index = rawDeps.all_public_dependent_repos.findIndex(

@@ -1,6 +1,9 @@
 import { writeFileSync } from 'fs'
+import { Readable } from 'stream'
 import { json2csv } from 'json-2-csv'
 import { RequestError } from 'octokit'
+import JSONStream from 'JSONStream'
+import es from 'event-stream'
 
 import * as yarnLock from '@yarnpkg/lockfile'
 import checkDenyList from './helpers/check-deny-list.mjs'
@@ -84,6 +87,7 @@ async function analyseRepo(repo) {
   let couldntAccess = false
   let lastUpdated = null
   let repoCreated = null
+  let parentDependency = null
 
   try {
     if (checkDenyList(repoName, repoOwner)) {
@@ -156,6 +160,7 @@ async function analyseRepo(repo) {
     if (!('govuk-frontend' in packageObject.dependencies)) {
       indirectDependency = true
       throw new IndirectDependencyError()
+      // TODO: Create a findIndirectDependencies function, add an array of the parents to the output column
     }
 
     frontendVersion = packageObject.dependencies['govuk-frontend']
@@ -164,12 +169,18 @@ async function analyseRepo(repo) {
         repo.name
       } is using GOV.UK Frontend version ${frontendVersion}`
     )
+    // TODO: Since we only search the Packagelock file if we find a frontend version
+    // we don't need to do anything but search for the `node_modules/govuk-frontend` entry
+    // in the getExactFrontendVersion function.
+    // If however, we don't find govuk-frontend in the dependencies, then we have an indirect dependency
+    // and we should search the lockfile for the govuk-frontend sub-dependencies
     if (frontendVersion.includes('^') || frontendVersion.includes('~')) {
       frontendVersion = await getExactFrontendVersion(
         repoOwner,
         repoName,
         frontendVersion,
-        lockfileType
+        lockfileType,
+        parentDependency
       )
       versionDoubt =
         frontendVersion.includes('^') || frontendVersion.includes('~')
@@ -193,6 +204,7 @@ async function analyseRepo(repo) {
     isPrototype,
     lastUpdated,
     repoCreated,
+    parentDependency,
   }
 }
 
@@ -200,7 +212,8 @@ async function getExactFrontendVersion(
   repoOwner,
   repoName,
   frontendVersion,
-  lockfileType
+  lockfileType,
+  parentDependency
 ) {
   try {
     if (lockfileType === 'package-lock.json') {
@@ -209,12 +222,12 @@ async function getExactFrontendVersion(
         repoName,
         'package-lock.json'
       )
-      const packageLockObject = JSON.parse(packageLockFile.data)
-      return (
-        packageLockObject.packages?.['node_modules/govuk-frontend']?.version ||
-        packageLockObject.dependencies?.['govuk-frontend']?.version ||
-        frontendVersion
+      const versionAndParent = await getFrontendVersionFromPackageLock(
+        packageLockFile.data
       )
+      // eslint-disable-next-line no-unused-vars
+      parentDependency = versionAndParent.parent
+      return versionAndParent.version || frontendVersion
     } else if (lockfileType === 'yarn.lock') {
       const yarnLockFile = await getFileContent(
         repoOwner,
@@ -231,6 +244,46 @@ async function getExactFrontendVersion(
     console.log('There was a problem with processing the lockfile:', error)
   }
   return frontendVersion.replace('^', '').replace('~', '')
+}
+
+// TODO: Streaming is probably overkill.
+async function getFrontendVersionFromPackageLock(packageLockText) {
+  const stream = Readable.from([packageLockText])
+
+  // Parse top-level keys to track parents
+  const parser = JSONStream.parse('*')
+
+  return new Promise((resolve, reject) => {
+    let result = { version: null, parent: null }
+
+    stream.pipe(parser).pipe(
+      es
+        .mapSync((data) => {
+          Object.entries(data).forEach(([parentKey, value]) => {
+            if (parentKey === 'node_modules/govuk-frontend') {
+              console.log(
+                `${performance.now()}: Found the node_modules/govuk-frontend package entry, version ${
+                  data[parentKey].version
+                }`
+              )
+              result = { version: data[parentKey].version, parent: null }
+            } else if (value.dependencies?.['govuk-frontend']) {
+              if (parentKey) {
+                console.log(
+                  `${performance.now()}: Found govuk-frontend as a dependency of: ${parentKey}. This has been noted.`
+                )
+              }
+              result = {
+                version: value.dependencies['govuk-frontend'].version,
+                parent: parentKey,
+              }
+            }
+          })
+        })
+        .on('end', () => resolve(result))
+        .on('error', reject)
+    )
+  })
 }
 
 async function writeBatchToFiles(builtData) {

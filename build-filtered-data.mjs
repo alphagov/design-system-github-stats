@@ -9,6 +9,10 @@ import checkServiceOwner from './helpers/check-service-owner.mjs'
 
 import rawDeps from './data/raw-deps.json' assert { type: 'json' }
 
+const currentDate = new Date()
+const yyyymmdd = currentDate.toISOString().split('T')[0]
+const timestamp = currentDate.getTime()
+
 const MyOctokit = Octokit.plugin(throttling)
 const octokit = new MyOctokit({
   auth: process.env.GITHUB_AUTH_TOKEN,
@@ -247,10 +251,6 @@ async function filterDeps() {
     })
 
     console.log(`Analysis of ${repo.name} complete`)
-
-    const currentDate = new Date()
-    const yyyymmdd = currentDate.toISOString().split('T')[0]
-    const timestamp = currentDate.getTime()
 
     // Write JSON file
     await writeFileSync(

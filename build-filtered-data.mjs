@@ -16,6 +16,7 @@ import {
   getLatestCommit,
   getFileContent,
   getRepoTree,
+  getRemainingRateLimit,
 } from './helpers/octokit.mjs'
 
 import rawDeps from './data/raw-deps.json' assert { type: 'json' }
@@ -211,8 +212,8 @@ async function filterDeps() {
       }`
     )
 
-    const rateLimit = await octokit.rest.rateLimit.get()
-    console.log(`${rateLimit.data.rate.remaining} remaining on rate limit`)
+    const remaining = await getRemainingRateLimit()
+    console.log(`${remaining} remaining on rate limit`)
   }
   if (batchCounter >= batchSize) {
     await writeBatchToFiles(builtData)

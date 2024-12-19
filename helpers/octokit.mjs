@@ -111,3 +111,17 @@ export async function getFileContent(repoOwner, repoName, filePath) {
     handleError(error, repoName)
   }
 }
+
+/**
+ * Check rate limit
+ *
+ * @returns {number} - The number of remaining requests
+ */
+export async function getRemainingRateLimit() {
+  try {
+    const rateLimit = await octokit.rest.rateLimit.get()
+    return rateLimit.data.rate.remaining
+  } catch (error) {
+    handleError(error, 'rate limit')
+  }
+}

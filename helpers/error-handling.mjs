@@ -1,8 +1,9 @@
 import { RequestError } from 'octokit'
 
 export class NoPackageJsonError extends Error {}
-export class CouldntReadPackageError extends Error {}
+export class NoDirectDependenciesError extends Error {}
 export class IndirectDependencyError extends Error {}
+export class NoDataError extends Error {}
 
 /**
  * Logs errors
@@ -19,11 +20,13 @@ export function handleError(error, repoName) {
         error.message
       }`
     )
+  } else if (error instanceof NoDataError) {
+    console.log(`${performance.now()}: Couldn't fetch data for ${repoName}.`)
   } else if (error instanceof NoPackageJsonError) {
     console.log(
-      `${performance.now()}: ${repoName} doesn't have a package.json at its project root. Assuming indirect usage of GOV.UK Frontend.`
+      `${performance.now()}: ${repoName} doesn't have a package.json at its project root. This has been noted.`
     )
-  } else if (error instanceof CouldntReadPackageError) {
+  } else if (error instanceof NoDirectDependenciesError) {
     console.log(
       `${performance.now()}: Couldn't find a direct dependencies list for ${repoName}. Assuming indirect usage of GOV.UK Frontend.`
     )

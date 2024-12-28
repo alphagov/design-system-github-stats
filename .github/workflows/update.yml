@@ -46,6 +46,7 @@ jobs:
       # gdi was built as a documentation tool. This is especially true of the
       # github action which doesn't give us the option to output this data as
       # something like json which we can programmatically interogate.
+      # TODO: Run a similar script for our known manual ports as well
       - name: Pipe our deps to a json file
         run: npm -v
         # run: github-dependents-info --repo alphagov/govuk-frontend --sort stars --json > ./data/raw-deps.json

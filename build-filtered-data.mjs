@@ -4,7 +4,6 @@ import { RequestError } from 'octokit'
 
 import denyList from './helpers/data/deny-list.json' assert { type: 'json' }
 import governmentServiceOwners from './helpers/data/service-owners.json' assert { type: 'json' }
-import { handleError } from './helpers/error-handling.mjs'
 import { getRemainingRateLimit } from './helpers/octokit.mjs'
 import { RepoData } from './helpers/repo-data.mjs'
 
@@ -73,7 +72,6 @@ async function analyseRepo(repo) {
     repoData.log(`analyzing...`)
 
     await repoData.fetchAndValidateMetaData()
-    repoData.log(`metadata fetched and validated.`)
     await repoData.fetchAndValidateRepoTree()
     repoData.log(`tree fetched and validated.`)
 
@@ -117,7 +115,7 @@ async function analyseRepo(repo) {
     }
   } catch (error) {
     repoData.errorThrown = error.toString()
-    handleError(error, repoName)
+    repoData.handleError(error)
     if (error instanceof RequestError) {
       repoData.couldntAccess = true
       repoData.versionDoubt = true

@@ -21,6 +21,14 @@ export class RepoData {
    * @param {Array<string>} [serviceOwners=[]] - The list of service owners.
    */
   constructor(repoOwner, repoName, serviceOwners = []) {
+    if (!repoOwner) {
+      this.log('repoOwner must be provided', 'error')
+      throw new Error('repoOwner must be provided')
+    }
+    if (!repoName) {
+      this.log('repoName must be provided', 'error')
+      throw new Error('repoName must be provided')
+    }
     this.repoOwner = repoOwner
     this.repoName = repoName
     this.couldntAccess = false
@@ -97,6 +105,7 @@ export class RepoData {
   async getLatestCommitSha() {
     const latestCommit = await getLatestCommit(this.repoOwner, this.repoName)
     if (latestCommit === undefined) {
+      console.log('what')
       throw new NoCommitsError()
     }
     return latestCommit.sha
@@ -146,8 +155,8 @@ export class RepoData {
    * @param {[string]} type - type of message (error)
    */
   log(message, type = '') {
-    const typeMsg = type === 'error' ? 'ERROR: ' : ''
-    console.log(`${this.repoOwner}/${this.repoName}: ${typeMsg} ${message}`)
+    const typeMsg = type === 'error' ? ' ERROR:' : ''
+    console.log(`${this.repoOwner}/${this.repoName}:${typeMsg} ${message}`)
   }
 
   /**

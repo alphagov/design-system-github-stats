@@ -7,10 +7,10 @@ import {
 import * as yarnLock from '@yarnpkg/lockfile'
 import { RequestError } from 'octokit'
 
-class UnsupportedLockFileError extends Error {}
-class NoMetaDataError extends Error {}
-class NoRepoTreeError extends Error {}
-class NoCommitsError extends Error {}
+export class UnsupportedLockFileError extends Error {}
+export class NoMetaDataError extends Error {}
+export class NoRepoTreeError extends Error {}
+export class NoCommitsError extends Error {}
 
 export class RepoData {
   /**
@@ -20,7 +20,7 @@ export class RepoData {
    * @param {string} repoName - The name of the repository.
    * @param {Array<string>} [serviceOwners=[]] - The list of service owners.
    */
-  constructor(repoOwner, repoName, serviceOwners = []) {
+  constructor (repoOwner, repoName, serviceOwners = []) {
     if (!repoOwner) {
       this.log('repoOwner must be provided', 'error')
       throw new Error('repoOwner must be provided')
@@ -32,7 +32,7 @@ export class RepoData {
     this.repoOwner = repoOwner
     this.repoName = repoName
     this.couldntAccess = false
-    this.frontendVersion = null
+    this.lockfileFrontendVersion = null
     this.versionDoubt = false
     this.builtByGovernment = serviceOwners.includes(this.repoOwner)
     this.indirectDependency = false
@@ -51,7 +51,7 @@ export class RepoData {
    * @param {array} denyList - An array of objects with owner and name properties
    * @returns {boolean} - Whether the repo is on the deny list
    */
-  checkDenyList(denyList) {
+  checkDenyList (denyList) {
     return denyList.some(
       (item) => this.repoOwner === item.owner && this.repoName === item.name
     )
@@ -64,7 +64,7 @@ export class RepoData {
    * @throws {RequestError} - If the request fails
    *
    */
-  async fetchAndValidateMetaData() {
+  async fetchAndValidateMetaData () {
     const repoMetaData = await getRepoMetaData(this.repoOwner, this.repoName)
     if (repoMetaData) {
       this.lastUpdated = repoMetaData.data.pushed_at
@@ -75,7 +75,7 @@ export class RepoData {
     if (!this.repoCreated) {
       throw new NoMetaDataError()
     }
-    this.log(`metadata fetched and validated.`)
+    this.log('metadata fetched and validated.')
   }
 
   /**
@@ -84,14 +84,14 @@ export class RepoData {
    * @throws {NoRepoTreeError} - If the tree could not be fetched
    * @throws {RequestError} - If the request fails
    */
-  async fetchAndValidateRepoTree() {
+  async fetchAndValidateRepoTree () {
     const latestCommitSha = await this.getLatestCommitSha()
     this.repoTree = await getRepoTree(
       this.repoOwner,
       this.repoName,
       latestCommitSha
     )
-    if (!this.repoTree) {
+    if (!this.repoTree || !this.repoTree.data || !this.repoTree.data.tree) {
       throw new NoRepoTreeError()
     }
   }
@@ -103,7 +103,7 @@ export class RepoData {
    * @throws {NoCommitsError} - If the repo has no commits
    * @throws {RequestError} - If the request fails
    */
-  async getLatestCommitSha() {
+  async getLatestCommitSha () {
     const latestCommit = await getLatestCommit(this.repoOwner, this.repoName)
     if (latestCommit === undefined) {
       throw new NoCommitsError()
@@ -117,9 +117,9 @@ export class RepoData {
    * @param {array} packageObjects - an array of packageObjects
    * @returns {boolean} - Whether the repo is a prototype
    */
-  checkPrototype(packageObjects) {
+  checkPrototype (packageObjects) {
     if (
-      this.repoTree.data.tree.some((file) => file.path == 'lib/usage_data.js')
+      this.repoTree.data.tree.some((file) => file.path === 'lib/usage_data.js')
     ) {
       return true
     } else if (packageObjects.length === 0) {
@@ -137,7 +137,7 @@ export class RepoData {
     return false
   }
 
-  checkDirectDependency(packageObjects) {
+  checkDirectDependency (packageObjects) {
     for (const packageObject of packageObjects) {
       if ('govuk-frontend' in packageObject.content.dependencies) {
         this.frontendVersions.push({
@@ -159,11 +159,11 @@ export class RepoData {
    * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposGetContentsResponse>>} - The file content
    * @throws {RequestError} - If the request fails
    */
-  async getRepoFileContent(filePath) {
+  async getRepoFileContent (filePath) {
     return await getFileContent(this.repoOwner, this.repoName, filePath)
   }
 
-  async getAllFilesContent(fileName) {
+  async getAllFilesContent (fileName) {
     const files = this.repoTree.data.tree.filter(
       (file) =>
         file.path.endsWith(fileName) && !file.path.includes('node_modules')
@@ -183,8 +183,8 @@ export class RepoData {
    * @param {string} filePath
    * @returns {boolean} - Whether the file exists
    */
-  checkFileExists(filePath) {
-    return this.repoTree.data.tree.some((file) => file.path == filePath)
+  checkFileExists (filePath) {
+    return this.repoTree.data.tree.some((file) => file.path === filePath)
   }
 
   /**
@@ -193,18 +193,17 @@ export class RepoData {
    * @param {string} message - the message to log
    * @param {[string]} type - type of message (error)
    */
-  log(message, type = '') {
+  log (message, type = '') {
     const typeMsg = type === 'error' ? ' ERROR:' : ''
     console.log(`${this.repoOwner}/${this.repoName}:${typeMsg} ${message}`)
   }
 
   /**
-   * Gets the version of govuk-frontend from the lockfile
-   * @returns {string} - The version of govuk-frontend
-   * @throws {UnsupportedLockFileError} - If the lockfile is not supported
-   * @throws {RequestError} - If the request for the file data fails
+   * Checks for the type of lockfile
+   *
+   * @returns {string} - the lockfile type
    */
-  async getVersionFromLockfile() {
+  getLockfileType () {
     let lockfileType
     if (this.checkFileExists('package-lock.json')) {
       lockfileType = 'package-lock.json'
@@ -214,19 +213,28 @@ export class RepoData {
       // @TODO: support some package files - ruby (for GOV.UK) and maybe python?
       throw new UnsupportedLockFileError()
     }
+    return lockfileType
+  }
 
+  /**
+   * Gets the version of govuk-frontend from the lockfile
+   * @returns {string} - The version of govuk-frontend
+   * @throws {UnsupportedLockFileError} - If the lockfile is not supported
+   * @throws {RequestError} - If the request for the file data fails
+   */
+  async getVersionFromLockfile (lockfileType) {
     const lockfile = await this.getRepoFileContent(lockfileType)
 
-    if (lockfileType == 'package-lock.json') {
+    if (lockfileType === 'package-lock.json') {
       const lockfileObject = JSON.parse(lockfile.data)
-      if (this.frontendVersion) {
+      if (this.frontendVersions.length > 0) {
         // If we found an ambiguous frontend version in the package.json file,
         // all we have to do is get the package version from the lockfile
         const packageVersion =
           lockfileObject.packages?.['node_modules/govuk-frontend']?.version ||
-          lockfileObject.dependencies?.['node_modules/govuk-frontend']?.version
+          lockfileObject.dependencies?.['govuk-frontend']?.version
         if (packageVersion) {
-          this.frontendVersion = packageVersion
+          this.lockfileFrontendVersion = packageVersion
         }
       } else {
         const deps = []
@@ -234,7 +242,7 @@ export class RepoData {
         // we have to search the lockfile for the govuk-frontend entries
         for (const [packageName, packageData] of Object.entries({
           ...(lockfileObject.packages || {}),
-          ...(lockfileObject.dependencies || {}),
+          ...(lockfileObject.dependencies || {})
         })) {
           if (packageData.dependencies?.['govuk-frontend']) {
             deps.push({
@@ -244,14 +252,25 @@ export class RepoData {
           }
         }
         this.parentDependency = deps
+        // Set highest dependency number to frontendVersion.
+        // Not sure this is the right approach, but we'll still have dependency data
+        if (deps.length > 0) {
+          const versions = deps.map(dep => dep.version)
+          this.lockfileFrontendVersion = versions.sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))[0]
+        }
       }
     } else if (lockfileType === 'yarn.lock') {
-      const yarnLockObject = yarnLock.default.parse(lockfile.data)
-      this.frontendVersion =
-        yarnLockObject.object[`govuk-frontend@${this.frontendVersion}`]
-          ?.version || this.frontendVersion
+      const yarnLockObject = yarnLock.parse(lockfile.data)
+      let yarnLockVersion = '0'
+
+      for (const [key, value] of Object.entries(yarnLockObject.object)) {
+        if (key.startsWith('govuk-frontend@') && value.version > yarnLockVersion) {
+          yarnLockVersion = value.version
+        }
+      }
+      this.lockfileFrontendVersion = yarnLockVersion || this.lockfileFrontendVersion
     }
-    return this.frontendVersion
+    return this.lockfileFrontendVersion
   }
 
   /**
@@ -261,18 +280,18 @@ export class RepoData {
    *
    * @throws {Error} - If the error is not an expected type
    */
-  handleError(error) {
+  handleError (error) {
     if (error instanceof RequestError) {
       this.log(`problem accessing repo: ${error.message}`, 'error')
     } else if (error instanceof NoMetaDataError) {
-      this.log(`couldn't fetch metadata`, 'error')
+      this.log("couldn't fetch metadata", 'error')
     } else if (error instanceof NoCommitsError) {
-      this.log(`couldn't fetch repo tree as repo has no commits`, 'error')
+      this.log("couldn't fetch repo tree as repo has no commits", 'error')
     } else if (error instanceof NoRepoTreeError) {
-      this.log(`couldn't fetch repo tree`, 'error')
+      this.log("couldn't fetch repo tree", 'error')
     } else if (error instanceof UnsupportedLockFileError) {
       this.log(
-        `couldn't find a supported lockfile. Skipping version check.`,
+        "couldn't find a supported lockfile. Skipping version check.",
         'error'
       )
     } else {
@@ -285,12 +304,12 @@ export class RepoData {
    *
    * @returns {object} - The result of the analysis
    */
-  getResult() {
+  getResult () {
     return {
       repoOwner: this.repoOwner,
       repoName: this.repoName,
       couldntAccess: this.couldntAccess,
-      frontendVersion: this.frontendVersion,
+      lockfileFrontendVersion: this.lockfileFrontendVersion,
       directDependencyVersions: this.frontendVersions,
       versionDoubt: this.versionDoubt,
       builtByGovernment: this.builtByGovernment,

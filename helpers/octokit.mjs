@@ -39,7 +39,7 @@ const octokit = new MyOctokit({
  * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposGetResponse>>}
  * @throws {RequestError} - If the request fails
  */
-export async function getRepoMetaData(repoOwner, repoName) {
+export async function getRepoMetaData (repoOwner, repoName) {
   return await octokit.rest.repos.get({
     owner: repoOwner,
     repo: repoName,
@@ -53,7 +53,7 @@ export async function getRepoMetaData(repoOwner, repoName) {
  * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposListCommitsResponse>>}
  * @throws {RequestError} - If the request fails
  */
-export async function getLatestCommit(repoOwner, repoName) {
+export async function getLatestCommit (repoOwner, repoName) {
   const commits = await octokit.rest.repos.listCommits({
     owner: repoOwner,
     repo: repoName,
@@ -71,7 +71,7 @@ export async function getLatestCommit(repoOwner, repoName) {
  * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').GitGetTreeResponse>>}
  * @throws {RequestError} - If the request fails
  */
-export async function getRepoTree(repoOwner, repoName, treeSha) {
+export async function getRepoTree (repoOwner, repoName, treeSha) {
   return await octokit.rest.git.getTree({
     owner: repoOwner,
     repo: repoName,
@@ -89,7 +89,7 @@ export async function getRepoTree(repoOwner, repoName, treeSha) {
  * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposGetContentResponse>>} - the file content
  * @throws {RequestError} - If the request fails
  */
-export async function getFileContent(repoOwner, repoName, filePath) {
+export async function getFileContent (repoOwner, repoName, filePath) {
   return await octokit.rest.repos.getContent({
     owner: repoOwner,
     repo: repoName,
@@ -104,7 +104,7 @@ export async function getFileContent(repoOwner, repoName, filePath) {
  * @returns {number} - The number of remaining requests
  * @throws {RequestError} - If the request fails
  */
-export async function getRemainingRateLimit() {
+export async function getRemainingRateLimit () {
   const rateLimit = await octokit.rest.rateLimit.get()
   return rateLimit.data.rate.remaining
 }

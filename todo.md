@@ -1,33 +1,42 @@
 # TODOs
 
-## Optimization
+- [*] Handle multiple packagefiles
+- [ ] Handle nested (multiple?) lock files
 
-- Investigate using dependency graph/SBOM instead of searching files
-  - Won't need to fetch repo tree
-  - Won't need to get file contents
-  - ISSUE: checking for prototype
-  - ISSUE: doesn't define whether dependency is indirect or not
+## Manual ports (STRETCH)
 
-### If that's not a goer
-
-- Handle multiple packagefiles
-- Handle other language package managers
+- [ ] Run get dependents for known manual ports and include them somehow on larger script
+- [ ] Handle other language package managers
   - here's what GitHub supports: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/dependency-graph-supported-package-ecosystems#supported-package-ecosystems
-
-## Manual ports
-
-- Run get dependents for known manual ports and include them somehow on larger script
 
 ## Testing
 
-- More and better
+- [ ] More and better
 
 ## Linting
 
-- Neostandard
-  - for import assertions, get rid of the problem by making the current JSON files into js files
+- [*] Neostandard
 
 ## Presentation
 
-- Rejig refactoring into clear commits
-- Update README
+- [ ] Rejig refactoring into clear commits
+  - Add octokit class
+  - Add octokit tests
+  - Add repodata class
+  - Add repodata tests
+  - convert data lists to JS
+  - Add linting
+  - Use repodata in build script
+  - Add build script tests
+- [ ] Update README
+- [ ] Summarise key data and have tests to detect wide variance
+  - Number of prototypes
+  - Number of government services
+  - Number updated in last year
+  - Number of errored checks
+  - Number of direct dependencies
+  - Number of indirect dependencies
+
+# Notes
+- Investigated using dependency graph, but there's no easy way to get dependents and trees
+- Investigated using search API, but rate limit for code search is 10 per minute (and normal search is 30 per minute)

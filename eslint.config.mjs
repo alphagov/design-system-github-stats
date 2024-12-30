@@ -1,12 +1,10 @@
-import globals from 'globals'
-import pluginJs from '@eslint/js'
+import neostandard from 'neostandard'
 import babelParser from '@babel/eslint-parser'
 
-/** @type {import('eslint').Linter.Config[]} */
 export default [
+  ...neostandard(),
   {
     languageOptions: {
-      globals: globals.node,
       parser: babelParser,
       parserOptions: {
         requireConfigFile: false,
@@ -16,5 +14,4 @@ export default [
       },
     },
   },
-  pluginJs.configs.recommended,
 ]

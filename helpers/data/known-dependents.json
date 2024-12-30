@@ -1,0 +1,13 @@
+[
+  {
+    "package": "govuk_publishing_components",
+    "lang": "ruby",
+    "manager": "gem"
+  },
+  {
+    "package": "govuk-frontend-jinja",
+    "lang": "python",
+    "manager": "pip",
+    "manual": true
+  }
+]

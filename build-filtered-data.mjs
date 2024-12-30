@@ -2,23 +2,23 @@ import { appendFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 import { RequestError } from 'octokit'
 
-import denyList from './helpers/data/deny-list.json' assert { type: 'json' }
-import governmentServiceOwners from './helpers/data/service-owners.json' assert { type: 'json' }
+import denyList from './helpers/data/deny-list.json' with { type: 'json' }
+import governmentServiceOwners from './helpers/data/service-owners.json' with { type: 'json' }
 import { getRemainingRateLimit } from './helpers/octokit.mjs'
 import { RepoData } from './helpers/repo-data.mjs'
 
-import rawDeps from './data/raw-deps.json' assert { type: 'json' }
+import rawDeps from './data/raw-deps.json' with { type: 'json' }
 
 // Set up date for file naming
 const currentDate = new Date()
 const yyyymmdd = currentDate.toISOString().split('T')[0]
 const timestamp = currentDate.getTime()
 
-async function filterDeps() {
+async function filterDeps () {
   const builtData = []
   const batchSize = 500
   let batchCounter = 0
-  console.log(`Beginning dependency analysis...`)
+  console.log('Beginning dependency analysis...')
 
   for (const repo of rawDeps.all_public_dependent_repos) {
     try {
@@ -56,35 +56,35 @@ async function filterDeps() {
   if (builtData.length > 0) {
     await writeBatchToFiles(builtData)
   }
-  console.log(`We're done!`)
+  console.log("We're done!")
 }
 
-export async function analyseRepo(repo) {
+export async function analyseRepo (repo) {
   const repoOwner = repo.owner
   const repoName = repo.repo_name
   const repoData = new RepoData(repoOwner, repoName, governmentServiceOwners)
 
   try {
     if (repoData.checkDenyList(denyList)) {
-      repoData.log(`on Deny List. Will not be processed.`)
+      repoData.log('on Deny List. Will not be processed.')
       return null
     }
-    repoData.log(`analyzing...`)
+    repoData.log('analyzing...')
 
     await repoData.fetchAndValidateMetaData()
     await repoData.fetchAndValidateRepoTree()
-    repoData.log(`tree fetched and validated.`)
+    repoData.log('tree fetched and validated.')
 
     if (repoData.builtByGovernment) {
-      repoData.log(`looks like a GOV.UK service.`)
+      repoData.log('looks like a GOV.UK service.')
     } else {
-      repoData.log(`looks like it ISN'T a GOV.UK service. This has been noted.`)
+      repoData.log("looks like it ISN'T a GOV.UK service. This has been noted.")
     }
 
     const packageFiles = await repoData.getAllFilesContent('package.json')
     let packageObjects = []
     if (packageFiles.length === 0) {
-      repoData.log(`no package files found.`)
+      repoData.log('no package files found.')
       repoData.versionDoubt = true
     } else {
       packageObjects = packageFiles.map((file) => {
@@ -103,11 +103,11 @@ export async function analyseRepo(repo) {
     // @TODO: several repos are failing silently somewhere after this log
 
     if (repoData.checkPrototype(packageObjects)) {
-      repoData.log(`looks like an instance of the prototype kit.`)
+      repoData.log('looks like an instance of the prototype kit.')
       repoData.isPrototype = true
     }
     if (!repoData.checkDirectDependency(packageObjects)) {
-      repoData.log(`govuk-frontend is not a direct dependency.`)
+      repoData.log('govuk-frontend is not a direct dependency.')
     } else {
       for (const versionData of repoData.frontendVersions) {
         repoData.log(
@@ -118,12 +118,13 @@ export async function analyseRepo(repo) {
           !!versionData.frontendVersion.startsWith('~') ||
           repoData.indirectDependency
         ) {
-          repoData.log(`searching for version in lockfile`)
+          repoData.log('searching for version in lockfile')
           repoData.versionDoubt = true
-          // @TODO: Get lockfile type here and log it. Pass to next function
-          repoData.frontendVersion = await repoData.getVersionFromLockfile()
+          const lockfileType = repoData.getLockfileType()
+          repoData.log(`using ${lockfileType}`)
+          repoData.lockfileFrontendVersion = await repoData.getVersionFromLockfile(lockfileType)
           repoData.log(
-            `using GOV.UK Frontend version ${repoData.frontendVersion}`
+            `using GOV.UK Frontend version ${repoData.lockfileFrontendVersion}`
           )
         }
       }
@@ -140,7 +141,7 @@ export async function analyseRepo(repo) {
   return repoData.getResult()
 }
 
-async function writeBatchToFiles(builtData) {
+async function writeBatchToFiles (builtData) {
   // Write JSON file
   await appendFileSync(
     `data/${yyyymmdd}-${timestamp}-filtered-data.json`,
@@ -149,7 +150,7 @@ async function writeBatchToFiles(builtData) {
   // Write CSV file
   const csv = json2csv(builtData)
   await appendFileSync(`data/${yyyymmdd}-${timestamp}-filtered-data.csv`, csv)
-  console.log(`Data file updated with batch of entries`)
+  console.log('Data file updated with batch of entries')
 }
 
 filterDeps()

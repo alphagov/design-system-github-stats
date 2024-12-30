@@ -140,28 +140,64 @@ describe('RepoData', () => {
     it('should assume prototype if usage_data.js present', async () => {
       const repoData = new RepoData(repoOwner, repoName, serviceOwners)
       repoData.repoTree = { data: { tree: [{ path: 'lib/usage_data.js' }] } }
-      const packageObject = { dependencies: { 'other-dependency': '1.0.0' } }
+      const packageObjects = [
+        {
+          content: { dependencies: { 'other-dependency': '1.0.0' } },
+        },
+      ]
 
-      const isPrototype = await repoData.checkPrototype(packageObject)
+      const isPrototype = repoData.checkPrototype(packageObjects)
       expect(isPrototype).toBe(true)
     })
 
     it('should assume prototype if dependency present', async () => {
       const repoData = new RepoData(repoOwner, repoName, serviceOwners)
       repoData.repoTree = { data: { tree: [{ path: 'other-file.js' }] } }
-      const packageObject = { dependencies: { 'govuk-prototype-kit': '1.0.0' } }
+      const packageObjects = [
+        {
+          content: { dependencies: { 'govuk-prototype-kit': '1.0.0' } },
+        },
+      ]
 
-      const isPrototype = await repoData.checkPrototype(packageObject)
+      const isPrototype = repoData.checkPrototype(packageObjects)
       expect(isPrototype).toBe(true)
     })
 
     it('should not assume prototype kit if conditions not met', async () => {
       const repoData = new RepoData(repoOwner, repoName, serviceOwners)
       repoData.repoTree = { data: { tree: [{ path: 'other-file.js' }] } }
-      const packageObject = { dependencies: { 'other-dependency': '1.0.0' } }
+      const packageObjects = [
+        {
+          content: { dependencies: { 'other-dependency': '1.0.0' } },
+        },
+      ]
 
-      const isPrototype = await repoData.checkPrototype(packageObject)
+      const isPrototype = repoData.checkPrototype(packageObjects)
       expect(isPrototype).toBe(false)
+    })
+  })
+
+  describe('getAllFilesContent', () => {
+    it('should get the content of all files with a given name', async () => {
+      const repoData = new RepoData(repoOwner, repoName, serviceOwners)
+      repoData.repoTree = {
+        data: {
+          tree: [
+            { path: 'package.json' },
+            { path: 'src/package.json' },
+            { path: 'lib/package.json' },
+            { path: 'test/package.json' },
+          ],
+        },
+      }
+      getFileContent.mockResolvedValue({ data: '{ test: "file content" }' })
+      const fileContents = await repoData.getAllFilesContent('package.json')
+      expect(fileContents).toEqual([
+        { content: '{ test: "file content" }', path: 'package.json' },
+        { content: '{ test: "file content" }', path: 'src/package.json' },
+        { content: '{ test: "file content" }', path: 'lib/package.json' },
+        { content: '{ test: "file content" }', path: 'test/package.json' },
+      ])
     })
   })
 

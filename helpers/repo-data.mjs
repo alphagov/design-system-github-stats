@@ -42,6 +42,7 @@ export class RepoData {
     this.parentDependency = null
     this.errorThrown = null
     this.repoTree = null
+    this.frontendVersions = []
   }
 
   /**
@@ -105,7 +106,6 @@ export class RepoData {
   async getLatestCommitSha() {
     const latestCommit = await getLatestCommit(this.repoOwner, this.repoName)
     if (latestCommit === undefined) {
-      console.log('what')
       throw new NoCommitsError()
     }
     return latestCommit.sha
@@ -114,17 +114,42 @@ export class RepoData {
   /**
    * Checks if repo is a prototype
    *
-   * @param {object} packageObject - package.json converted to an object
+   * @param {array} packageObjects - an array of packageObjects
    * @returns {boolean} - Whether the repo is a prototype
    */
-  async checkPrototype(packageObject) {
-    return (
-      this.repoTree.data.tree.some(
-        (file) => file.path == 'lib/usage_data.js'
-      ) ||
-      (packageObject.dependencies &&
-        'govuk-prototype-kit' in packageObject.dependencies)
-    )
+  checkPrototype(packageObjects) {
+    if (
+      this.repoTree.data.tree.some((file) => file.path == 'lib/usage_data.js')
+    ) {
+      return true
+    } else if (packageObjects.length === 0) {
+      return false
+    } else {
+      for (const packageObject of packageObjects) {
+        if (
+          packageObject.content.dependencies &&
+          'govuk-prototype-kit' in packageObject.content.dependencies
+        ) {
+          return true
+        }
+      }
+    }
+    return false
+  }
+
+  checkDirectDependency(packageObjects) {
+    for (const packageObject of packageObjects) {
+      if ('govuk-frontend' in packageObject.content.dependencies) {
+        this.frontendVersions.push({
+          packagePath: packageObject.path,
+          frontendVersion: packageObject.content.dependencies['govuk-frontend'],
+        })
+      }
+    }
+    if (this.frontendVersions.length === 0) {
+      this.indirectDependency = true
+    }
+    return this.frontendVersions.length > 0
   }
 
   /**
@@ -136,6 +161,20 @@ export class RepoData {
    */
   async getRepoFileContent(filePath) {
     return await getFileContent(this.repoOwner, this.repoName, filePath)
+  }
+
+  async getAllFilesContent(fileName) {
+    const files = this.repoTree.data.tree.filter(
+      (file) =>
+        file.path.endsWith(fileName) && !file.path.includes('node_modules')
+    )
+    const fileContents = await Promise.all(
+      files.map(async (file) => {
+        const content = await this.getRepoFileContent(file.path)
+        return { path: file.path, content: content.data }
+      })
+    )
+    return fileContents
   }
 
   /**
@@ -252,6 +291,7 @@ export class RepoData {
       repoName: this.repoName,
       couldntAccess: this.couldntAccess,
       frontendVersion: this.frontendVersion,
+      directDependencyVersions: this.frontendVersions,
       versionDoubt: this.versionDoubt,
       builtByGovernment: this.builtByGovernment,
       indirectDependency: this.indirectDependency,

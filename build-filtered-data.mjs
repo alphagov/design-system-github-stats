@@ -59,7 +59,7 @@ async function filterDeps() {
   console.log(`We're done!`)
 }
 
-async function analyseRepo(repo) {
+export async function analyseRepo(repo) {
   const repoOwner = repo.owner
   const repoName = repo.repo_name
   const repoData = new RepoData(repoOwner, repoName, governmentServiceOwners)
@@ -81,37 +81,52 @@ async function analyseRepo(repo) {
       repoData.log(`looks like it ISN'T a GOV.UK service. This has been noted.`)
     }
 
-    const packageFile = await repoData.getRepoFileContent('package.json')
-    const packageObject = JSON.parse(packageFile.data)
+    const packageFiles = await repoData.getAllFilesContent('package.json')
+    let packageObjects = []
+    if (packageFiles.length === 0) {
+      repoData.log(`no package files found.`)
+      repoData.versionDoubt = true
+    } else {
+      packageObjects = packageFiles.map((file) => {
+        return {
+          content: JSON.parse(file.content),
+          path: file.path,
+        }
+      })
+      repoData.log(
+        `${packageObjects.length} package file${
+          packageObjects.length > 1 ? 's' : ''
+        } found.`
+      )
+    }
 
-    if (await repoData.checkPrototype(packageObject)) {
+    // @TODO: several repos are failing silently somewhere after this log
+
+    if (repoData.checkPrototype(packageObjects)) {
       repoData.log(`looks like an instance of the prototype kit.`)
       repoData.isPrototype = true
     }
-
-    // Handle indirect dependencies
-    if (
-      !('dependencies' in packageObject) ||
-      !('govuk-frontend' in packageObject.dependencies)
-    ) {
-      repoData.indirectDependency = true
+    if (!repoData.checkDirectDependency(packageObjects)) {
       repoData.log(`govuk-frontend is not a direct dependency.`)
-    }
-
-    if (!repoData.indirectDependency) {
-      repoData.frontendVersion = packageObject.dependencies['govuk-frontend']
-      repoData.log(`using GOV.UK Frontend version ${repoData.frontendVersion}`)
-    }
-
-    if (
-      !!repoData.frontendVersion?.startsWith('^') ||
-      !!repoData.frontendVersion?.startsWith('~') ||
-      repoData.indirectDependency
-    ) {
-      repoData.log(`searching for version in lockfile`)
-      repoData.versionDoubt = true
-      // @TODO: Get lockfile type here and log it. Pass to next function
-      repoData.frontendVersion = await repoData.getVersionFromLockfile()
+    } else {
+      for (const versionData of repoData.frontendVersions) {
+        repoData.log(
+          `${versionData.packagePath} specifies GOV.UK Frontend version ${versionData.frontendVersion}`
+        )
+        if (
+          !!versionData.frontendVersion.startsWith('^') ||
+          !!versionData.frontendVersion.startsWith('~') ||
+          repoData.indirectDependency
+        ) {
+          repoData.log(`searching for version in lockfile`)
+          repoData.versionDoubt = true
+          // @TODO: Get lockfile type here and log it. Pass to next function
+          repoData.frontendVersion = await repoData.getVersionFromLockfile()
+          repoData.log(
+            `using GOV.UK Frontend version ${repoData.frontendVersion}`
+          )
+        }
+      }
     }
   } catch (error) {
     repoData.errorThrown = error.toString()

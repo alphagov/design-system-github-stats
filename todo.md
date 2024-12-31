@@ -11,7 +11,8 @@
 
 ## Testing
 
-- [ ] More and better
+- [ ] Test the build script way better somehow
+- [ ] Rationalise repodata tests
 
 ## Linting
 

@@ -1,7 +1,6 @@
 import {
+  getRepoInfo,
   getFileContent,
-  getLatestCommit,
-  getRepoMetaData,
   getRepoTree,
 } from './octokit.mjs'
 import * as yarnLock from '@yarnpkg/lockfile'
@@ -43,6 +42,8 @@ export class RepoData {
     this.errorThrown = null
     this.repoTree = null
     this.frontendVersions = []
+    this.latestCommitSHA = null
+    this.graphQLRateLimit = null
   }
 
   /**
@@ -58,24 +59,28 @@ export class RepoData {
   }
 
   /**
-   * Fetches and validates repo metadata
+   * Fetches metadata and repo tree using GraphQL
    *
    * @throws {NoMetaDataError} - If metadata could not be fetched
+   * @throws {NoRepoTreeError} - If the tree could not be fetched
    * @throws {RequestError} - If the request fails
-   *
    */
-  async fetchAndValidateMetaData () {
-    const repoMetaData = await getRepoMetaData(this.repoOwner, this.repoName)
-    if (repoMetaData) {
-      this.lastUpdated = repoMetaData.data.pushed_at
-      this.repoCreated = repoMetaData.data.created_at
-    }
+  async fetchAndValidateRepoInfo () {
+    const response = await getRepoInfo(this.repoOwner, this.repoName)
+
+    this.repoCreated = response.repository?.createdAt
+    this.lastUpdated = response.repository?.pushedAt
+    this.latestCommitSHA = response.repository?.defaultBranchRef?.target?.oid
+    this.graphQLRateLimit = response.rateLimit
 
     // Some repos won't have a pushed_at
     if (!this.repoCreated) {
       throw new NoMetaDataError()
     }
-    this.log('metadata fetched and validated.')
+
+    if (!this.latestCommitSHA) {
+      throw new NoCommitsError()
+    }
   }
 
   /**
@@ -85,30 +90,14 @@ export class RepoData {
    * @throws {RequestError} - If the request fails
    */
   async fetchAndValidateRepoTree () {
-    const latestCommitSha = await this.getLatestCommitSha()
     this.repoTree = await getRepoTree(
       this.repoOwner,
       this.repoName,
-      latestCommitSha
+      this.latestCommitSHA
     )
     if (!this.repoTree || !this.repoTree.data || !this.repoTree.data.tree) {
       throw new NoRepoTreeError()
     }
-  }
-
-  /**
-   * Gets the SHA of the latest commit
-   *
-   * @returns {string} - The SHA of the latest commit
-   * @throws {NoCommitsError} - If the repo has no commits
-   * @throws {RequestError} - If the request fails
-   */
-  async getLatestCommitSha () {
-    const latestCommit = await getLatestCommit(this.repoOwner, this.repoName)
-    if (latestCommit === undefined) {
-      throw new NoCommitsError()
-    }
-    return latestCommit.sha
   }
 
   /**

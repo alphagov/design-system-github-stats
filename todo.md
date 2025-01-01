@@ -1,7 +1,11 @@
 # TODOs
 
+## Optimisation and behaviour
+
 - [*] Handle multiple packagefiles
 - [ ] Handle nested (multiple?) lock files
+- [ ] Fetch metadata, repotree and latest commit SHA in one API call (3*4600 API calls is a big saving!)
+  - Make sure to check cost of GraphQL query - the rate limit is 10,000 - but mixing that and REST might give us more?
 
 ## Manual ports (STRETCH)
 

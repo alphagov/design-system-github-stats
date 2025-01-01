@@ -2,16 +2,14 @@ import { describe, it, expect, vi } from 'vitest'
 import { RepoData, NoMetaDataError, NoRepoTreeError, NoCommitsError, UnsupportedLockFileError } from './repo-data.mjs'
 import {
   getFileContent,
-  getLatestCommit,
-  getRepoMetaData,
   getRepoTree,
+  getRepoInfo
 } from './octokit.mjs'
 
 // Mock the octokit functions
 vi.mock('./octokit.mjs', () => ({
   getFileContent: vi.fn(),
-  getLatestCommit: vi.fn(),
-  getRepoMetaData: vi.fn(),
+  getRepoInfo: vi.fn(),
   getRepoTree: vi.fn(),
 }))
 
@@ -57,40 +55,62 @@ describe('RepoData', () => {
     )
   })
 
-  describe('fetchAndValidateMetaData', () => {
+  describe('fetchAndValidateRepoInfo', () => {
     it('should throw a NoMetaDataError if metadata is missing', async () => {
       const repoData = new RepoData(repoOwner, repoName, serviceOwners)
-      getRepoMetaData.mockResolvedValue({
+      getRepoInfo.mockResolvedValue({
         data: {
-          pushed_at: null,
-          created_at: null,
-        },
+          repository: {
+            createdAt: '2022-01-01T00:00:00Z',
+            pushedAt: '2023-01-01T00:00:00Z'
+          }
+        }
       })
 
-      await expect(repoData.fetchAndValidateMetaData()).rejects.toThrow(
+      await expect(repoData.fetchAndValidateRepoInfo()).rejects.toThrow(
         NoMetaDataError
       )
     })
 
-    it('should fetch and validate metadata', async () => {
+    it('should throw a NoCommitsError if no latest commit', async () => {
       const repoData = new RepoData(repoOwner, repoName, serviceOwners)
-      getRepoMetaData.mockResolvedValue({
-        data: {
-          pushed_at: '2023-01-01T00:00:00Z',
-          created_at: '2022-01-01T00:00:00Z',
-        },
+      getRepoInfo.mockResolvedValue({
+        repository: {
+          createdAt: '2022-01-01T00:00:00Z',
+          pushedAt: '2023-01-01T00:00:00Z'
+        }
       })
 
-      await repoData.fetchAndValidateMetaData()
+      await expect(repoData.fetchAndValidateRepoInfo()).rejects.toThrow(
+        NoCommitsError
+      )
+    })
+
+    it('should fetch and validate repo info', async () => {
+      const repoData = new RepoData(repoOwner, repoName, serviceOwners)
+      getRepoInfo.mockResolvedValue({
+        repository: {
+          createdAt: '2022-01-01T00:00:00Z',
+          pushedAt: '2023-01-01T00:00:00Z',
+          defaultBranchRef: {
+            target: {
+              oid: 'test-sha'
+            }
+          }
+        }
+      })
+
+      await repoData.fetchAndValidateRepoInfo()
       expect(repoData.lastUpdated).toBe('2023-01-01T00:00:00Z')
       expect(repoData.repoCreated).toBe('2022-01-01T00:00:00Z')
+      expect(repoData.latestCommitSHA).toBe('test-sha')
     })
   })
 
   describe('fetchAndValidateRepoTree', () => {
     it('should throw a NoRepoTreeError if repo tree is missing', async () => {
       const repoData = new RepoData(repoOwner, repoName, serviceOwners)
-      vi.spyOn(repoData, 'getLatestCommitSha').mockResolvedValue('test-sha')
+      repoData.latestCommitSHA = 'test-sha'
       getRepoTree.mockResolvedValue({
         data: {
           tree: null,
@@ -104,30 +124,10 @@ describe('RepoData', () => {
 
     it('should fetch and validate repo tree', async () => {
       const repoData = new RepoData(repoOwner, repoName, serviceOwners)
-      getLatestCommit.mockResolvedValue({ sha: 'test-sha' })
       getRepoTree.mockResolvedValue({ data: { tree: [] } })
 
       await repoData.fetchAndValidateRepoTree()
       expect(repoData.repoTree).toEqual({ data: { tree: [] } })
-    })
-  })
-
-  describe('getLatestCommitSha', () => {
-    it('should throw a NoCommitsError if the repo has no commits', async () => {
-      const repoData = new RepoData(repoOwner, repoName, serviceOwners)
-      getLatestCommit.mockResolvedValue(undefined)
-
-      await expect(repoData.getLatestCommitSha()).rejects.toThrow(
-        NoCommitsError
-      )
-    })
-
-    it('should get the SHA of the latest commit', async () => {
-      const repoData = new RepoData(repoOwner, repoName, serviceOwners)
-      getLatestCommit.mockResolvedValue({ sha: 'test-sha' })
-
-      const sha = await repoData.getLatestCommitSha()
-      expect(sha).toBe('test-sha')
     })
   })
 

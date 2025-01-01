@@ -1,5 +1,6 @@
 import { Octokit } from 'octokit'
 import { throttling } from '@octokit/plugin-throttling'
+import { graphql } from '@octokit/graphql'
 
 const MyOctokit = Octokit.plugin(throttling)
 const octokit = new MyOctokit({
@@ -31,35 +32,40 @@ const octokit = new MyOctokit({
   },
 })
 
-/**
- * Gets repo metadata
- *
- * @param {string} repoOwner - The owner of the repo
- * @param {string} repoName - The name of the repo
- * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposGetResponse>>}
- * @throws {RequestError} - If the request fails
- */
-export async function getRepoMetaData (repoOwner, repoName) {
-  return await octokit.rest.repos.get({
-    owner: repoOwner,
-    repo: repoName,
-  })
-}
+const graphQLAuth = graphql.defaults({
+  headers: {
+    authorization: `token ${process.env.GITHUB_AUTH_TOKEN}`,
+  }
+})
 
-/**
- * Gets the latest commit for a repo
- * @param {string} repoOwner - The owner of the repo
- * @param {string} repoName - The name of the repo
- * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposListCommitsResponse>>}
- * @throws {RequestError} - If the request fails
- */
-export async function getLatestCommit (repoOwner, repoName) {
-  const commits = await octokit.rest.repos.listCommits({
-    owner: repoOwner,
-    repo: repoName,
-    per_page: 1,
-  })
-  return commits.data[0]
+export async function getRepoInfo (owner, name) {
+  const query = `
+    query($owner: String!, $name: String!) {
+      repository(owner: $owner, name: $name) {
+        createdAt
+        pushedAt
+        defaultBranchRef {
+          target {
+            ... on Commit {
+              oid
+            }
+          }
+        }
+      }
+      rateLimit {
+        cost
+        remaining
+        resetAt
+      }
+    }
+  `
+
+  const variables = {
+    owner,
+    name,
+  }
+
+  return await graphQLAuth(query, variables)
 }
 
 /**

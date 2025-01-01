@@ -71,7 +71,8 @@ export async function analyseRepo (repo) {
     }
     repoData.log('analyzing...')
 
-    await repoData.fetchAndValidateMetaData()
+    await repoData.fetchAndValidateRepoInfo()
+    repoData.log('repo metadata and latest commit details fetched and validated.')
     await repoData.fetchAndValidateRepoTree()
     repoData.log('tree fetched and validated.')
 

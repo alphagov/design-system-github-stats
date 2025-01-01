@@ -6,7 +6,8 @@
 - [ ] Handle nested (multiple?) lock files
 - [x] Fetch metadata, repotree and latest commit SHA in one API call (3*4600 API calls is a big saving!)
 - [ ] Caching
-  - we already have a huge amount of local info. I'm thinking simple caching could be storing a file which contains an object of repo name keys to latest commit/last updated values. When we initially get this info (for free!) via the initial graphql query, we can simply check if these values match. if they do, we don't do any processing, This could result in some memory issues, but the main complication would come from having to include the unprocessed repo in the end data file with all its old information, ie: how to retrieve that quickly and efficiently, because the files are big (the CSV file probably isn't THAT big, to be honest)
+  - we already have a huge amount of local info. I'm thinking simple caching could be storing a file which contains an object of repo name keys to latest commit/last updated values. When we initially get this info (for free!) via the initial graphql query, we can simply check if these values match. if they do, we don't do any processing, This could result in some memory issues, but the main complication would come from having to include the unprocessed repo in the end data file with all its old information, ie: how to retrieve that quickly and efficiently, because the files are big (the CSV file probably isn't THAT big, to be honest).
+  - potentially could investigate storing the data in an SQLite DB instead of JSON files, then should be able to make really quick queries.
 
 ## Manual ports (STRETCH)
 

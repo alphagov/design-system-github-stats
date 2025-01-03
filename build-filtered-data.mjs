@@ -96,6 +96,10 @@ export async function analyseRepo (repo) {
     await repoData.fetchAndValidateRepoInfo()
     repoData.log('repo metadata and latest commit details fetched and validated.')
     repoData.log(`GraphQL rate limit remaining: ${repoData.graphQLRateLimit.remaining}`)
+    if (db.isRepoUpToDate(repoOwner, repoName, repoData.lastUpdated)) {
+      repoData.log('repo has had no updates since we last checked. Skipping.')
+      return db.getRepoData(repoOwner, repoName)
+    }
     await repoData.fetchAndValidateRepoTree()
     repoData.log('tree fetched and validated.')
 

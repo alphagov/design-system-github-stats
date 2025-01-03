@@ -25,6 +25,25 @@ export class RepoDB {
     `)
     setup.run()
 
+    const keyDataSetup = this.db.prepare(`
+      CREATE TABLE IF NOT EXISTS keyData (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        date TEXT,
+        Total INTEGER,
+        NumberBuiltByGovernment INTEGER,
+        VersionUnknown INTEGER,
+        version0 INTEGER,
+        version1 INTEGER,
+        version2 INTEGER,
+        version3 INTEGER,
+        version4 INTEGER,
+        version5 INTEGER,
+        prototypes INTEGER,
+        activeRepos INTEGER,
+        errors INTEGER
+      )`)
+    keyDataSetup.run()
+
     // Create an index on repoOwner and repoName for faster lookups
     const indexSetup = this.db.prepare(`
       CREATE INDEX IF NOT EXISTS idx_repo_owner_name ON repos (repoOwner, repoName)
@@ -98,7 +117,43 @@ export class RepoDB {
     }
   }
 
-  getKeyData () {
+  insertKeyData (stats) {
+    const insertKeyData = this.db.prepare(`
+      INSERT OR REPLACE INTO keyData (
+        date,
+        Total,
+        NumberBuiltByGovernment,
+        VersionUnknown,
+        version0,
+        version1,
+        version2,
+        version3,
+        version4,
+        version5,
+        prototypes,
+        activeRepos,
+        errors
+      ) VALUES (
+        @date,  
+        @Total,
+        @NumberBuiltByGovernment,
+        @VersionUnknown,
+        @version0,
+        @version1,
+        @version2,
+        @version3,
+        @version4,
+        @version5,
+        @prototypes,
+        @activeRepos,
+        @errors
+      )
+    `)
+
+    insertKeyData.run(stats)
+  }
+
+  getKeyDataFromResults () {
     const query = this.db.prepare(`
       SELECT
       (SELECT COUNT(*) FROM repos) AS Total,

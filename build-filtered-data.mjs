@@ -72,7 +72,9 @@ async function filterDeps () {
   )
 
   console.log('Getting key data')
-  const keyData = await db.getKeyData()
+  const keyData = await db.getKeyDataFromResults()
+  keyData.date = new Date().toISOString()
+  db.insertKeyData(keyData)
   await appendFileSync(
     `data/${yyyymmdd}-${timestamp}-key-data.json`,
     JSON.stringify(keyData, null, 2)

@@ -3,7 +3,7 @@ import Database from 'better-sqlite3'
 export class RepoDB {
   constructor () {
     this.db = new Database('./data/database.db')
-    this.db.run(`
+    const setup = this.db.prepare(`
       CREATE TABLE IF NOT EXISTS repos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         repoOwner TEXT,
@@ -22,6 +22,7 @@ export class RepoDB {
         UNIQUE(repoOwner, repoName)
       )
     `)
+    setup.run()
   }
 
   insertRepoData (repo) {

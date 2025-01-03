@@ -7,7 +7,7 @@ import * as yarnLock from '@yarnpkg/lockfile'
 import checkDenyList from './helpers/check-deny-list.mjs'
 import checkServiceOwner from './helpers/check-service-owner.mjs'
 
-import rawDeps from './data/raw-deps.json' assert { type: 'json' }
+import rawDeps from './data/raw-deps.json' with { type: 'json' }
 
 const currentDate = new Date()
 const yyyymmdd = currentDate.toISOString().split('T')[0]
@@ -33,8 +33,8 @@ const octokit = new MyOctokit({
       octokit.log.warn(
         `SecondaryRateLimit detected for request ${options.method} ${options.url}`
       )
-    },
-  },
+    }
+  }
 })
 
 class NoPackageJsonError extends Error {}
@@ -43,7 +43,7 @@ class IndirectDependencyError extends Error {}
 
 filterDeps()
 
-async function filterDeps() {
+async function filterDeps () {
   const builtData = []
 
   console.log('Analysis BEGIN')
@@ -84,13 +84,13 @@ async function filterDeps() {
 
       const repoMetaData = await octokit.rest.repos.get({
         owner: repoOwner,
-        repo: repoName,
+        repo: repoName
       })
 
       const firstCommit = await octokit.rest.repos.listCommits({
         owner: repoOwner,
         repo: repoName,
-        per_page: 1,
+        per_page: 1
       })
 
       lastUpdated = repoMetaData.data.pushed_at
@@ -100,16 +100,16 @@ async function filterDeps() {
         owner: repoOwner,
         repo: repoName,
         tree_sha: firstCommit.data[0].sha,
-        recursive: true,
+        recursive: true
       })
 
-      if (!repoTree.data.tree.find((file) => file.path == 'package.json')) {
+      if (!repoTree.data.tree.find((file) => file.path === 'package.json')) {
         throw new NoPackageJsonError()
       }
 
-      if (repoTree.data.tree.find((file) => file.path == 'package-lock.json')) {
+      if (repoTree.data.tree.find((file) => file.path === 'package-lock.json')) {
         lockfileType = 'package-lock.json'
-      } else if (repoTree.data.tree.find((file) => file.path == 'yarn.lock')) {
+      } else if (repoTree.data.tree.find((file) => file.path === 'yarn.lock')) {
         lockfileType = 'yarn.lock'
       }
 
@@ -119,8 +119,8 @@ async function filterDeps() {
         repo: repoName,
         path: 'package.json',
         headers: {
-          accept: 'application/vnd.github.raw+json',
-        },
+          accept: 'application/vnd.github.raw+json'
+        }
       })
 
       const packageObject = JSON.parse(packageFile.data)
@@ -130,7 +130,7 @@ async function filterDeps() {
       }
 
       isPrototype =
-        repoTree.data.tree.find((file) => file.path == 'lib/usage_data.js') !=
+        repoTree.data.tree.find((file) => file.path === 'lib/usage_data.js') !==
           undefined || 'govuk-prototype-kit' in packageObject.dependencies
 
       if (isPrototype) {
@@ -149,21 +149,21 @@ async function filterDeps() {
       )
 
       if (
-        frontendVersion.indexOf('^') != -1 ||
-        frontendVersion.indexOf('~') != -1
+        frontendVersion.indexOf('^') !== -1 ||
+        frontendVersion.indexOf('~') !== -1
       ) {
         console.log(
           `${repo.name} is using approximation syntax in their GOV.UK Frontend version declaration, meaning their actual version might be different to what's in their package.json. Checking their lockfile...`
         )
 
-        if (lockfileType == 'package-lock.json') {
+        if (lockfileType === 'package-lock.json') {
           const packageLockFile = await octokit.rest.repos.getContent({
             owner: repoOwner,
             repo: repoName,
             path: 'package-lock.json',
             headers: {
-              accept: 'application/vnd.github.raw+json',
-            },
+              accept: 'application/vnd.github.raw+json'
+            }
           })
 
           try {
@@ -180,14 +180,14 @@ async function filterDeps() {
           } catch (e) {
             console.log('There was a problem with processing this lockfile:', e)
           }
-        } else if (lockfileType == 'yarn.lock') {
+        } else if (lockfileType === 'yarn.lock') {
           const yarnLockFile = await octokit.rest.repos.getContent({
             owner: repoOwner,
             repo: repoName,
             path: 'yarn.lock',
             headers: {
-              accept: 'application/vnd.github.raw+json',
-            },
+              accept: 'application/vnd.github.raw+json'
+            }
           })
 
           try {
@@ -201,11 +201,11 @@ async function filterDeps() {
         }
 
         if (
-          frontendVersion.indexOf('^') != -1 ||
-          frontendVersion.indexOf('~') != -1
+          frontendVersion.indexOf('^') !== -1 ||
+          frontendVersion.indexOf('~') !== -1
         ) {
           console.log(
-            `Something went wrong in lockfile processing so we'll have to assume GOV.UK Frontend version for now.`
+            'Something went wrong in lockfile processing so we\'ll have to assume GOV.UK Frontend version for now.'
           )
           frontendVersion = frontendVersion.replace('^', '').replace('~', '')
           versionDoubt = true
@@ -247,7 +247,7 @@ async function filterDeps() {
       indirectDependency,
       isPrototype,
       lastUpdated,
-      repoCreated,
+      repoCreated
     })
 
     console.log(`Analysis of ${repo.name} complete`)
@@ -275,5 +275,5 @@ async function filterDeps() {
     console.log(`${rateLimit.data.rate.remaining} remaining on rate limit`)
   }
 
-  console.log(`We're done!`)
+  console.log('We\'re done!')
 }

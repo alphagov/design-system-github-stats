@@ -1,3 +1,3 @@
-import denyList from './data/deny-list.json' assert {type: 'json'}
+import denyList from './data/deny-list.json' with {type: 'json'}
 
-export default (name, owner) => denyList.some(item => name == item.name && owner == item.owner)
+export default (name, owner) => denyList.some(item => name === item.name && owner === item.owner)

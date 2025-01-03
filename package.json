@@ -13,7 +13,8 @@
   "scripts": {
     "build-filtered-data": "node build-filtered-data.mjs",
     "lint": "eslint",
-    "typecheck": "tsc --project tsconfig.json"
+    "typecheck": "tsc --project tsconfig.json",
+    "test": "npm run lint && vitest --coverage"
   },
   "homepage": "https://github.com/alphagov/design-system-github-stats#readme",
   "devDependencies": {
@@ -21,11 +22,13 @@
     "@octokit/graphql": "^8.2.0",
     "@octokit/plugin-throttling": "^9.3.0",
     "@octokit/rest": "^21.1.0",
+    "@vitest/coverage-v8": "^2.1.8",
     "@yarnpkg/lockfile": "^1.1.0",
     "eslint": "^9.17.0",
     "eslint-plugin-jsdoc": "^50.6.3",
-    "neostandard": "^0.12.0",
     "json-2-csv": "^5.5.7",
+    "neostandard": "^0.12.0",
+    "vitest": "^2.1.9",
     "yaml": "^2.7.0"
   },
   "dependencies": {

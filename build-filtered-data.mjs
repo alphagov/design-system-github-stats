@@ -6,7 +6,7 @@ import denyList from './helpers/data/deny-list.json' with { type: 'json' }
 import governmentServiceOwners from './helpers/data/service-owners.json' with { type: 'json' }
 import { getRemainingRateLimit } from './helpers/octokit.mjs'
 import { RepoData } from './helpers/repo-data.mjs'
-import { setupDatabase, insertRepoData } from './helpers/database.mjs'
+import { RepoDB } from './helpers/database.mjs'
 
 import rawDeps from './data/raw-deps.json' with { type: 'json' }
 
@@ -16,7 +16,7 @@ const yyyymmdd = currentDate.toISOString().split('T')[0]
 const timestamp = currentDate.getTime()
 
 // Setup database for caching
-setupDatabase()
+const db = new RepoDB()
 
 async function filterDeps () {
   const builtData = []
@@ -30,7 +30,7 @@ async function filterDeps () {
       const repoData = await analyseRepo(repo)
       if (repoData) {
         builtData.push(repoData)
-        insertRepoData(repoData)
+        db.insertRepoData(repoData)
         batchCounter++
       }
       console.log(`${repo.name}: Analysis complete`)

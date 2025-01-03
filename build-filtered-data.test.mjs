@@ -1,6 +1,17 @@
 import { describe, it, expect, vi } from 'vitest'
 import { analyseRepo } from './build-filtered-data.mjs'
 
+// Mock the RepoDB class
+vi.mock('./helpers/database.mjs', async (importOriginal) => {
+  return {
+    RepoDB: vi.fn().mockImplementation(() => ({
+      insertRepoData: vi.fn(),
+      insertKeyInfo: vi.fn(),
+      close: vi.fn()
+    }))
+  }
+})
+
 vi.mock('./helpers/repo-data.mjs', async (importOriginal) => {
   const actual = await importOriginal()
   return {

@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build-filtered-data": "node build-filtered-data.mjs",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "npm run lint && vitest"
   },
   "homepage": "https://github.com/alphagov/design-system-github-stats#readme",
   "devDependencies": {

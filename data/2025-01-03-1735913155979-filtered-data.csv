@@ -1,0 +1,13 @@
+repoOwner,repoName,couldntAccess,lockfileFrontendVersion,directDependencyVersions,versionDoubt,builtByGovernment,indirectDependency,isPrototype,lastUpdated,repoCreated,parentDependency,errorThrown
+alphagov,whitehall,false,null,[],false,true,true,false,2025-01-03T14:03:57Z,2011-09-19T15:10:49Z,null,null
+timpaul,form-extractor-prototype,false,5.3.1,"[{""packagePath"":""package.json"",""frontendVersion"":""^5.3.1""}]",true,false,false,false,2024-08-26T12:02:36Z,2024-04-11T18:29:05Z,null,null
+alphagov,govuk-prototype-kit,false,null,"[{""packagePath"":""package.json"",""frontendVersion"":""5.2.0""}]",false,true,false,true,2024-04-05T11:19:46Z,2014-06-26T13:54:09Z,null,null
+uktrade,stream-unzip,false,null,[],false,true,true,false,2024-11-17T22:30:06Z,2021-05-16T14:21:59Z,null,null
+UKHSA-Internal,coronavirus-dashboard,false,3.14.0,"[{""packagePath"":""package.json"",""frontendVersion"":""^3.14.0""}]",true,true,false,false,2023-11-16T18:01:43Z,2020-03-19T11:48:24Z,null,null
+x-govuk,govuk-components,false,null,"[{""packagePath"":""guide/package.json"",""frontendVersion"":""5.7.1""},{""packagePath"":""spec/dummy/package.json"",""frontendVersion"":""5.0.0-beta.1""}]",false,true,false,false,2025-01-01T21:18:13Z,2020-05-05T14:15:18Z,null,null
+co-cddo,api-catalogue,false,null,"[{""packagePath"":""package.json"",""frontendVersion"":""4.7.0""}]",false,true,false,false,2024-12-30T23:46:49Z,2019-09-05T11:03:45Z,null,null
+uktrade,stream-zip,false,null,[],false,true,true,false,2024-11-21T09:35:16Z,2021-12-29T07:31:26Z,null,null
+i-dot-ai,redbox,false,null,"[{""packagePath"":""django_app/frontend/package.json"",""frontendVersion"":""^5.2.0""}]",true,true,false,false,2025-01-03T12:19:52Z,2024-01-18T16:51:54Z,null,Error
+x-govuk,govuk-form-builder,false,null,"[{""packagePath"":""guide/package.json"",""frontendVersion"":""5.7.1""}]",false,true,false,false,2025-01-01T20:28:15Z,2019-05-27T10:31:14Z,null,null
+alphagov,govuk_publishing_components,false,null,"[{""packagePath"":""package.json"",""frontendVersion"":""5.7.1""}]",false,true,false,false,2025-01-03T12:02:33Z,2017-07-12T14:59:27Z,null,null
+x-govuk,govuk-eleventy-plugin,false,5.7.1,"[{""packagePath"":""package.json"",""frontendVersion"":""^5.6.0""}]",true,true,false,false,2025-01-02T16:03:00Z,2019-08-01T23:06:50Z,null,null

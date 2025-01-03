@@ -6,6 +6,7 @@ import denyList from './helpers/data/deny-list.json' with { type: 'json' }
 import governmentServiceOwners from './helpers/data/service-owners.json' with { type: 'json' }
 import { getRemainingRateLimit } from './helpers/octokit.mjs'
 import { RepoData } from './helpers/repo-data.mjs'
+import { setupDatabase, insertRepoData } from './helpers/database.mjs'
 
 import rawDeps from './data/raw-deps.json' with { type: 'json' }
 
@@ -14,18 +15,22 @@ const currentDate = new Date()
 const yyyymmdd = currentDate.toISOString().split('T')[0]
 const timestamp = currentDate.getTime()
 
+// Setup database for caching
+setupDatabase()
+
 async function filterDeps () {
   const builtData = []
   const batchSize = 500
   let batchCounter = 0
   console.log('Beginning dependency analysis...')
 
-  for (const repo of rawDeps.all_public_dependent_repos) {
+  for (const repo of rawDeps.all_public_dependent_repos.slice(0, 20)) {
     try {
       console.log(`${repo.name}: Getting repo data...`)
       const repoData = await analyseRepo(repo)
       if (repoData) {
         builtData.push(repoData)
+        insertRepoData(repoData)
         batchCounter++
       }
       console.log(`${repo.name}: Analysis complete`)

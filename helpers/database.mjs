@@ -24,6 +24,34 @@ export class RepoDB {
       )
     `)
     setup.run()
+
+    // Create an index on repoOwner and repoName for faster lookups
+    const indexSetup = this.db.prepare(`
+      CREATE INDEX IF NOT EXISTS idx_repo_owner_name ON repos (repoOwner, repoName)
+    `)
+    indexSetup.run()
+  }
+
+  getRepoData (repoOwner, repoName) {
+    const query = this.db.prepare(`
+      SELECT * FROM repos
+      WHERE repoOwner = ? AND repoName = ?
+    `)
+
+    const result = query.get(repoOwner, repoName)
+    if (!result) {
+      return null
+    }
+    return this.denormaliseData(result)
+  }
+
+  isRepoUpToDate (repoOwner, repoName, lastUpdated) {
+    const query = this.db.prepare(`
+      SELECT lastUpdated FROM repos
+      WHERE repoOwner = ? AND repoName = ?
+    `)
+    const result = query.get(repoOwner, repoName)
+    return result && result.lastUpdated === lastUpdated
   }
 
   insertRepoData (repo) {
@@ -110,6 +138,24 @@ export class RepoDB {
       }
     }
     return normalisedData
+  }
+
+  denormaliseData (dataset) {
+    const denormalisedData = {}
+    for (const [key, value] of Object.entries(dataset)) {
+      if (value === 0 || value === 1) {
+        denormalisedData[key] = value === 1
+      } else if (value === '') {
+        denormalisedData[key] = null
+      } else {
+        try {
+          denormalisedData[key] = JSON.parse(value)
+        } catch (error) {
+          denormalisedData[key] = value
+        }
+      }
+    }
+    return denormalisedData
   }
 
   close () {

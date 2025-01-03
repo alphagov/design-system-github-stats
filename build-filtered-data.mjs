@@ -7,6 +7,7 @@ import denyList from './helpers/data/deny-list.json' with { type: 'json' }
 import governmentServiceOwners from './helpers/data/service-owners.json' with { type: 'json' }
 import { getRemainingRateLimit } from './helpers/octokit.mjs'
 import { RepoData } from './helpers/repo-data.mjs'
+import { RepoDB } from './helpers/database.mjs'
 
 import rawDeps from './data/raw-deps.json' with { type: 'json' }
 
@@ -14,6 +15,9 @@ import rawDeps from './data/raw-deps.json' with { type: 'json' }
 const currentDate = new Date()
 const yyyymmdd = currentDate.toISOString().split('T')[0]
 const timestamp = currentDate.getTime()
+
+// Setup database for caching
+const db = new RepoDB()
 
 async function filterDeps () {
   const builtData = []
@@ -28,6 +32,7 @@ async function filterDeps () {
       const repoData = await analyseRepo(repo)
       if (repoData) {
         builtData.push(repoData)
+        db.insertRepoData(repoData)
         batchCounter++
       }
       console.log(`${repo.name}: Analysis complete`)
@@ -61,11 +66,18 @@ async function filterDeps () {
   }
 
   const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
-
   await appendFileSync(
-    `data/${yyyymmdd}-${timestamp}-unprocessedItems.json`,
+    `data/${yyyymmdd}-${timestamp}-unprocessed-items.json`,
     JSON.stringify(unprocessedItems, null, 2)
   )
+
+  console.log('Getting key data')
+  const keyData = await db.getKeyData()
+  await appendFileSync(
+    `data/${yyyymmdd}-${timestamp}-key-data.json`,
+    JSON.stringify(keyData, null, 2)
+  )
+  db.close()
   console.log("We're done!")
 }
 

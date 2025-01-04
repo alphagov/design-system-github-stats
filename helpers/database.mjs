@@ -70,7 +70,10 @@ export class RepoDB {
       WHERE repoOwner = ? AND repoName = ?
     `)
     const result = query.get(repoOwner, repoName)
-    return result && result.lastUpdated === lastUpdated
+    if (result) {
+      return result.lastUpdated === lastUpdated
+    }
+    return false
   }
 
   insertRepoData (repo) {

@@ -18,6 +18,7 @@ const timestamp = currentDate.getTime()
 async function filterDeps () {
   const builtData = []
   const batchSize = 500
+  const processedIndexes = []
   let batchCounter = 0
   console.log('Beginning dependency analysis...')
 
@@ -34,6 +35,7 @@ async function filterDeps () {
       const index = rawDeps.all_public_dependent_repos.findIndex(
         (item) => item === repo
       )
+      processedIndexes.push(index)
       console.log(
         `This was repo number ${index + 1} of ${
           rawDeps.all_public_dependent_repos.length
@@ -57,6 +59,13 @@ async function filterDeps () {
   if (builtData.length > 0) {
     await writeBatchToFiles(builtData)
   }
+
+  const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
+
+  await appendFileSync(
+    `data/${yyyymmdd}-${timestamp}-unprocessedItems.json`,
+    JSON.stringify(unprocessedItems, null, 2)
+  )
   console.log("We're done!")
 }
 

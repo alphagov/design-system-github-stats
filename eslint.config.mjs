@@ -1,4 +1,4 @@
-import neostandard from 'neostandard'
+import neostandard, { resolveIgnoresFromGitignore } from 'neostandard'
 import babelParser from '@babel/eslint-parser'
 import jsdoc from 'eslint-plugin-jsdoc';
 

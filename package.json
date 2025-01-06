@@ -14,7 +14,8 @@
     "build-filtered-data": "node build-filtered-data.mjs",
     "lint": "eslint",
     "typecheck": "tsc --project tsconfig.json",
-    "test": "npm run lint && vitest --coverage"
+    "test": "npm run lint && vitest --coverage",
+    "jsdoc": "jsdoc --configure jsdoc.config.js"
   },
   "homepage": "https://github.com/alphagov/design-system-github-stats#readme",
   "devDependencies": {
@@ -26,6 +27,7 @@
     "@yarnpkg/lockfile": "^1.1.0",
     "eslint": "^9.17.0",
     "eslint-plugin-jsdoc": "^50.6.3",
+    "jsdoc": "^4.0.4",
     "json-2-csv": "^5.5.7",
     "json5": "^2.2.3",
     "neostandard": "^0.12.0",

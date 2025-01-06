@@ -246,7 +246,6 @@ export class RepoData {
     try {
       console.log(lockfileType)
       lockfile = await this.getRepoFileContent(lockfileType)
-      console.log(lockfile)
     } catch (error) {
       this.log('lockfile not at root.')
     }

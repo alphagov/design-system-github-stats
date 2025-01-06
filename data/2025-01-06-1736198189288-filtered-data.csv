@@ -1,0 +1,2 @@
+repoOwner,repoName,couldntAccess,lockfileFrontendVersion,latestVersion,directDependencyVersions,versionDoubt,builtByGovernment,indirectDependency,isPrototype,lastUpdated,repoCreated,parentDependency,errorThrown
+uktrade,stream-unzip,false,undefined,undefined,[],true,true,true,false,2024-11-17T22:30:06Z,2021-05-16T14:21:59Z,"[{""parent"":""node_modules/@x-govuk/govuk-eleventy-plugin""}]",null

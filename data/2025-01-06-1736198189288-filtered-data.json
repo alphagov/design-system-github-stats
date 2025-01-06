@@ -1,0 +1,20 @@
+[
+  {
+    "repoOwner": "uktrade",
+    "repoName": "stream-unzip",
+    "couldntAccess": false,
+    "directDependencyVersions": [],
+    "versionDoubt": true,
+    "builtByGovernment": true,
+    "indirectDependency": true,
+    "isPrototype": false,
+    "lastUpdated": "2024-11-17T22:30:06Z",
+    "repoCreated": "2021-05-16T14:21:59Z",
+    "parentDependency": [
+      {
+        "parent": "node_modules/@x-govuk/govuk-eleventy-plugin"
+      }
+    ],
+    "errorThrown": null
+  }
+]

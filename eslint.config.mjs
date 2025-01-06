@@ -1,9 +1,11 @@
-import neostandard from 'neostandard'
+import neostandard, { resolveIgnoresFromGitignore } from 'neostandard'
 import babelParser from '@babel/eslint-parser'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  ...neostandard({}),
+  ...neostandard({
+    ignores: resolveIgnoresFromGitignore()
+  }),
   {
     languageOptions: {
       // We need Babel to parse the import assertions.

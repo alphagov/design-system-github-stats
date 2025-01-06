@@ -244,19 +244,25 @@ export class RepoData {
   async getVersionFromLockfile (lockfileType, packagePath = '') {
     let lockfile
     try {
+      console.log(lockfileType)
       lockfile = await this.getRepoFileContent(lockfileType)
+      console.log(lockfile)
     } catch (error) {
       this.log('lockfile not at root.')
     }
     if (!lockfile) {
+      console.log('Not lockfile!')
       // Try the non-root package.json directory instead
       lockfile = await this.getRepoFileContent(packagePath.replace('package.json', lockfileType))
     }
 
     if (lockfileType === 'package-lock.json') {
+      console.log('correct lockfile!')
       let lockfileObject
       try {
+        console.log('trying to parse')
         lockfileObject = JSON5.parse(lockfile.data)
+        console.log('successfully parsed')
       } catch (error) {
         this.log('problem parsing package-lock.json', 'error')
       }
@@ -270,6 +276,7 @@ export class RepoData {
           this.lockfileFrontendVersion = packageVersion
         }
       } else {
+        console.log('checking deps')
         const deps = []
         // If we didn't find a frontend version in the package.json file,
         // we have to search the lockfile for the govuk-frontend entries
@@ -277,6 +284,8 @@ export class RepoData {
           ...(lockfileObject.packages || {}),
           ...(lockfileObject.dependencies || {})
         })) {
+          console.log(packageName)
+          console.log(packageData)
           if (packageData.dependencies?.['govuk-frontend']) {
             deps.push({
               parent: packageName,

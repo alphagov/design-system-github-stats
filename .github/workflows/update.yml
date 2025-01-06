@@ -57,7 +57,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: update-filtered-data
+          branch: update-filtered-data-${{ github.head_ref }}
           delete-branch: true
           commit-message: "Get latest filtered dependents data and rejections"
           title: "Get latest filtered dependents data and rejections"

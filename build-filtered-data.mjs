@@ -133,7 +133,9 @@ export async function analyseRepo (repo) {
       repoData.versionDoubt = true
       const lockfileType = repoData.getLockfileType()
       repoData.log(`using ${lockfileType}`)
+      console.log('getting version')
       repoData.lockfileFrontendVersion = await repoData.getVersionFromLockfile(lockfileType)
+      console.log('got version?')
       if (repoData.lockfileFrontendVersion) {
         repoData.log(
             `using GOV.UK Frontend version ${repoData.lockfileFrontendVersion}`

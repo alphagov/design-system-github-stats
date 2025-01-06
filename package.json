@@ -13,13 +13,14 @@
   "scripts": {
     "build-filtered-data": "node build-filtered-data.mjs",
     "lint": "eslint",
-    "test": "npm run lint && vitest"
+    "test": "npm run lint && vitest --coverage"
   },
   "homepage": "https://github.com/alphagov/design-system-github-stats#readme",
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.9",
     "@octokit/graphql": "^8.1.2",
     "@octokit/plugin-throttling": "^9.3.0",
+    "@vitest/coverage-v8": "^2.1.8",
     "@yarnpkg/lockfile": "^1.1.0",
     "eslint": "^9.17.0",
     "json-2-csv": "^5.5.7",

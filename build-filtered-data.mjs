@@ -120,8 +120,21 @@ export async function analyseRepo (repo) {
       repoData.log('looks like an instance of the prototype kit.')
       repoData.isPrototype = true
     }
+
     if (!repoData.checkDirectDependency(packageObjects)) {
       repoData.log('govuk-frontend is not a direct dependency.')
+      repoData.log('searching for version in lockfile')
+      repoData.versionDoubt = true
+      const lockfileType = repoData.getLockfileType()
+      repoData.log(`using ${lockfileType}`)
+      repoData.lockfileFrontendVersion = await repoData.getVersionFromLockfile(lockfileType)
+      if (repoData.lockfileFrontendVersion) {
+        repoData.log(
+            `using GOV.UK Frontend version ${repoData.lockfileFrontendVersion}`
+        )
+      } else {
+        repoData.log('exact GOV.UK Frontend version could not be determined from lockfile.')
+      }
     } else {
       for (const versionData of repoData.frontendVersions) {
         repoData.log(

@@ -276,7 +276,7 @@ describe('RepoData', () => {
             packages: {
               'parent-dependency': {
                 dependencies: {
-                  'govuk-frontend': { version: '3.11.0' }
+                  'govuk-frontend': '3.11.0'
                 }
               }
             }

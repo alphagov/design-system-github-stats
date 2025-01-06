@@ -241,7 +241,7 @@ export class RepoData {
    * @throws {UnsupportedLockFileError} - If the lockfile is not supported
    * @throws {RequestError} - If the request for the file data fails
    */
-  async getVersionFromLockfile (lockfileType, packagePath) {
+  async getVersionFromLockfile (lockfileType, packagePath = '') {
     let lockfile
     try {
       lockfile = await this.getRepoFileContent(lockfileType)
@@ -280,7 +280,7 @@ export class RepoData {
           if (packageData.dependencies?.['govuk-frontend']) {
             deps.push({
               parent: packageName,
-              version: packageData.dependencies['govuk-frontend'].version
+              version: packageData.dependencies['govuk-frontend']
             })
           }
         }

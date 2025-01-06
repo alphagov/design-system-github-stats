@@ -7,8 +7,6 @@ import { parse as parseYaml } from 'yaml'
 import yarnLock from '@yarnpkg/lockfile'
 import JSON5 from 'json5'
 
-export class UnsupportedLockfileError extends Error { }
-
 /**
  * The RepoData class is used to store and manipulate data about a repository, and serves as an abstraction
  * of the GitHub API.
@@ -31,7 +29,7 @@ export class RepoData {
     this.repoOwner = repoOwner
     this.repoName = repoName
     this.errorsThrown = []
-    this.lockfileUnsupported = false
+    this.rootLockfileVersion = null
   }
 
   /**
@@ -295,22 +293,30 @@ export class RepoData {
     const results = []
     // We want to try the root directory in all cases
     if (!packageObjects.some(pkg => pkg.path === 'package.json')) {
-      packageObjects.push({ path: '', content: {} })
+      packageObjects.push({ path: 'package.json', content: {} })
     }
     for (const packageObject of packageObjects) {
       try {
         const lockfileType = this.getLockfileType(packageObject.path, tree)
-        const lockfilePath = packageObject.path.replace('package.json', lockfileType)
-        const lockfile = await this.getRepoFileContent(packageObject.path.replace('package.json', lockfileType))
-        const lockfileObject = this.parseLockfile(lockfile, lockfileType)
-        results.push(await this.getIndirectDependencyFromLockfile(lockfileObject, lockfileType, lockfilePath))
+        if (lockfileType) {
+          const lockfilePath = packageObject.path.replace('package.json', lockfileType)
+          if (this.checkFileExists(lockfilePath, tree)) {
+            const lockfile = await this.getRepoFileContent(packageObject.path.replace('package.json', lockfileType))
+            const lockfileObject = this.parseLockfile(lockfile, lockfileType)
+            const deps = await this.getIndirectDependencyFromLockfile(lockfileObject, lockfileType, lockfilePath)
+            if (deps.length > 0) {
+              results.push(deps)
+            }
+          }
+        }
       } catch (error) {
         this.handleError(error)
       }
     }
     this.log(`${results.length} indirect dependencies found.`)
-
-    return results
+    if (results.length > 0) {
+      return results
+    }
   }
 
   /**
@@ -324,17 +330,28 @@ export class RepoData {
     this.log('disambiguating direct dependencies')
 
     const results = []
-    // We want to try the root directory in all cases
-    if (!dependencies.some(dep => dep.packagePath === 'package.json')) {
-      dependencies.push({ packagePath: '', specifiedVersion: '*' })
+    // We want to fall back to the root lockfile if we can't find a local lockfile
+    if (!this.rootLockfileVersion) {
+      const rootLockfileType = this.getLockfileType('package.json', tree)
+      if (rootLockfileType) {
+        const rootLockfile = await this.getRepoFileContent(rootLockfileType)
+        const rootLockfileObject = this.parseLockfile(rootLockfile, rootLockfileType)
+        this.rootLockfileVersion = await this.getLockfileVersion(rootLockfileObject, rootLockfileType, rootLockfileType, tree)
+      }
     }
+
     for (const dependency of dependencies) {
       try {
         if (/^[~^*]/.test(dependency.specifiedVersion)) {
           const lockfileType = this.getLockfileType(dependency.packagePath, tree)
-          const lockfile = await this.getRepoFileContent(dependency.packagePath.replace('package.json', lockfileType))
-          const lockfileObject = this.parseLockfile(lockfile, lockfileType)
-          dependency.actualVersion = await this.getLockfileVersion(lockfileObject, lockfileType, dependency.packagePath)
+          const lockfilePath = dependency.packagePath.replace('package.json', lockfileType)
+          if (this.checkFileExists(lockfilePath, tree)) {
+            const lockfile = await this.getRepoFileContent(lockfilePath)
+            const lockfileObject = this.parseLockfile(lockfile, lockfileType)
+            dependency.actualVersion = await this.getLockfileVersion(lockfileObject, lockfileType, dependency.packagePath, tree)
+          } else {
+            dependency.actualVersion = this.rootLockfileVersion ? this.rootLockfileVersion : dependency.specifiedVersion
+          }
         } else {
           dependency.actualVersion = dependency.specifiedVersion
         }
@@ -357,12 +374,13 @@ export class RepoData {
    * @param {string} path - The path to the package.
    * @returns {Promise<String>} The lockfile govuk-frontend semver string.
    */
-  async getLockfileVersion (lockfileObject, lockfileType, path) {
+  async getLockfileVersion (lockfileObject, lockfileType, path, tree) {
     let version
+
     if (lockfileType === 'package-lock.json') {
       version =
-          lockfileObject?.packages?.['node_modules/govuk-frontend']?.version ||
-          lockfileObject?.dependencies?.['govuk-frontend']?.version
+        lockfileObject?.packages?.['node_modules/govuk-frontend']?.version ||
+        lockfileObject?.dependencies?.['govuk-frontend']?.version
     } else if (lockfileType === 'yarn.lock') {
       const dependencyKey = Object.keys(lockfileObject).find(key => key.startsWith('govuk-frontend@'))
       version = lockfileObject[dependencyKey]?.version
@@ -456,14 +474,14 @@ export class RepoData {
    *
    * @returns {string} - the lockfile type
    */
-  getLockfileType (packagePath = '', tree) {
+  getLockfileType (packagePath = 'package.json', tree) {
     let lockfileType
-    if (this.checkFileExists('package-lock.json', tree) || this.checkFileExists(packagePath.replace('package.json', 'package-lock.json'), tree)) {
+    if (this.checkFileExists(packagePath.replace('package.json', 'package-lock.json'), tree)) {
       lockfileType = 'package-lock.json'
-    } else if (this.checkFileExists('yarn.lock', tree) || this.checkFileExists(packagePath.replace('package.json', 'yarn.lock'), tree)) {
+    } else if (this.checkFileExists(packagePath.replace('package.json', 'yarn.lock'), tree)) {
       lockfileType = 'yarn.lock'
     } else {
-      throw new UnsupportedLockfileError()
+      return null
     }
     return lockfileType
   }
@@ -476,9 +494,6 @@ export class RepoData {
    * @throws {Error} - If the error is not an expected type
    */
   handleError (error) {
-    if (error instanceof UnsupportedLockfileError) {
-      this.lockfileUnsupported = true
-    }
     this.log(`${error.message}. Added to result.`, 'error')
     this.errorsThrown.push(error.toString())
   }

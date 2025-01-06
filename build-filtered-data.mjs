@@ -1,4 +1,4 @@
-import { appendFileSync } from 'fs'
+import { writeFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 import { RequestError } from 'octokit'
 
@@ -10,16 +10,9 @@ import { Result } from './helpers/result.mjs'
 
 import rawDeps from './data/raw-deps.json' with { type: 'json' }
 
-// Set up date for file naming
-const currentDate = new Date()
-const yyyymmdd = currentDate.toISOString().split('T')[0]
-const timestamp = currentDate.getTime()
-
 async function filterDeps () {
   const builtData = []
-  const batchSize = 500
   const processedIndexes = []
-  let batchCounter = 0
   console.log('Beginning dependency analysis...')
 
   for (const repo of rawDeps.all_public_dependent_repos) {
@@ -28,7 +21,6 @@ async function filterDeps () {
       const repoData = await analyseRepo(repo)
       if (repoData) {
         builtData.push(repoData)
-        batchCounter++
       }
       console.log(`${repo.name}: Analysis complete`)
 
@@ -49,23 +41,11 @@ async function filterDeps () {
         continue
       }
     }
-    if (batchCounter >= batchSize) {
-      await writeBatchToFiles(builtData)
-      builtData.length = 0
-      batchCounter = 0
-    }
   }
 
   if (builtData.length > 0) {
-    await writeBatchToFiles(builtData)
+    writeToFiles(builtData, processedIndexes)
   }
-
-  const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
-
-  await appendFileSync(
-    `data/${yyyymmdd}-${timestamp}-unprocessedItems.json`,
-    JSON.stringify(unprocessedItems, null, 2)
-  )
   console.log("We're done!")
 }
 
@@ -109,22 +89,28 @@ export async function analyseRepo (repo) {
     }
   } catch (error) {
     repoData.handleError(error)
-    result.errorsThrown = repoData.errorsThrown
   }
+  result.errorsThrown = repoData.errorsThrown
 
   return result.getResult(repoData)
 }
 
-async function writeBatchToFiles (builtData) {
+function writeToFiles (builtData, processedIndexes) {
   // Write JSON file
-  await appendFileSync(
-    `data/${yyyymmdd}-${timestamp}-filtered-data.json`,
-    JSON.stringify(builtData, null, 2)
-  )
+  const jsonData = JSON.stringify(builtData, null, 2)
+  writeFileSync('data/filtered-data.json', jsonData)
+
   // Write CSV file
   const csv = json2csv(builtData)
-  await appendFileSync(`data/${yyyymmdd}-${timestamp}-filtered-data.csv`, csv)
+  writeFileSync('data/filtered-data.csv', csv)
   console.log('Data file updated with batch of entries')
+
+  // Write Unprocessed Items file
+  const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
+  writeFileSync(
+    'data/unprocessedItems.json',
+    JSON.stringify(unprocessedItems, null, 2)
+  )
 }
 
 filterDeps()

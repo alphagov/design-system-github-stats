@@ -62,7 +62,7 @@ describe('RepoData', () => {
         data: {
           repository: {
             createdAt: '2022-01-01T00:00:00Z',
-            pushedAt: '2023-01-01T00:00:00Z'
+            updatedAt: '2023-01-01T00:00:00Z'
           }
         }
       })
@@ -77,7 +77,7 @@ describe('RepoData', () => {
       getRepoInfo.mockResolvedValue({
         repository: {
           createdAt: '2022-01-01T00:00:00Z',
-          pushedAt: '2023-01-01T00:00:00Z'
+          updatedAt: '2023-01-01T00:00:00Z'
         }
       })
 
@@ -91,7 +91,7 @@ describe('RepoData', () => {
       getRepoInfo.mockResolvedValue({
         repository: {
           createdAt: '2022-01-01T00:00:00Z',
-          pushedAt: '2023-01-01T00:00:00Z',
+          updatedAt: '2023-01-01T00:00:00Z',
           defaultBranchRef: {
             target: {
               oid: 'test-sha'

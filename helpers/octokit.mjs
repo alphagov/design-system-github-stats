@@ -45,13 +45,13 @@ const graphQLAuth = graphql.defaults({
 })
 
 /**
- * Gets Repo created_at, pushed_at and latest commit SHA, as well as rate limit info
+ * Gets Repo created_at, updated_at and latest commit SHA, as well as rate limit info
  *
  * Note that this GraphQL query is essentially FREE in terms of rate limiting as it is only 1 point cost, which won't
  * actually count against the GraphQL rate limit.
  *
  * This contrasts with the REST API which would require 2 requests to get the same information:
- *   1. Get the repo-level info like created_at and pushed_at
+ *   1. Get the repo-level info like created_at and updated_at
  *   2. Get the latest commit SHA
  *
  * In testing, this query sped up the build script from 80 minutes to 60 minutes.
@@ -63,7 +63,7 @@ const graphQLAuth = graphql.defaults({
  * {
  *   repository: {
  *     createdAt: '2022-01-01T00:00:00Z',
- *     pushedAt: '2023-01-01T00:00:00Z',
+ *     updatedAt: '2023-01-01T00:00:00Z',
  *     defaultBranchRef: {
  *       target: {
  *         oid: 'sha-123'
@@ -86,7 +86,7 @@ export async function getRepoInfo (owner, name) {
     query($owner: String!, $name: String!) {
       repository(owner: $owner, name: $name) {
         createdAt
-        pushedAt
+        updatedAt
         defaultBranchRef {
           target {
             ... on Commit {

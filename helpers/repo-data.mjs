@@ -75,11 +75,11 @@ export class RepoData {
     const response = await getRepoInfo(this.repoOwner, this.repoName)
 
     this.repoCreated = response.repository?.createdAt
-    this.lastUpdated = response.repository?.pushedAt
+    this.lastUpdated = response.repository?.updatedAt
     this.latestCommitSHA = response.repository?.defaultBranchRef?.target?.oid
     this.graphQLRateLimit = response.rateLimit
 
-    // Some repos won't have a pushed_at
+    // Some repos won't have a updated_at
     if (!this.repoCreated) {
       throw new NoMetaDataError()
     }

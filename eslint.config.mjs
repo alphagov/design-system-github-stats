@@ -1,9 +1,13 @@
 import neostandard from 'neostandard'
 import babelParser from '@babel/eslint-parser'
+import jsdoc from 'eslint-plugin-jsdoc';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  ...neostandard({}),
+  ...neostandard({
+    ignores: resolveIgnoresFromGitignore()
+  }),
+  jsdoc.configs['flat/recommended'],
   {
     languageOptions: {
       // We need Babel to parse the import assertions.
@@ -17,6 +21,7 @@ export default [
     rules: {
       // neostandard relaxes the comma-dangle rule, but we prefer not to
       '@stylistic/comma-dangle': ['error', 'never']
-    }
+    },
+    plugins: { jsdoc }
   }
 ]

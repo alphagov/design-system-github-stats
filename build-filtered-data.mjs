@@ -22,7 +22,7 @@ async function filterDeps () {
   let batchCounter = 0
   console.log('Beginning dependency analysis...')
 
-  for (const repo of rawDeps.all_public_dependent_repos) {
+  for (const repo of rawDeps.all_public_dependent_repos.slice(0, 20)) {
     try {
       console.log(`${repo.name}: Getting repo data...`)
       const repoData = await analyseRepo(repo)
@@ -32,13 +32,13 @@ async function filterDeps () {
       }
       console.log(`${repo.name}: Analysis complete`)
 
-      const index = rawDeps.all_public_dependent_repos.findIndex(
+      const index = rawDeps.all_public_dependent_repos.slice(0, 20).findIndex(
         (item) => item === repo
       )
       processedIndexes.push(index)
       console.log(
         `This was repo number ${index + 1} of ${
-          rawDeps.all_public_dependent_repos.length
+          rawDeps.all_public_dependent_repos.slice(0, 20).length
         }`
       )
 
@@ -108,14 +108,18 @@ export async function analyseRepo (repo) {
       } found.`
     )
 
+    repoData.log(`${packageObjects.length} package file(s) found.`)
+
     // Check if repo is instance of the GOV.UK Prototype Kit
     if (repoData.checkPrototype(packageObjects, result.repoTree)) {
       repoData.log('looks like an instance of the prototype kit.')
       result.isPrototype = true
     }
 
+    repoData.log('Looking for direct dependencies')
     // Get all dependency versions
     result.directDependencies = repoData.getDirectDependencies(packageObjects)
+    repoData.log(`${result.directDependencies.length} direct dependencies found.`)
 
     if (result.directDependencies.length === 0) {
       repoData.log('govuk-frontend is not a direct dependency.')

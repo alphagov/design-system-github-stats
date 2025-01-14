@@ -271,9 +271,15 @@ export class RepoData {
     }
     for (const packageObject of packageObjects) {
       try {
+        this.log(`Checking indirect dependencies for ${packageObject.path}`)
         const lockfileType = this.getLockfileType(packageObject.path, tree)
+        this.log(`Lockfile type is ${lockfileType}`)
         const lockfile = await this.getRepoFileContent(packageObject.path.replace('package.json', lockfileType))
+        this.log(`Got lockfile for ${packageObject.path}`)
         const lockfileObject = this.parseLockfile(lockfile, lockfileType)
+        this.log(`Parsed lockfile for ${packageObject.path}`)
+        const test = await this.getIndirectDependencyFromLockfile(lockfileObject, lockfileType, packageObject.path)
+        this.log(`${JSON.stringify(test)}`)
         results.push(await this.getIndirectDependencyFromLockfile(lockfileObject, lockfileType, packageObject.path))
       } catch (error) {
         this.handleError(error)

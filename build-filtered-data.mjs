@@ -22,7 +22,7 @@ async function filterDeps () {
   let batchCounter = 0
   console.log('Beginning dependency analysis...')
 
-  for (const repo of rawDeps.all_public_dependent_repos) {
+  for (const repo of rawDeps.all_public_dependent_repos.slice(0, 20)) {
     try {
       console.log(`${repo.name}: Getting repo data...`)
       const repoData = await analyseRepo(repo)
@@ -32,13 +32,13 @@ async function filterDeps () {
       }
       console.log(`${repo.name}: Analysis complete`)
 
-      const index = rawDeps.all_public_dependent_repos.findIndex(
+      const index = rawDeps.all_public_dependent_repos.slice(0, 20).findIndex(
         (item) => item === repo
       )
       processedIndexes.push(index)
       console.log(
         `This was repo number ${index + 1} of ${
-          rawDeps.all_public_dependent_repos.length
+          rawDeps.all_public_dependent_repos.slice(0, 20).length
         }`
       )
 
@@ -60,7 +60,7 @@ async function filterDeps () {
     await writeBatchToFiles(builtData)
   }
 
-  const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
+  const unprocessedItems = rawDeps.all_public_dependent_repos.slice(0, 20).filter((_, index) => !processedIndexes.includes(index))
 
   await appendFileSync(
     `data/${yyyymmdd}-${timestamp}-unprocessedItems.json`,
@@ -121,7 +121,7 @@ export async function analyseRepo (repo) {
       repoData.log('govuk-frontend is not a direct dependency.')
       repoData.log('searching for indirect dependencies')
       result.indirectDependencies = await repoData.getIndirectDependencies(packageObjects, result.repoTree)
-      repoData.log(`${result.indirectDependencies.length} indirect dependencies found.`)
+      repoData.log(`${result.indirectDependencies.length} direct dependencies found.`)
     } else {
       result.directDependencies = await repoData.disambiguateDependencies(result.directDependencies, result.repoTree)
     }

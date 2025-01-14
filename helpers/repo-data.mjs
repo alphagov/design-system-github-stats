@@ -240,6 +240,8 @@ export class RepoData {
    * @returns {boolean} - Whether the file exists
    */
   checkFileExists (filePath, tree) {
+    console.log(filePath)
+    console.log(tree.some((file) => file.path === filePath))
     return tree.some((file) => file.path === filePath)
   }
 
@@ -269,10 +271,14 @@ export class RepoData {
     if (!packageObjects.some(pkg => pkg.path === 'package.json')) {
       packageObjects.push({ path: '', content: {} })
     }
+    console.log('Going through packageObjects')
     for (const packageObject of packageObjects) {
       try {
+        console.log('Getting lockfile type')
         const lockfileType = this.getLockfileType(packageObject.path, tree)
+        console.log('Getting file content')
         const lockfile = await this.getRepoFileContent(packageObject.path.replace('package.json', lockfileType))
+        console.log('Parsing lockfile')
         const lockfileObject = this.parseLockfile(lockfile, lockfileType)
         results.push(await this.getIndirectDependencyFromLockfile(lockfileObject, lockfileType, packageObject.path))
       } catch (error) {
@@ -290,17 +296,24 @@ export class RepoData {
    * @returns {Promise<Array>} A promise that resolves to an array of disambiguated dependencies.
    */
   async disambiguateDependencies (dependencies, tree) {
+    console.log(dependencies)
     const results = []
     // We want to try the root directory in all cases
     if (!dependencies.some(dep => dep.packagePath === 'package.json')) {
       dependencies.push({ packagePath: '', frontendVersion: '*' })
     }
+    console.log('Going through dependencies')
     for (const dependency of dependencies) {
       try {
         if (/^[~^*]/.test(dependency.frontendVersion)) {
+          console.log('Getting lockfile type')
           const lockfileType = this.getLockfileType(dependency.packagePath, tree)
+          console.log('Getting file content')
           const lockfile = await this.getRepoFileContent(dependency.packagePath.replace('package.json', lockfileType))
+
+          console.log('Parsing lockfile')
           const lockfileObject = this.parseLockfile(lockfile, lockfileType)
+          console.log('adding to results')
           results.push(await this.getDirectDependencyFromLockfile(lockfileObject, lockfileType, dependency.packagePath))
         } else {
           results.push(dependency)
@@ -420,10 +433,13 @@ export class RepoData {
    * @returns {string} - the lockfile type
    */
   getLockfileType (packagePath = '', tree) {
+    console.log(packagePath)
     let lockfileType
     if (this.checkFileExists('package-lock.json', tree) || this.checkFileExists(packagePath.replace('package.json', 'package-lock.json'), tree)) {
+      console.log('package-lock.json')
       lockfileType = 'package-lock.json'
-    } else if (this.checkFileExists('yarn.lock') || this.checkFileExists(packagePath.replace('package.json', 'yarn.lock'), tree)) {
+    } else if (this.checkFileExists('yarn.lock', tree) || this.checkFileExists(packagePath.replace('package.json', 'yarn.lock'), tree)) {
+      console.log('yarn.lock')
       lockfileType = 'yarn.lock'
     } else {
       throw new UnsupportedLockFileError()

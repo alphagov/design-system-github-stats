@@ -22,7 +22,7 @@ async function filterDeps () {
   let batchCounter = 0
   console.log('Beginning dependency analysis...')
 
-  for (const repo of rawDeps.all_public_dependent_repos) {
+  for (const repo of rawDeps.all_public_dependent_repos.slice(0, 20)) {
     try {
       console.log(`${repo.name}: Getting repo data...`)
       const repoData = await analyseRepo(repo)
@@ -32,13 +32,13 @@ async function filterDeps () {
       }
       console.log(`${repo.name}: Analysis complete`)
 
-      const index = rawDeps.all_public_dependent_repos.findIndex(
+      const index = rawDeps.all_public_dependent_repos.slice(0, 20).findIndex(
         (item) => item === repo
       )
       processedIndexes.push(index)
       console.log(
         `This was repo number ${index + 1} of ${
-          rawDeps.all_public_dependent_repos.length
+          rawDeps.all_public_dependent_repos.slice(0, 20).length
         }`
       )
 

@@ -122,10 +122,13 @@ export class RepoData {
    * @returns {Promise<Array<{content: Object, path: string}>>} - The package.json objects
    */
   async getPackageFiles (tree) {
+    console.log(tree)
     const packageFiles = await this.getAllFilesContent('package.json', tree)
+    console.log(packageFiles)
     const packageObjects = []
     if (packageFiles.length > 0) {
       for (const file of packageFiles) {
+        console.log(file)
         try {
           packageObjects.push({
             content: JSON5.parse(file.content),
@@ -137,6 +140,7 @@ export class RepoData {
         }
       }
     }
+    console.log(packageObjects)
 
     return packageObjects
   }

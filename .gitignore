@@ -1,6 +1,8 @@
 # Files to ignore
 .DS_Store
 *.log
+coverage
+jsdoc
 
 # Node.js modules
 node_modules/

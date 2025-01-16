@@ -80,6 +80,7 @@ export class RepoData {
     this.log('fetching repository information')
 
     const response = await getRepo(this.repoOwner, this.repoName)
+    console.log(JSON.stringify(response, null, 2))
     const result = {
       createdAt: response.data.repository?.createdAt,
       updatedAt: response.data.repository?.updatedAt,

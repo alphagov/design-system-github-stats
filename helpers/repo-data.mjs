@@ -81,11 +81,13 @@ export class RepoData {
 
     const response = await getRepo(this.repoOwner, this.repoName)
     const result = {
-      createdAt: response.repository?.createdAt,
-      updatedAt: response.repository?.updatedAt,
-      latestCommitSHA: response.repository?.defaultBranchRef?.target?.oid,
-      graphQLRateLimit: response.rateLimit
+      createdAt: response.data.repository?.createdAt,
+      updatedAt: response.data.repository?.updatedAt,
+      latestCommitSHA: response.data.repository?.defaultBranchRef?.target?.oid,
+      graphQLRateLimit: response.data.rateLimit,
+      eTag: response.eTag
     }
+    console.log(result)
 
     if (!result.createdAt) {
       throw new Error('Could not fetch createdAt from repository')

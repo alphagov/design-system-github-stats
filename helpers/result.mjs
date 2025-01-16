@@ -25,6 +25,7 @@ export class Result {
     this.errorsThrown = []
     this.unknownLockFileType = false
     this.isValid = false
+    this.eTag = ''
 
     // Non returned values
     this.latestCommitSHA = ''
@@ -64,7 +65,8 @@ export class Result {
       indirectDependencies: this.indirectDependencies,
       errorsThrown: this.errorsThrown,
       unknownLockFileType: this.unknownLockFileType,
-      isValid: this.isValid
+      isValid: this.isValid,
+      eTag: this.eTag
     }
   }
 }

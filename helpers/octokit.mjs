@@ -38,11 +38,16 @@ const octokit = new MyOctokit({
   }
 })
 
-const graphQLAuth = graphql.defaults({
-  headers: {
-    authorization: `token ${process.env.GITHUB_AUTH_TOKEN}`
+const graphQLAuth = (query, variables, options = {}) => {
+  const headers = {
+    authorization: `token ${process.env.GITHUB_AUTH_TOKEN}`,
+    ...options.headers
   }
-})
+  return graphql(query, {
+    ...variables,
+    headers
+  })
+}
 
 /**
  * Gets Repo created_at, updated_at and latest commit SHA, as well as rate limit info
@@ -81,7 +86,7 @@ const graphQLAuth = graphql.defaults({
  * @param {string} name - the repo name
  * @returns {Promise<import('@octokit/graphql').GraphQlQueryResponse>} - the repo info
  */
-export async function getRepo (owner, name) {
+export async function getRepo (owner, name, eTag = null) {
   const query = `
     query($owner: String!, $name: String!) {
       repository(owner: $owner, name: $name) {
@@ -108,7 +113,14 @@ export async function getRepo (owner, name) {
     name
   }
 
-  return await graphQLAuth(query, variables)
+  const headers = eTag ? { 'If-None-Match': eTag } : {}
+
+  const response = await graphQLAuth(query, variables, { headers })
+
+  return {
+    data: response,
+    eTag: response.headers['etag']
+  }
 }
 
 /**

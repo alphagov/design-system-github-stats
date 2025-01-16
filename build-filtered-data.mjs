@@ -86,6 +86,7 @@ export async function analyseRepo (repo) {
 
     // Get the repo metadata
     const repoInfo = await repoData.getRepoInfo()
+
     Object.assign(result, repoInfo)
 
     // Get the repo tree
@@ -118,12 +119,12 @@ export async function analyseRepo (repo) {
 async function writeBatchToFiles (builtData) {
   // Write JSON file
   await appendFileSync(
-    `data/${yyyymmdd}-${timestamp}-filtered-data.json`,
+    'data/filtered-data.json',
     JSON.stringify(builtData, null, 2)
   )
   // Write CSV file
   const csv = json2csv(builtData)
-  await appendFileSync(`data/${yyyymmdd}-${timestamp}-filtered-data.csv`, csv)
+  await appendFileSync('data/filtered-data.csv', csv)
   console.log('Data file updated with batch of entries')
 }
 

@@ -116,6 +116,7 @@ export async function getRepo (owner, name, eTag = null) {
   const headers = eTag ? { 'If-None-Match': eTag } : {}
 
   const response = await graphQLAuth(query, variables, { headers })
+  console.log(JSON.stringify(response, null, 2))
 
   return {
     data: response,

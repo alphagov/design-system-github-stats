@@ -1,14 +1,43 @@
 import { appendFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 import { RequestError } from 'octokit'
+import fetch from 'node-fetch'
 
 import denyList from './helpers/data/deny-list.json' with { type: 'json' }
-import governmentServiceOwners from './helpers/data/service-owners.json' with { type: 'json' }
+import governmentOwners from './helpers/data/service-owners.json' with { type: 'json' }
 import { getRemainingRateLimit } from './helpers/octokit.mjs'
 import { RepoData } from './helpers/repo-data.mjs'
 import { Result } from './helpers/result.mjs'
 
 import rawDeps from './data/raw-deps.json' with { type: 'json' }
+
+async function getServices () {
+  const response = await fetch('https://govuk-digital-services.herokuapp.com/data.json')
+  if (!response.ok) {
+    throw new Error(`Failed to fetch data: ${response.statusText}`)
+  }
+  return await response.json()
+}
+const services = await getServices()
+
+const serviceOwnersSet = new Set()
+
+for (const service of services.services) {
+  if (service.sourceCode) {
+    for (const source of service.sourceCode) {
+      const url = new URL(source.href)
+      const owner = url.pathname.split('/')[1]
+      if (owner) {
+        serviceOwnersSet.add(owner)
+      }
+    }
+  }
+}
+
+const serviceOwners = Array.from(serviceOwnersSet)
+
+const governmentRepoOwners = [...new Set(governmentOwners.concat(serviceOwners))]
+console.log(JSON.stringify(governmentRepoOwners, null, 2))
 
 // Set up date for file naming
 const currentDate = new Date()
@@ -75,6 +104,25 @@ export async function analyseRepo (repo) {
   const repoData = new RepoData(repoOwner, repoName)
   const result = new Result(repoOwner, repoName)
 
+  // Check if the repo is in the services list
+  for (const service of services.services) {
+    if (service.sourceCode) {
+      for (const source of service.sourceCode) {
+        if (source.href.includes(`/${repoOwner}/${repoName}`)) {
+          result.name = service.name
+          result.description = service.description
+          result.theme = service.theme
+          result.organisation = service.organisation
+          result.liveservice = service.liveservice
+          result.facing = service.facing
+          result.sourceCode = service.sourceCode
+          result.startPage = service['start-page']
+          break
+        }
+      }
+    }
+  }
+
   try {
     // Run some checks
     if (repoData.checkDenyList(denyList)) {
@@ -82,7 +130,7 @@ export async function analyseRepo (repo) {
     }
     repoData.log('analyzing...')
 
-    result.builtByGovernment = repoData.checkServiceOwner(governmentServiceOwners)
+    result.builtByGovernment = repoData.checkServiceOwner(governmentRepoOwners)
 
     // Get the repo metadata
     const repoInfo = await repoData.getRepoInfo()

@@ -109,19 +109,22 @@ export async function analyseRepo (repo) {
     if (service.sourceCode) {
       for (const source of service.sourceCode) {
         if (source.href.includes(`/${repoOwner}/${repoName}`)) {
-          result.service.name = service.name
-          result.service.description = service.description
-          result.service.theme = service.theme
-          result.service.organisation = service.organisation
-          result.service.liveservice = service.liveservice
-          result.service.facing = service.facing
-          result.service.sourceCode = service.sourceCode
-          result.service.startPage = service['start-page']
+          result.service = {
+            name: service.name,
+            description: service.description,
+            theme: service.theme,
+            organisation: service.organisation,
+            liveservice: service.liveservice,
+            facing: service.facing,
+            sourceCode: service.sourceCode,
+            startPage: service['start-page']
+          }
           break
         }
       }
     }
   }
+  console.log(result)
 
   try {
     // Run some checks

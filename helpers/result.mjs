@@ -52,7 +52,7 @@ export class Result {
     this.isIndirect = this.directDependencies.length === 0
     this.isValid = this.validate()
 
-    return {
+    let result = {
       repoOwner: this.repoOwner,
       repoName: this.repoName,
       builtByGovernment: this.builtByGovernment,
@@ -66,5 +66,11 @@ export class Result {
       unknownLockFileType: this.unknownLockFileType,
       isValid: this.isValid
     }
+
+    if (result.service) {
+      result = { ...result, ...this.service }
+    }
+
+    return result
   }
 }

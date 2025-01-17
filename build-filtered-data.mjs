@@ -105,6 +105,7 @@ export async function analyseRepo (repo) {
   const result = new Result(repoOwner, repoName)
 
   // Check if the repo is in the services list
+  // @TODO abstract this and optimise it away from a loop
   for (const service of services.services) {
     if (service.sourceCode) {
       for (const source of service.sourceCode) {
@@ -119,12 +120,15 @@ export async function analyseRepo (repo) {
             sourceCode: service.sourceCode,
             startPage: service['start-page']
           }
+
+          if (service.tags?.includes('Top 75')) {
+            result.service.top75 = true
+          }
           break
         }
       }
     }
   }
-  console.log(result)
 
   try {
     // Run some checks

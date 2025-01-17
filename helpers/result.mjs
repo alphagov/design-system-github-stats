@@ -67,7 +67,7 @@ export class Result {
       isValid: this.isValid
     }
 
-    if (result.service) {
+    if (this.service) {
       result = { ...result, ...this.service }
     }
 

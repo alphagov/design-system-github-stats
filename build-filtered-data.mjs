@@ -104,27 +104,27 @@ async function filterDeps () {
     top75: builtData.filter(result => result.service?.top75).length,
     version0: builtData.filter(result => {
       const dependencies = result.isIndirect ? result.indirectDependencies : result.directDependencies
-      return dependencies?.[0]?.actualVersion.startsWith('0.')
+      return dependencies?.[0]?.actualVersion?.startsWith('0.')
     }).length,
     version1: builtData.filter(result => {
       const dependencies = result.isIndirect ? result.indirectDependencies : result.directDependencies
-      return dependencies?.[0]?.actualVersion.startsWith('1.')
+      return dependencies?.[0]?.actualVersion?.startsWith('1.')
     }).length,
     version2: builtData.filter(result => {
       const dependencies = result.isIndirect ? result.indirectDependencies : result.directDependencies
-      return dependencies?.[0]?.actualVersion.startsWith('2.')
+      return dependencies?.[0]?.actualVersion?.startsWith('2.')
     }).length,
     version3: builtData.filter(result => {
       const dependencies = result.isIndirect ? result.indirectDependencies : result.directDependencies
-      return dependencies?.[0]?.actualVersion.startsWith('3.')
+      return dependencies?.[0]?.actualVersion?.startsWith('3.')
     }).length,
     version4: builtData.filter(result => {
       const dependencies = result.isIndirect ? result.indirectDependencies : result.directDependencies
-      return dependencies?.[0]?.actualVersion.startsWith('4.')
+      return dependencies?.[0]?.actualVersion?.startsWith('4.')
     }).length,
     version5: builtData.filter(result => {
       const dependencies = result.isIndirect ? result.indirectDependencies : result.directDependencies
-      return dependencies?.[0]?.actualVersion.startsWith('5.')
+      return dependencies?.[0]?.actualVersion?.startsWith('5.')
     }).length,
     totalGovernment: builtData.filter(result => result.builtByGovernment).length,
     totalPrototypes: builtData.filter(result => result.isPrototype).length,

@@ -55,6 +55,9 @@ jobs:
       - name: Build filtered data
         run: npm run build-filtered-data
       
+      - name: Generate key data
+        run: npm run generate-key-data
+      
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
         with:

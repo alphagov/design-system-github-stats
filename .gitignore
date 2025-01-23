@@ -6,3 +6,6 @@ jsdoc
 
 # Node.js modules
 node_modules/
+
+# Editors
+.vscode/

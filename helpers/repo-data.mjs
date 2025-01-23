@@ -57,7 +57,7 @@ export class RepoData {
    * @returns {boolean} - Whether the repo owner is in the serviceOwners list
    */
   checkServiceOwner (serviceOwners) {
-    const isServiceOwner = serviceOwners.includes(this.repoOwner)
+    const isServiceOwner = Object.keys(serviceOwners).includes(this.repoOwner)
 
     if (isServiceOwner) {
       this.log('looks like a GOV.UK service.')
@@ -295,7 +295,9 @@ export class RepoData {
     const results = []
     // We want to try the root directory in all cases
     if (!packageObjects.some(pkg => pkg.path === 'package.json')) {
-      packageObjects.push({ path: '', content: {} })
+      if (this.checkFileExists('package.json', tree)) {
+        packageObjects.push({ path: 'package.json', content: {} })
+      }
     }
     for (const packageObject of packageObjects) {
       try {
@@ -326,7 +328,9 @@ export class RepoData {
     const results = []
     // We want to try the root directory in all cases
     if (!dependencies.some(dep => dep.packagePath === 'package.json')) {
-      dependencies.push({ packagePath: '', specifiedVersion: '*' })
+      if (this.checkFileExists('package.json', tree)) {
+        dependencies.push({ packagePath: 'package.json', specifiedVersion: '*' })
+      }
     }
     for (const dependency of dependencies) {
       try {
@@ -478,8 +482,9 @@ export class RepoData {
   handleError (error) {
     if (error instanceof UnsupportedLockfileError) {
       this.lockfileUnsupported = true
+    } else {
+      this.log(`${error.message}. Added to result.`, 'error')
     }
-    this.log(`${error.message}. Added to result.`, 'error')
     this.errorsThrown.push(error.toString())
   }
 }

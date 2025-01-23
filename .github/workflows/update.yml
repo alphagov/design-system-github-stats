@@ -48,6 +48,9 @@ jobs:
       # something like json which we can programmatically interogate.
       - name: Pipe our deps to a json file
         run: github-dependents-info --repo alphagov/govuk-frontend --sort stars --json > ./data/raw-deps.json
+      
+      - name: Update service owners
+        run: npm run update-service-owners
 
       - name: Build filtered data
         run: npm run build-filtered-data

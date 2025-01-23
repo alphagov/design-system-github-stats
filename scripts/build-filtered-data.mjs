@@ -2,18 +2,13 @@ import { appendFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 import { RequestError } from 'octokit'
 
-import denyList from './helpers/data/deny-list.json' with { type: 'json' }
-import governmentServiceOwners from './helpers/data/service-owners.json' with { type: 'json' }
-import { getRemainingRateLimit } from './helpers/octokit.mjs'
-import { RepoData } from './helpers/repo-data.mjs'
-import { Result } from './helpers/result.mjs'
+import denyList from '../helpers/data/deny-list.json' with { type: 'json' }
+import governmentServiceOwners from '../helpers/data/service-owners.json' with { type: 'json' }
+import { getRemainingRateLimit } from '../helpers/octokit.mjs'
+import { RepoData } from '../helpers/repo-data.mjs'
+import { Result } from '../helpers/result.mjs'
 
-import rawDeps from './data/raw-deps.json' with { type: 'json' }
-
-// Set up date for file naming
-const currentDate = new Date()
-const yyyymmdd = currentDate.toISOString().split('T')[0]
-const timestamp = currentDate.getTime()
+import rawDeps from '../data/raw-deps.json' with { type: 'json' }
 
 async function filterDeps () {
   const builtData = []
@@ -63,7 +58,7 @@ async function filterDeps () {
   const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
 
   await appendFileSync(
-    `data/${yyyymmdd}-${timestamp}-unprocessedItems.json`,
+    'data/unprocessedItems.json',
     JSON.stringify(unprocessedItems, null, 2)
   )
   console.log("We're done!")
@@ -74,6 +69,10 @@ export async function analyseRepo (repo) {
   const repoName = repo.repo_name
   const repoData = new RepoData(repoOwner, repoName)
   const result = new Result(repoOwner, repoName)
+
+  if (governmentServiceOwners[repoOwner]?.[repoName]) {
+    result.service = result.getServiceData(governmentServiceOwners[repoOwner][repoName])
+  }
 
   try {
     // Run some checks
@@ -109,8 +108,8 @@ export async function analyseRepo (repo) {
     }
   } catch (error) {
     repoData.handleError(error)
-    result.errorsThrown = repoData.errorsThrown
   }
+  result.errorsThrown = repoData.errorsThrown
 
   return result.getResult(repoData)
 }
@@ -118,12 +117,12 @@ export async function analyseRepo (repo) {
 async function writeBatchToFiles (builtData) {
   // Write JSON file
   await appendFileSync(
-    `data/${yyyymmdd}-${timestamp}-filtered-data.json`,
+    'data/filtered-data.json',
     JSON.stringify(builtData, null, 2)
   )
   // Write CSV file
   const csv = json2csv(builtData)
-  await appendFileSync(`data/${yyyymmdd}-${timestamp}-filtered-data.csv`, csv)
+  await appendFileSync('data/filtered-data.csv', csv)
   console.log('Data file updated with batch of entries')
 }
 

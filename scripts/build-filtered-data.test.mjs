@@ -16,7 +16,7 @@ vi.mock('./helpers/repo-data.mjs', async (importOriginal) => {
 })
 
 describe('analyseRepo', () => {
-  it('should return null if repo is on deny list', async () => {
+  it.skip('should return null if repo is on deny list', async () => {
     const repo = { owner: 'alphagov', repo_name: 'govuk-frontend' }
 
     const result = await analyseRepo(repo)

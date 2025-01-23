@@ -25,6 +25,7 @@ export class Result {
     this.errorsThrown = []
     this.unknownLockFileType = false
     this.isValid = false
+    this.service = null
 
     // Non returned values
     this.latestCommitSHA = ''
@@ -47,12 +48,31 @@ export class Result {
     return valid
   }
 
+  getServiceData (service) {
+    const result = {
+      name: service.name,
+      description: service.description,
+      theme: service.theme,
+      organisation: service.organisation,
+      liveservice: service.liveservice,
+      facing: service.facing,
+      sourceCode: service.sourceCode,
+      startPage: service['start-page']
+    }
+
+    if (service.tags?.includes('Top 75')) {
+      result.top75 = true
+    }
+
+    return result
+  }
+
   getResult (repoData) {
     this.unknownLockFileType = repoData.lockfileUnsupported
     this.isIndirect = this.directDependencies.length === 0
     this.isValid = this.validate()
 
-    return {
+    let result = {
       repoOwner: this.repoOwner,
       repoName: this.repoName,
       builtByGovernment: this.builtByGovernment,
@@ -66,5 +86,11 @@ export class Result {
       unknownLockFileType: this.unknownLockFileType,
       isValid: this.isValid
     }
+
+    if (this.service) {
+      result = { ...result, ...this.service }
+    }
+
+    return result
   }
 }

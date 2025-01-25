@@ -2,13 +2,13 @@ import { writeFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 import { RequestError } from 'octokit'
 
-import denyList from './helpers/data/deny-list.json' with { type: 'json' }
-import governmentServiceOwners from './helpers/data/service-owners.json' with { type: 'json' }
-import { getRemainingRateLimit } from './helpers/octokit.mjs'
-import { RepoData } from './helpers/repo-data.mjs'
-import { Result } from './helpers/result.mjs'
+import denyList from '../helpers/data/deny-list.json' with { type: 'json' }
+import governmentServiceOwners from '../helpers/data/service-owners.json' with { type: 'json' }
+import { getRemainingRateLimit } from '../helpers/octokit.mjs'
+import { RepoData } from '../helpers/repo-data.mjs'
+import { Result } from '../helpers/result.mjs'
 
-import rawDeps from './data/raw-deps.json' with { type: 'json' }
+import rawDeps from '../data/raw-deps.json' with { type: 'json' }
 
 async function filterDeps () {
   const builtData = []

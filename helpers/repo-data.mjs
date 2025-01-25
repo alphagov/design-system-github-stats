@@ -57,7 +57,7 @@ export class RepoData {
    * @returns {boolean} - Whether the repo owner is in the serviceOwners list
    */
   checkServiceOwner (serviceOwners) {
-    const isServiceOwner = serviceOwners.includes(this.repoOwner)
+    const isServiceOwner = Object.hasOwn(serviceOwners, this.repoOwner)
 
     if (isServiceOwner) {
       this.log('looks like a GOV.UK service.')

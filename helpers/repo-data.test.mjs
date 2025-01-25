@@ -41,12 +41,12 @@ describe('RepoData', () => {
   describe('checkServiceOwner', () => {
     it.each([
       {
-        serviceOwners: ['test-owner', 'other-owner'],
+        serviceOwners: { 'test-owner': {}, 'other-owner': {} },
         expected: true,
         description: 'repo is owned by service owner'
       },
-      { serviceOwners: [], expected: false, description: 'serviceOwners is empty' },
-      { serviceOwners: ['other-owner'], expected: false, description: 'repo is NOT owned by service owner' }
+      { serviceOwners: {}, expected: false, description: 'serviceOwners is empty' },
+      { serviceOwners: { 'other-owner': {} }, expected: false, description: 'repo is NOT owned by service owner' }
     ])(
       'should correctly check if $description',
       ({ serviceOwners, expected }) => {

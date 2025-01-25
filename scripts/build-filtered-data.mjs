@@ -84,6 +84,10 @@ export async function analyseRepo (repo) {
 
     result.builtByGovernment = repoData.checkServiceOwner(governmentServiceOwners)
 
+    if (governmentServiceOwners[repoOwner]?.[repoName]) {
+      result.service = governmentServiceOwners[repoOwner][repoName]
+    }
+
     // Get the repo metadata
     const repoInfo = await repoData.getRepoInfo()
     Object.assign(result, repoInfo)

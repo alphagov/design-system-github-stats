@@ -24,6 +24,7 @@ export class Result {
     this.errorsThrown = []
     this.unknownLockFileType = false
     this.isValid = false
+    this.service = null
 
     // Non returned values
     this.latestCommitSHA = ''
@@ -51,7 +52,7 @@ export class Result {
     this.isIndirect = this.directDependencies.length === 0
     this.isValid = this.validate()
 
-    return {
+    const result = {
       repoOwner: this.repoOwner,
       repoName: this.repoName,
       builtByGovernment: this.builtByGovernment,
@@ -65,5 +66,19 @@ export class Result {
       unknownLockFileType: this.unknownLockFileType,
       isValid: this.isValid
     }
+    if (this.service) {
+      result.name = this.service.name
+      result.description = this.service.description
+      result.synonyms = this.service.synonyms
+      result.organisation = this.service.organisation
+      result.phase = this.service.phase
+      result.theme = this.service.theme
+      result['start-page'] = this.service.startPage
+      result.liveservice = this.service.liveservice
+      result.timeline = this.service.timeline
+      result.tags = this.service.tags
+    }
+
+    return result
   }
 }

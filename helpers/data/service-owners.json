@@ -1,53 +1,3700 @@
-[
-  "alphagov",
-  "uktrade",
-  "UKHSA-Internal",
-  "x-govuk",
-  "co-cddo",
-  "UKHomeOffice",
-  "i-dot-ai",
-  "DEFRA",
-  "ministryofjustice",
-  "ONSdigital",
-  "department-for-transport-BODS",
-  "DFE-Digital",
-  "dwp",
-  "HMPO",
-  "dvsa",
-  "UKHomeOfficeForms",
-  "hmcts",
-  "DFEAGILEDEVOPS",
-  "OfficeForProductSafetyAndStandards",
-  "Crown-Commercial-Service",
-  "govuk-one-login",
-  "DFID",
-  "UK-Export-Finance",
-  "hmrc",
-  "communitiesuk",
-  "Planning-Inspectorate",
-  "LandRegistry",
-  "dfe-analytical-services",
-  "SkillsFundingAgency",
-  "Department-for-Transport-Disruptions",
-  "defencedigital",
-  "ukgov-equality-hub",
-  "companieshouse",
-  "openregister",
-  "digital-land",
-  "UKGovernmentBEIS",
-  "smbc-digital",
-  "cabinetoffice",
-  "defra-design",
-  "mcagov",
-  "NeXt-Warning-System",
-  "InsolvencyService",
-  "trade-tariff",
-  "Government-People-Group",
-  "UKForeignOffice",
-  "department-for-transport-public",
-  "OfqualGovUK",
-  "UKSpaceAgency",
-  "BEIS-Digital-Services",
-  "Flood-warning-services",
-  "CriminalInjuriesCompensationAuthority"
-]
+{
+  "ministryofjustice": {
+    "accelerated_claims": {
+      "name": "Evict a tenant using accelerated possession",
+      "description": "The system helps step the user through the creation of an N5B, Claim form for Possession of Property).  The resultant PDF must be printed and posted to the court along with the fee and required documents",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Live",
+      "start-page": [
+        "https://www.gov.uk/evicting-tenants/accelerated-possession-orders"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed live assessment",
+            "date": "2014-07-15",
+            "links": [
+              {
+                "href": "https://dataingovernment.blog.gov.uk/civil-claims-accelerated-possession-service-assessment/",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/accelerated_claims"
+        }
+      ],
+      "filename": "accelerated-possession-eviction.json",
+      "slug": "accelerated-possession-eviction"
+    },
+    "grc-app": {
+      "name": "Apply for a Gender Recognition Certificate",
+      "description": "Apply for a Gender Recognition Certificate if you want your affirmed gender (sometimes called an ‘acquired gender’) to be legally recognised in the UK.",
+      "organisation": [
+        "Government Equalities Office",
+        "HM Courts & Tribunals Service",
+        "Cabinet Office"
+      ],
+      "theme": "Citizenship and living in the UK",
+      "phase": "Beta",
+      "liveservice": "https://apply-gender-recognition-certificate.service.gov.uk/",
+      "start-page": [
+        "https://www.gov.uk/apply-gender-recognition-certificate/how-to-apply"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Service launched",
+            "date": "2022-06-29",
+            "links": [
+              {
+                "href": "https://www.gov.uk/government/news/gender-recognition-application-modernised",
+                "text": "Gender recognition application modernised"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/grc-app"
+        }
+      ],
+      "filename": "apply-gender-recognition-certificate.json",
+      "slug": "apply-gender-recognition-certificate",
+      "screenshot": true
+    },
+    "laa-apply-for-legal-aid": {
+      "name": "Apply for legal aid",
+      "description": "This service enables citizens and their solicitors to submit means and capital information, with supporting evidence, and solicitors to submit merit information.",
+      "organisation": [
+        "Legal Aid Agency"
+      ],
+      "theme": "Crime, justice and the law",
+      "phase": "Beta",
+      "liveservice": "https://apply-for-legal-aid.service.justice.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/guidance/apply-for-legal-aid"
+      ],
+      "tags": [
+        "Top 75"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed alpha assessment",
+            "date": "2018-06-25",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/apply-for-legal-aid-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/laa-apply-for-legal-aid"
+        }
+      ],
+      "filename": "apply-legal-aid.json",
+      "slug": "apply-legal-aid",
+      "screenshot": true
+    },
+    "cla_public": {
+      "name": "Check if you can get legal aid",
+      "description": "Legal aid can help pay for legal advice.You’ll be asked general questions about your legal problem and your income and savings. You’ll be told where you can get legal advice.",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Live",
+      "liveservice": "https://checklegalaid.service.gov.uk/start?locale=en_GB",
+      "start-page": [
+        "https://www.gov.uk/check-legal-aid"
+      ],
+      "tags": [
+        "Top 75"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/cla_public"
+        }
+      ],
+      "filename": "check-legal-aid.json",
+      "slug": "check-legal-aid",
+      "screenshot": true
+    },
+    "laa-estimate-financial-eligibility-for-legal-aid": {
+      "name": "Check if your client qualifies for legal aid",
+      "description": "Use this service to find out if your client is likely to get civil legal aid, based on their financial situation.",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Legal Aid Agency",
+        "Ministry of Justice"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://check-your-client-qualifies-for-legal-aid.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/laa-estimate-financial-eligibility-for-legal-aid"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Service launched",
+            "date": "2023-08-22",
+            "links": [
+              {
+                "href": "https://www.gov.uk/government/news/civil-news-online-eligibility-tool-launched-for-all-providers",
+                "text": "News story: Civil news: online eligibility tool launched for providers"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "check-your-client-qualifies-for-legal-aid.json",
+      "slug": "check-your-client-qualifies-for-legal-aid",
+      "start-page": [],
+      "screenshot": true
+    },
+    "fala": {
+      "name": "Find a legal aid adviser or family mediator",
+      "description": "Search for a legal adviser or family mediator with a legal aid contract in England and Wales.",
+      "organisation": [
+        "Legal Aid Agency"
+      ],
+      "theme": "Crime, justice and the law",
+      "phase": "Beta",
+      "liveservice": "https://find-legal-advice.justice.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/fala"
+        }
+      ],
+      "filename": "find-legal-advice.json",
+      "slug": "find-legal-advice",
+      "start-page": [],
+      "screenshot": true
+    },
+    "find-unclaimed-court-money": {
+      "name": "Find unclaimed court money",
+      "description": "You can find and claim money you're entitled to from a civil court in England and Wales if it has not been claimed.",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Unknown",
+      "start-page": [
+        "https://www.gov.uk/find-court-money"
+      ],
+      "liveservice": "https://find-unclaimed-court-money.service.justice.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/find-unclaimed-court-money"
+        }
+      ],
+      "filename": "find-unclaimed-court-money.json",
+      "slug": "find-unclaimed-court-money",
+      "screenshot": true
+    },
+    "hwf-publicapp": {
+      "name": "Get help paying court and tribunal fees",
+      "synonyms": [
+        "Help With Fees"
+      ],
+      "description": "You might be able to get money off your court or tribunal fees if you have little or no savings, are on certain benefits or have a low income. There are different ways of applying for help with fees for the Court of Protection and the First-Tier Immigration and Asylum Tribunal.",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/get-help-with-court-fees"
+      ],
+      "liveservice": "https://helpwithcourtfees.service.gov.uk/checklist",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2016-06-14",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/help-with-fees",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2016-02-04",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/help-with-fees-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/hwf-publicapp"
+        }
+      ],
+      "filename": "help-with-fees.json",
+      "slug": "help-with-fees",
+      "screenshot": true
+    },
+    "help-with-child-arrangements": {
+      "name": "Get help with child arrangements",
+      "description": "Use this guide if you need to make or change child arrangements (also known as contact, access or custody) with the other parent.",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "theme": "Childcare and parenting",
+      "phase": "Beta",
+      "liveservice": "https://helpwithchildarrangements.service.justice.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/help-with-child-arrangements"
+        }
+      ],
+      "filename": "helpwithchildarrangements.json",
+      "slug": "helpwithchildarrangements",
+      "start-page": [],
+      "screenshot": true
+    },
+    "peoplefinder": {
+      "name": "MoJ People Finder",
+      "description": "Find contact details.",
+      "theme": "Government Internal",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "unknown",
+      "facing": "internal",
+      "liveservice": "https://peoplefinder.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/peoplefinder"
+        }
+      ],
+      "filename": "people-finder.json",
+      "slug": "people-finder",
+      "start-page": [],
+      "screenshot": true
+    },
+    "help-with-prison-visits-external": {
+      "name": "Get help with the cost of prison visits",
+      "description": "If you visit a family member, partner or someone who doesn’t get other visitors you might be able to get help paying for: travel to the prisonsomewhere to stay overnight, meals. You must be getting certain benefits or have a health certificate to get help.",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://help-with-prison-visits.service.gov.uk/start",
+      "start-page": [
+        "https://www.gov.uk/help-with-prison-visits"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/help-with-prison-visits-external"
+        }
+      ],
+      "filename": "prison-visits-help.json",
+      "slug": "prison-visits-help",
+      "screenshot": true
+    },
+    "prison-visits-public": {
+      "name": "Visit someone in prison",
+      "description": "Use this service to book a social visit to a prisoner in England or Wales.",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Live",
+      "start-page": [
+        "https://www.gov.uk/prison-visits"
+      ],
+      "liveservice": "https://www.prisonvisits.service.gov.uk/",
+      "tags": [
+        "Top 75",
+        "Original 25 exemplars"
+      ],
+      "sourceCode": [
+        {
+          "text": "Public-facing service source code",
+          "href": "https://github.com/ministryofjustice/prison-visits-public"
+        },
+        {
+          "text": "Staff-facing service source code",
+          "href": "https://github.com/ministryofjustice/prison-visits-2"
+        },
+        {
+          "text": "Staff-facing manage service source code",
+          "href": "https://github.com/ministryofjustice/book-a-prison-visit-staff-ui"
+        },
+        {
+          "text": "Public-facing booking service source code",
+          "href": "https://github.com/ministryofjustice/hmpps-book-a-prison-visit-ui"
+        }
+      ],
+      "filename": "prison-visits.json",
+      "slug": "prison-visits",
+      "screenshot": true
+    },
+    "send-legal-mail-to-prisons": {
+      "name": "Send legal mail to prisons",
+      "description": "Use this service to create barcodes and addresses to display in your legal correspondence or confidential access mail if your organisation or role is listed in the guidance on monitoring and managing prisoner communications.",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://send-legal-mail.prison.service.justice.gov.uk/oneTimeCode/request-code",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/send-legal-mail-to-prisons"
+        }
+      ],
+      "filename": "send-legal-mail-prison.json",
+      "slug": "send-legal-mail-prison",
+      "start-page": [],
+      "screenshot": true
+    },
+    "money-to-prisoners-send-money": {
+      "name": "Send money to someone in prison",
+      "synonyms": [
+        "Send money to a prisoner"
+      ],
+      "description": "You can use this service to make a payment by debit card. We accept Visa, Mastercard and Maestro debit cards. You can also find out how to make a UK bank transfer to a prisoner by online banking, mobile banking app, telephone banking",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Live",
+      "start-page": [
+        "https://www.gov.uk/send-prisoner-money"
+      ],
+      "liveservice": "https://send-money-to-prisoner.service.gov.uk/",
+      "tags": [
+        "Top 75"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2016-07-08",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/send-money-to-a-prisoner-beta-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/ministryofjustice/money-to-prisoners-send-money"
+        }
+      ],
+      "filename": "send-prisoner-money.json",
+      "slug": "send-prisoner-money",
+      "screenshot": true
+    }
+  },
+  "DFE-Digital": {
+    "access-your-teaching-qualifications": {
+      "name": "Access your teaching qualifications",
+      "description": "Qualified teachers can use this service to download your teaching certificates, check qualification and early career teacher induction status and change the name on your teaching certificates.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://access-your-teaching-qualifications.education.gov.uk/",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/access-your-teaching-qualifications"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Launched",
+            "date": "2023-07-21"
+          }
+        ]
+      },
+      "filename": "access-your-teaching-qualifications.json",
+      "slug": "access-your-teaching-qualifications",
+      "start-page": [],
+      "screenshot": true
+    },
+    "Dfe.Academies.External": {
+      "name": "Apply to become an Academy",
+      "description": "Application processes for mainstream and special schools applying to convert to academy status.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://apply-convert-academy.service.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/government/publications/academy-conversion-application-forms"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/Dfe.Academies.External"
+        }
+      ],
+      "filename": "apply-convert-academy.json",
+      "slug": "apply-convert-academy",
+      "screenshot": true
+    },
+    "apply-for-teacher-training": {
+      "name": "Apply for teacher training",
+      "description": "Use this service to apply for a postgraduate teacher training course to teach in a state primary or secondary school, or in further education.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://www.apply-for-teacher-training.service.gov.uk/candidate/account",
+      "start-page": [
+        "https://www.gov.uk/apply-for-teacher-training"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/apply-for-teacher-training"
+        }
+      ],
+      "filename": "apply-for-teacher-training.json",
+      "slug": "apply-for-teacher-training",
+      "screenshot": true
+    },
+    "teacher-pay-calculator": {
+      "name": "Calculate teacher pay",
+      "description": "Calculate teacher pay following the 2023 pay award",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://calculate-teacher-pay.education.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/teacher-pay-calculator"
+        }
+      ],
+      "filename": "calculate-teacher-pay.json",
+      "slug": "calculate-teacher-pay",
+      "start-page": [],
+      "screenshot": true
+    },
+    "early-years-foundation-recovery": {
+      "name": "Early years child development training",
+      "description": "A free, online training course providing an overview of child development and giving practical advice for supporting the development of children in your early years setting.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://child-development-training.education.gov.uk/",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/early-years-foundation-recovery"
+        }
+      ],
+      "filename": "child-development-training.json",
+      "slug": "child-development-training",
+      "start-page": [],
+      "screenshot": true
+    },
+    "claim-additional-payments-for-teaching": {
+      "name": "Claim Additional Payments for Teaching",
+      "synonyms": [
+        "Claim an early-career payment"
+      ],
+      "description": "You may be eligible for early-career payments if you teach chemistry, languages, mathematics or physics.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://www.claim-additional-teaching-payment.service.gov.uk/additional-payments/landing-page",
+      "start-page": [
+        "https://www.gov.uk/guidance/early-career-payments-guidance-for-teachers-and-schools#when-to-apply-and-payments"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/claim-additional-payments-for-teaching"
+        }
+      ],
+      "filename": "claim-additional-teaching-payment.json",
+      "slug": "claim-additional-teaching-payment",
+      "screenshot": true
+    },
+    "fh-services": {
+      "name": "Manage family support services and accounts",
+      "description": "This service is for people working in local authorities or voluntary and community sector organisations. It allows you to manage your organisation and services on Connect families to support and Find support for your family.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Childcare and parenting",
+      "phase": "Beta",
+      "liveservice": "https://manage-family-support-services-and-accounts.education.gov.uk/",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/fh-services"
+        }
+      ],
+      "filename": "manage-family-support-services-and-accounts.json",
+      "slug": "manage-family-support-services-and-accounts",
+      "start-page": []
+    },
+    "childrens-social-care-cpd": {
+      "name": "Develop your career in child and family social work",
+      "description": "Find development programmes for child and family social workers at different stages of your career.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://www.develop-child-family-social-work-career.education.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/childrens-social-care-cpd"
+        }
+      ],
+      "filename": "develop-child-family-social-work-career.json",
+      "slug": "develop-child-family-social-work-career",
+      "start-page": [],
+      "screenshot": true
+    },
+    "eapim-developer-hub": {
+      "name": "Find and Use an API",
+      "synonyms": [
+        "DfE Developer Hub",
+        "DfE Data Exchange"
+      ],
+      "description": "Connect to the Department for Education (DfE) digital services through our APIs.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Alpha",
+      "liveservice": "https://find-and-use-an-api.education.gov.uk",
+      "timeline": {
+        "items": [
+          {
+            "label": "Did not pass alpha assessment",
+            "date": "2017-02-14",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/dfe-data-exchange-alpha",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/eapim-developer-hub"
+        }
+      ],
+      "filename": "dfe-developer-hub.json",
+      "slug": "dfe-developer-hub",
+      "start-page": [],
+      "screenshot": true
+    },
+    "find-a-lost-trn": {
+      "name": "Find a lost teacher reference number (TRN)",
+      "description": "Use this service to find your teacher reference number (TRN) if you do not know it or have forgotten it, or to check if you have a TRN.",
+      "organisation": [
+        "Teaching Regulation Agency",
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://find-a-lost-trn.education.gov.uk/start",
+      "start-page": [
+        "https://www.gov.uk/guidance/teacher-reference-number-trn"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/find-a-lost-trn"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Service launched",
+            "date": "2022-04-04"
+          }
+        ]
+      },
+      "filename": "find-a-lost-trn.json",
+      "slug": "find-a-lost-trn",
+      "screenshot": true
+    },
+    "teaching-school-hub-finder": {
+      "name": "Find a teaching school hub",
+      "description": "Use this service to find the contact details and websites of teaching school hubs near you.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://find-a-teaching-school-hub.education.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/teaching-school-hub-finder"
+        }
+      ],
+      "filename": "find-a-teaching-school-hub.json",
+      "slug": "find-a-teaching-school-hub",
+      "start-page": [],
+      "screenshot": true
+    },
+    "npd-find-and-explore": {
+      "name": "National Pupil Database (NPD)",
+      "description": "Use this tool to find and explore information about the data that is held in the NPD, a key DfE data store, covering education, skills and children services data for individual learners in England.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/guidance/apply-for-department-for-education-dfe-personal-data"
+      ],
+      "liveservice": "https://www.find-npd-data.education.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/npd-find-and-explore"
+        }
+      ],
+      "filename": "find-npd-data.json",
+      "slug": "find-npd-data",
+      "screenshot": true
+    },
+    "publish-teacher-training": {
+      "name": "Publish teacher training courses",
+      "description": "Use this service to publish information about initial teacher training courses.",
+      "theme": "Education, training and skills",
+      "organisation": [
+        "Department for Education"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://www.publish-teacher-training-courses.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/publish-teacher-training"
+        }
+      ],
+      "filename": "publish-teacher-training-courses.json",
+      "slug": "publish-teacher-training-courses",
+      "start-page": [],
+      "screenshot": true
+    },
+    "buy-for-your-school": {
+      "name": "Get help buying for schools",
+      "description": "Use this service to create a specification for a new catering service for a single school in England.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://www.get-help-buying-for-schools.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/buy-for-your-school"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2023-01-31",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/get-help-buying-for-schools-beta-assessment",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "get-help-buying-for-schools.json",
+      "slug": "get-help-buying-for-schools",
+      "start-page": [],
+      "screenshot": true
+    },
+    "get-help-to-retrain": {
+      "name": "Get help to retrain",
+      "description": "The service allowed users to create an action plan to help them identify another type of work they could move into and what training might be available nearby to support them in their application.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Retired",
+      "timeline": {
+        "items": [
+          {
+            "label": "Did not pass beta assessment",
+            "date": "2019-11-21",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/get-help-to-retrain-beta-assessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2019-02-21",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/get-help-to-retrain-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "Service closed",
+            "date": "2020-11-11"
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/get-help-to-retrain"
+        }
+      ],
+      "filename": "get-help-to-retrain.json",
+      "slug": "get-help-to-retrain",
+      "start-page": []
+    },
+    "get-help-with-tech": {
+      "name": "Get help with technology",
+      "description": "Information for local authorities, academy trusts and schools about the devices, internet access and support available to provide remote education and access to children’s social care during coronavirus (COVID-19).",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Coronavirus (COVID-19)",
+      "phase": "Retired",
+      "liveservice": "https://get-help-with-tech.education.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/guidance/get-laptops-and-tablets-for-children-who-cannot-attend-school-due-to-coronavirus-covid-19"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/get-help-with-tech"
+        }
+      ],
+      "filename": "get-help-with-tech.json",
+      "slug": "get-help-with-tech",
+      "screenshot": true
+    },
+    "get-information-about-schools": {
+      "name": "Get information about schools",
+      "description": "This is a register of schools and colleges in England. You can search for and download information on establishments, establishment groups or governors. Schools, local authorities and academy trusts can also update details by signing in to their Secure Access account.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://www.get-information-schools.service.gov.uk/",
+      "tags": [
+        "Top 75"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/get-information-about-schools"
+        }
+      ],
+      "filename": "get-information-schools.json",
+      "slug": "get-information-schools",
+      "start-page": [],
+      "screenshot": true
+    },
+    "get-into-teaching-app": {
+      "name": "Get Into Teaching",
+      "description": "A service which aims to inspire, inform and support people who are interested in training to become a teacher.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://getintoteaching.education.gov.uk",
+      "tags": [
+        "Top 75"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2021-01-19",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/get-into-teaching-beta-assessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2020-03-17",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/get-into-teaching-alpha-assessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/get-into-teaching-app"
+        }
+      ],
+      "filename": "get-into-teaching.json",
+      "slug": "get-into-teaching",
+      "start-page": [],
+      "screenshot": true
+    },
+    "get-teacher-training-adviser-service": {
+      "name": "Get an adviser",
+      "synonyms": [
+        "Get a teacher training adviser"
+      ],
+      "description": "If you’re thinking about teaching in England, an adviser can provide free, one-to-one support through phone, text or email.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://getintoteaching.education.gov.uk/teacher-training-adviser/sign_up/identity",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/get-teacher-training-adviser-service"
+        }
+      ],
+      "filename": "get-teacher-training-adviser.json",
+      "slug": "get-teacher-training-adviser",
+      "start-page": [],
+      "screenshot": true
+    },
+    "improve-workload-and-wellbeing-for-school-staff": {
+      "name": "Improve workload and wellbeing for school staff",
+      "description": "Use the service to help you promote staff wellbeing and support workload reduction in your school, with free resources that are produced by school leaders, for school leaders, support what you’re already doing and can be adapted to work in your school.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://improve-workload-and-wellbeing-for-school-staff.education.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/guidance/improve-workload-and-wellbeing-for-school-staff"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/improve-workload-and-wellbeing-for-school-staff"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Launched",
+            "date": "2024-03-26"
+          }
+        ]
+      },
+      "filename": "improve-workload-and-wellbeing-for-school-staff.json",
+      "slug": "improve-workload-and-wellbeing-for-school-staff",
+      "screenshot": true
+    },
+    "early-careers-framework": {
+      "name": "Manage training for early career teachers",
+      "description": "This service is for induction tutors who have been nominated by their school Use this service to manage your school’s statutory induction programme for early career teachers.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://manage-training-for-early-career-teachers.education.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/early-careers-framework"
+        }
+      ],
+      "filename": "manage-training-for-early-career-teachers.json",
+      "slug": "manage-training-for-early-career-teachers",
+      "start-page": [],
+      "screenshot": true
+    },
+    "plan-technology-for-your-school": {
+      "name": "Plan technology for your school",
+      "description": "This is a self-assessment service to determine how your school is using technology and what your school can do to use technology better in future.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://www.plan-technology-for-your-school.education.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/plan-technology-for-your-school"
+        }
+      ],
+      "filename": "plan-technology-for-your-school.json",
+      "slug": "plan-technology-for-your-school",
+      "start-page": [],
+      "screenshot": true
+    },
+    "cpd-information": {
+      "name": "Professional development for teachers and leaders",
+      "description": "Take a specialist national professional qualification (NPQ) to enhance and develop your existing skills and knowledge both inside and outside of the classroom.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Retired",
+      "liveservice": "https://professional-development-for-teachers-leaders.education.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/cpd-information"
+        }
+      ],
+      "filename": "professional-development-for-teachers-leaders.json",
+      "slug": "professional-development-for-teachers-leaders",
+      "start-page": [],
+      "screenshot": true
+    },
+    "refer-serious-misconduct": {
+      "name": "Refer serious misconduct by a teacher in England",
+      "synonyms": [
+        "Report serious teacher misconduct"
+      ],
+      "description": "The Teaching Regulation Agency (TRA) will investigate cases where the misconduct is serious enough to potentially result in a teacher being stopped from teaching (known as a ‘prohibition order’).",
+      "theme": "Education, training and skills",
+      "organisation": [
+        "Teaching Regulation Agency"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/report-teacher-misconduct",
+        "https://www.gov.uk/guidance/teacher-misconduct-referring-a-case"
+      ],
+      "liveservice": "https://refer-serious-misconduct.education.gov.uk/start",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/refer-serious-misconduct"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Service launched in beta",
+            "date": "2022-11-22"
+          }
+        ]
+      },
+      "filename": "refer-serious-misconduct-teacher.json",
+      "slug": "refer-serious-misconduct-teacher",
+      "screenshot": true
+    },
+    "npq-registration": {
+      "name": "Register for a National Professional Qualification",
+      "description": "This service is for teachers who want to register to study for a National Professional Qualification (NPQ).",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Alpha",
+      "liveservice": "https://register-national-professional-qualifications.education.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/government/publications/national-professional-qualifications-npqs-reforms/national-professional-qualifications-npqs-reforms"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/npq-registration"
+        }
+      ],
+      "filename": "register-national-professional-qualifications.json",
+      "slug": "register-national-professional-qualifications",
+      "screenshot": true
+    },
+    "register-trainee-teachers": {
+      "name": "Register trainee teachers",
+      "description": "Register trainees with the Department for Education and record the outcome of their training.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://www.register-trainee-teachers.education.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/register-trainee-teachers"
+        }
+      ],
+      "filename": "register-trainee-teachers.json",
+      "slug": "register-trainee-teachers",
+      "start-page": [],
+      "screenshot": true
+    },
+    "schools-experience": {
+      "name": "Get school experience",
+      "description": "Use this service if you want to request school experience in a primary or secondary school in England.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://schoolexperience.education.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/schools-experience"
+        }
+      ],
+      "filename": "school-experience.json",
+      "slug": "school-experience",
+      "start-page": [],
+      "screenshot": true
+    },
+    "support-for-early-career-teachers": {
+      "name": "Support for early career teachers",
+      "description": "Use this service to access training and support materials for the Early Career Framework (ECF), accredited by the Department for Education.",
+      "organisation": [
+        "Department for Education"
+      ],
+      "theme": "Education, training and skills",
+      "phase": "Beta",
+      "liveservice": "https://support-for-early-career-teachers.education.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/guidance/how-to-set-up-training-for-early-career-teachers"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/support-for-early-career-teachers"
+        }
+      ],
+      "filename": "support-for-early-career-teachers.json",
+      "slug": "support-for-early-career-teachers",
+      "screenshot": true
+    },
+    "teaching-vacancies": {
+      "name": "Teaching Vacancies",
+      "description": "Search for a job in teaching in England by subject or role, location, salary, full-time and part-time jobs, and by primary education and secondary education.",
+      "theme": "Working, jobs and pensions",
+      "organisation": [
+        "Department for Education"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://teaching-vacancies.service.gov.uk/",
+      "start-page": [
+        "https://www.gov.uk/find-teaching-job"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DFE-Digital/teaching-vacancies"
+        }
+      ],
+      "filename": "teaching-vacancies.json",
+      "slug": "teaching-vacancies",
+      "screenshot": true
+    }
+  },
+  "Planning-Inspectorate": {
+    "appeal-planning-decision": {
+      "name": "Appeal a planning decision",
+      "synonyms": [
+        "Appeal a householder planning decision"
+      ],
+      "description": "You can appeal a householder planning decision if you were refused permission for reasons that you think go against the local planning authority’s development plan or planning policy.",
+      "organisation": [
+        "Planning Inspectorate",
+        "Ministry of Housing, Communities & Local Government"
+      ],
+      "theme": "Housing and local services",
+      "phase": "Beta",
+      "liveservice": "https://appeal-planning-decision.service.gov.uk/before-you-start",
+      "start-page": [
+        "https://www.gov.uk/appeal-householder-planning-decision/make-an-appeal"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/Planning-Inspectorate/appeal-planning-decision"
+        }
+      ],
+      "filename": "appeal-planning-decision.json",
+      "slug": "appeal-planning-decision",
+      "screenshot": true
+    },
+    "applications-service": {
+      "name": "Find a National Infrastructure Project",
+      "description": "Find information about Nationally Significant Infrastructure Projects (NSIPs). These are large scale projects like power stations, highways and power lines. They are treated separately from normal local authority planning because of their size and importance to wider communities.",
+      "organisation": [
+        "Planning Inspectorate",
+        "Ministry of Housing, Communities & Local Government"
+      ],
+      "theme": "Housing and local services",
+      "phase": "Beta",
+      "liveservice": "https://national-infrastructure-consenting.planninginspectorate.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/Planning-Inspectorate/applications-service"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Service launched",
+            "date": "2024-03-26",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/manage-and-register-pension-schemes-alpha",
+                "text": "News story: New online hub launches for National Infrastructure Projects"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "national-infrastructure.json",
+      "slug": "national-infrastructure",
+      "start-page": [],
+      "screenshot": true
+    }
+  },
+  "hmcts": {
+    "nfdiv-frontend": {
+      "name": "Apply for a divorce",
+      "synonyms": [
+        "Apply for Divorce"
+      ],
+      "description": "You can use this service to apply for a divorce in England and Wales.",
+      "organisation": [
+        "HM Courts & Tribunals Service",
+        "Ministry of Justice"
+      ],
+      "theme": "Births, deaths, marriages and care",
+      "phase": "Beta",
+      "liveservice": "https://www.apply-divorce.service.gov.uk/index",
+      "start-page": [
+        "https://www.gov.uk/apply-for-divorce"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed alpha assessment",
+            "date": "2016-10-25",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/apply-for-divorce",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "New service launched",
+            "date": "2022-04-06",
+            "links": [
+              {
+                "href": "https://www.gov.uk/government/news/new-divorce-laws-will-come-into-force-from-6-april-2022",
+                "text": "New divorce laws will come into force from 6 April 2022"
+              },
+              {
+                "href": "https://www.gov.uk/government/news/blame-game-ends-as-no-fault-divorce-comes-into-force",
+                "text": "“Blame game” ends as no-fault divorce comes into force"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/hmcts/nfdiv-frontend"
+        }
+      ],
+      "filename": "apply-divorce.json",
+      "slug": "apply-divorce",
+      "screenshot": true
+    },
+    "probate-frontend": {
+      "name": "Apply for Probate",
+      "description": "Applying for the legal right to deal with someone’s property, money and possessions (their ‘estate’) when they die is called ‘applying for probate’.",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "HM Courts & Tribunals Service"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/applying-for-probate/apply-for-probate"
+      ],
+      "liveservice": "https://www.apply-for-probate.service.gov.uk/death-certificate",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2018-05-03",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/apply-for-probate-beta-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2017-02-21",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/apply-for-probate-alpha-assessment",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "Did not meet alpha assessment",
+            "date": "2016-12-09"
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/hmcts/probate-frontend"
+        }
+      ],
+      "filename": "apply-for-probate.json",
+      "slug": "apply-for-probate",
+      "screenshot": true
+    },
+    "cmc-legal-rep-frontend": {
+      "name": "Money Claims",
+      "synonyms": [
+        "Civil money claims",
+        "Make a money claim online"
+      ],
+      "description": "You can make a money claim if you think a person or organisation owes you money and will not pay you back.",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "HM Courts & Tribunals Service"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/make-court-claim-for-money/make-claim"
+      ],
+      "liveservice": "https://www1.moneyclaims.service.gov.uk/eligibility/claim-value",
+      "tags": [
+        "Original 25 exemplars"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2018-03-21",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/civil-money-claims-beta",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2017-04-06",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/civil-money-claims-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/hmcts/cmc-legal-rep-frontend"
+        }
+      ],
+      "filename": "money-claims.json",
+      "slug": "money-claims",
+      "screenshot": true
+    }
+  },
+  "InnovateUKGitHub": {
+    "innovation-funding-service": {
+      "name": "Apply for innovation funding",
+      "synonyms": [
+        "Innovation Funding Service",
+        "Apply for an Innovation funding grant"
+      ],
+      "description": "Lets users who are looking for funding to complete their innovative projects apply to comptitions to win a grant.",
+      "theme": "Business and self-employed",
+      "organisation": [
+        "Innovate UK"
+      ],
+      "phase": "Beta",
+      "phase_modifier": "Public",
+      "liveservice": "https://apply-for-innovation-funding.service.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/apply-funding-innovation"
+      ],
+      "video": "YgWbfuxffj8",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/InnovateUKGitHub/innovation-funding-service"
+        }
+      ],
+      "filename": "apply-for-innovation-funding.json",
+      "slug": "apply-for-innovation-funding",
+      "screenshot": true
+    }
+  },
+  "SkillsFundingAgency": {
+    "das-employerapprenticeshipsservice": {
+      "name": "Manage apprenticeships",
+      "synonyms": [
+        "The (Digital) Apprenticeship",
+        "Access my Levy"
+      ],
+      "description": "This service is for organisations that want to take on apprentices. Use this service to set up and manage apprenticeship training and pay for apprenticeship training.",
+      "theme": "Education, training and skills",
+      "organisation": [
+        "Education and Skills Funding Agency",
+        "Department for Education"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/sign-in-apprenticeship-service-account"
+      ],
+      "liveservice": "https://accounts.manage-apprenticeships.service.gov.uk/service",
+      "tags": [
+        "Top 75"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2016-12-15",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/the-digital-apprenticeship-service",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2016-06-15",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/access-my-levy",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/SkillsFundingAgency/das-employerapprenticeshipsservice"
+        }
+      ],
+      "filename": "apprenticeship-levy.json",
+      "slug": "apprenticeship-levy",
+      "screenshot": true
+    },
+    "das-findapprenticeshiptraining": {
+      "name": "Find apprenticeship training for your apprentice",
+      "synonyms": [
+        "Find apprenticeship training if you're an employer"
+      ],
+      "description": "If you’re an employer, you can find training for your apprentices.",
+      "theme": "Education, training and skills",
+      "organisation": [
+        "Education and Skills Funding Agency",
+        "Department for Education"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/employers-find-apprenticeship-training"
+      ],
+      "liveservice": "https://findapprenticeshiptraining.apprenticeships.education.gov.uk/courses",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/SkillsFundingAgency/das-findapprenticeshiptraining"
+        }
+      ],
+      "filename": "findapprenticeshiptraining.json",
+      "slug": "findapprenticeshiptraining",
+      "screenshot": true
+    }
+  },
+  "abbott567": {
+    "bereavement": {
+      "name": "Apply for Bereavement Support Payment",
+      "synonyms": [
+        "Bereavement support",
+        "Bereavement Support Payment"
+      ],
+      "description": "You may be able to get Bereavement Support Payment if your husband, wife or civil partner died in the last 21 months.",
+      "theme": "Benefits",
+      "organisation": [
+        "Department for Work and Pensions"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/bereavement-support-payment/how-to-claim"
+      ],
+      "liveservice": "https://apply-for-bereavement-support-payment.dwp.gov.uk/apply?lang=en",
+      "tags": [
+        "Top 75"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/abbott567/bereavement"
+        }
+      ],
+      "filename": "bereavement-allowance.json",
+      "slug": "bereavement-allowance",
+      "screenshot": true
+    }
+  },
+  "UKHomeOffice": {
+    "brp_enquiry_forms": {
+      "name": "Biometric Residence Permits",
+      "synonyms": [
+        "Biometric Residence Permits (BRPs)"
+      ],
+      "description": "A biometric residence permit (BRP) can be used to confirm your identit, right to study or work in the UK or right to any public services or benefits you’re entitled to.",
+      "theme": "Citizenship and living in the UK",
+      "organisation": [
+        "Home Office"
+      ],
+      "phase": "Live",
+      "start-page": [
+        "https://www.gov.uk/biometric-residence-permits"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed live assessment",
+            "date": "2016-06-21",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/biometric-residence-permits-brps",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          },
+          {
+            "label": "Did not pass beta assessment",
+            "date": "2015-01-14",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/biometric-residence-permits-beta",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed beta reassessment",
+            "date": "2015-08-17",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/biometric-residence-permits-beta#reassessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta reassessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKHomeOffice/brp_enquiry_forms"
+        }
+      ],
+      "filename": "biometric-residence-permits.json",
+      "slug": "biometric-residence-permits"
+    },
+    "undefined": {
+      "name": "Apply for a passport",
+      "synonyms": [
+        "Apply online for a UK passport"
+      ],
+      "description": "Use this service to apply for, renew, replace or update your passport and pay for it online.",
+      "theme": "Passports, travel and living abroad",
+      "organisation": [
+        "Home Office"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://www.passport.service.gov.uk/filter",
+      "start-page": [
+        "https://www.gov.uk/apply-renew-passport"
+      ],
+      "tags": [
+        "Top 75",
+        "Original 25 exemplars"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKHomeOffice?utf8=%E2%9C%93&q=passport"
+        }
+      ],
+      "filename": "passport.json",
+      "slug": "passport",
+      "screenshot": true
+    },
+    "gro": {
+      "name": "Order a birth, death, marriage or civil partnership certificate",
+      "description": "You need to register on the General Register Office (GRO) website to get a copy of a birth, adoption, death, marriage or civil partnership certificate in England and Wales.",
+      "theme": "Births, deaths, marriages and care",
+      "organisation": [
+        "Home Office",
+        "General Register Office"
+      ],
+      "phase": "unknown",
+      "start-page": [
+        "https://www.gov.uk/order-copy-birth-death-marriage-certificate",
+        "https://www.gov.uk/commemorative-marriage-certificate"
+      ],
+      "liveservice": "https://www.gro.gov.uk/gro/content/certificates/default.asp",
+      "tags": [
+        "Top 75"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKHomeOffice/gro"
+        }
+      ],
+      "filename": "general-registrars-office.json",
+      "slug": "general-registrars-office",
+      "screenshot": true
+    },
+    "home-office-design-system": {
+      "name": "Home Office Design System",
+      "description": "Documenting common ways of solving problems - helping to reduce multiplied effort. Filling the gaps between GDS guidance and Home Office services.",
+      "organisation": [
+        "Home Office"
+      ],
+      "phase": "unknown",
+      "theme": "Government internal",
+      "liveservice": "https://design.homeoffice.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKHomeOffice/home-office-design-system"
+        }
+      ],
+      "filename": "home-office-design-system.json",
+      "slug": "home-office-design-system",
+      "start-page": [],
+      "screenshot": true
+    },
+    "modern-slavery": {
+      "name": "Report modern slavery",
+      "synonyms": [
+        "Report modern slavery as a first responder"
+      ],
+      "description": "First responders can use the National Referral Mechanism (NRM) to report cases of modern slavery and refer potential victims for support and protection.",
+      "organisation": [
+        "Home Office"
+      ],
+      "theme": "Crime, justice and the law",
+      "phase": "Beta",
+      "liveservice": "https://www.modernslavery.gov.uk/start",
+      "start-page": [
+        "https://www.gov.uk/guidance/report-modern-slavery-as-a-first-responder"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKHomeOffice/modern-slavery"
+        }
+      ],
+      "filename": "report-modern-slavery.json",
+      "slug": "report-modern-slavery",
+      "screenshot": true
+    },
+    "rotm": {
+      "name": "Report online material promoting terrorism or extremism",
+      "description": "Report illegal or harmful information, pictures or videos you’ve found on the internet. You can make your report anonymously.",
+      "theme": "Citizenship and living in the UK",
+      "organisation": [
+        "Home Office"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://www.report-terrorist-material.homeoffice.gov.uk/evidence-url",
+      "start-page": [
+        "https://www.gov.uk/report-terrorism"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKHomeOffice/rotm"
+        }
+      ],
+      "filename": "report-online-terrorist-material.json",
+      "slug": "report-online-terrorist-material",
+      "screenshot": true
+    },
+    "right-to-rent-check": {
+      "name": "View a tenant's right to rent in England",
+      "description": "View a tenant's right to rent if they have a biometric residence card, biometric residence permit, settled or pre-settled status, or applied for a visa and used the ‘UK Immigration: ID Check’ app to scan their identity document on their phone.",
+      "theme": "Citizenship and living in the UK",
+      "organisation": [
+        "Home Office"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://right-to-rent.service.gov.uk/view",
+      "start-page": [
+        "https://www.gov.uk/view-right-to-rent"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKHomeOffice/right-to-rent-check"
+        }
+      ],
+      "filename": "right-to-rent.json",
+      "slug": "right-to-rent",
+      "screenshot": true
+    }
+  },
+  "DEFRA": {
+    "rod-licensing": {
+      "name": "Get a rod fishing licence",
+      "synonyms": [
+        "Get a fishing rod license",
+        "I want to go fishing",
+        "I want to fish",
+        "Buy a Rod Fishing Licence for England & Wales"
+      ],
+      "description": "You can buy a 1-day, 8-day or 12-month licence online.",
+      "theme": "Environment and countryside",
+      "organisation": [
+        "Environment Agency"
+      ],
+      "phase": "Live",
+      "liveservice": "https://get-fishing-licence.service.gov.uk/",
+      "start-page": [
+        "https://www.gov.uk/fishing-licences/buy-a-fishing-licence"
+      ],
+      "tags": [
+        "Top 75"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DEFRA/rod-licensing"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed live assessment",
+            "date": "2021-05-11",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/get-a-fishing-rod-license",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for  assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2016-04-04",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/i-want-to-go-fishing-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "buy-fishing-licence.json",
+      "slug": "buy-fishing-licence",
+      "screenshot": true
+    },
+    "fmp-app": {
+      "name": "Flood map for planning",
+      "description": "This service is for learning about a site location's flood probability as part of development planning.",
+      "theme": "Environment and countryside",
+      "organisation": [
+        "Environment Agency"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://flood-map-for-planning.service.gov.uk/",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DEFRA/fmp-app"
+        }
+      ],
+      "filename": "flood-map.json",
+      "slug": "flood-map",
+      "start-page": [],
+      "screenshot": true
+    },
+    "flood-app": {
+      "name": "Check for flooding",
+      "description": "Use this service to check current flood warnings or alerts, river, sea, groundwater and rainfall levels and flood risk in the next 5 days.",
+      "theme": "Environment and countryside",
+      "organisation": [
+        "Environment Agency"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/check-flooding"
+      ],
+      "liveservice": "https://check-for-flooding.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DEFRA/flood-app"
+        }
+      ],
+      "filename": "flood-warning-info.json",
+      "slug": "flood-warning-info",
+      "screenshot": true
+    },
+    "rod-catch-returns-frontend": {
+      "name": "Report your salmon or sea trout catch",
+      "synonyms": [
+        "Report a catch return (England and Wales)"
+      ],
+      "description": "You must report how many salmon and sea trout you’ve caught if you have a migratory salmon and sea trout rod licence.",
+      "theme": "Business and self-employed",
+      "organisation": [
+        "Environment Agency"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://catchreturn.service.gov.uk/",
+      "start-page": [
+        "https://www.gov.uk/catch-return"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/DEFRA/rod-catch-returns-frontend"
+        }
+      ],
+      "filename": "report-your-salmon-or-sea-trout-catch.json",
+      "slug": "report-your-salmon-or-sea-trout-catch",
+      "screenshot": true
+    },
+    "flood-xws-contact-web": {
+      "name": "Sign up for flood warnings",
+      "synonyms": [
+        "Get flood warnings"
+      ],
+      "description": "Sign up to get warnings in England by phone, email or text message if your home or business is at risk of flooding. The service is free.",
+      "theme": "Environment and countryside",
+      "organisation": [
+        "Environment Agency"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/sign-up-for-flood-warnings"
+      ],
+      "liveservice": "https://www.fws.environment-agency.gov.uk/app/olr/register",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed alpha assessment",
+            "date": "2021-11-17",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/get-flood-warnings",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Public facing website",
+          "href": "https://github.com/DEFRA/flood-xws-contact-web"
+        },
+        {
+          "text": "API",
+          "href": "https://github.com/DEFRA/flood-xws-subscription-api"
+        }
+      ],
+      "filename": "sign-up-for-flood-warnings.json",
+      "slug": "sign-up-for-flood-warnings",
+      "screenshot": true
+    }
+  },
+  "dwp": {
+    "carers-allowance-prototype": {
+      "name": "Apply for Carer’s Allowance",
+      "synonyms": [
+        "Carer’s Allowance",
+        "Claim Carer’s Allowance"
+      ],
+      "description": "Lets users who care for another person for more than 35 hours a week get a regular payment so that they can carry on giving care.",
+      "theme": "Benefits",
+      "organisation": [
+        "Department for Work and Pensions"
+      ],
+      "phase": "Live",
+      "prototype": "https://dwp-story.3cbeta.co.uk/URSept/",
+      "video": "IYBLX3V8ek4",
+      "start-page": [
+        "https://www.gov.uk/carers-allowance"
+      ],
+      "liveservice": "https://www.carersallowance.service.gov.uk/",
+      "tags": [
+        "Top 75",
+        "Original 25 exemplars"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed live assessment",
+            "date": "2014-11-13",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/carer-s-allowance-live-assessment",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/dwp/carers-allowance-prototype"
+        }
+      ],
+      "filename": "carers-allowance.json",
+      "slug": "carers-allowance",
+      "screenshot": true
+    }
+  },
+  "noms-digital-studio": {
+    "csra-app": {
+      "name": "Cell Sharing Risk Assessment application",
+      "description": "Assess if a prisoner can share a cell safely",
+      "theme": "Crime, justice and the law",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Unknown",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/noms-digital-studio/csra-app"
+        }
+      ],
+      "filename": "cell-sharing-risk.json",
+      "slug": "cell-sharing-risk",
+      "start-page": []
+    }
+  },
+  "uktrade": {
+    "global-uk-tariff": {
+      "name": "Check UK trade tariffs from 1 January 2021",
+      "description": "Use this service to check the UK Global Tariff that will apply to goods you import from 1 January 2021. You can also check the difference between what you pay now and what you’ll pay from 1 January 2021.",
+      "organisation": [
+        "Department for International Trade"
+      ],
+      "theme": "Money and tax",
+      "phase": "Retired",
+      "liveservice": "https://check-future-uk-trade-tariffs.service.gov.uk/",
+      "start-page": [
+        "https://www.gov.uk/check-tariffs-1-january-2021"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/uktrade/global-uk-tariff"
+        }
+      ],
+      "filename": "check-future-uk-trade-tariffs.json",
+      "slug": "check-future-uk-trade-tariffs"
+    }
+  },
+  "UKGovernmentBEIS": {
+    "payment-practices-reporting": {
+      "name": "Payment practices reporting",
+      "description": "Large businesses must publish information about their payment terms and practices, and how they keep to them.",
+      "organisation": [
+        "Department for Business and Trade"
+      ],
+      "theme": "Business and self-employed",
+      "phase": "Beta",
+      "liveservice": "https://publish-payment-practices.service.gov.uk/",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKGovernmentBEIS/payment-practices-reporting"
+        }
+      ],
+      "filename": "payment-practices-reporting.json",
+      "slug": "payment-practices-reporting",
+      "start-page": [],
+      "screenshot": true
+    },
+    "energy-label-service": {
+      "name": "Create an energy label",
+      "description": "Create a label for an energy-related product (ErP) that you make or sell to UK customers, for example white goods, boilers and other household appliances.",
+      "organisation": [
+        "Department for Business and Trade"
+      ],
+      "theme": "Business and self-employed",
+      "phase": "Beta",
+      "liveservice": "https://create-energy-label.service.gov.uk/",
+      "start-page": [
+        "https://www.gov.uk/guidance/create-an-energy-label"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKGovernmentBEIS/energy-label-service"
+        }
+      ],
+      "filename": "create-energy-label.json",
+      "slug": "create-energy-label",
+      "screenshot": true
+    },
+    "beis-opss-psd": {
+      "name": "Product safety database",
+      "description": "Report, track and share product safety information with the product safety community",
+      "organisation": [
+        "Office for Product Safety and Standards"
+      ],
+      "theme": "Business and self-employed",
+      "phase": "Beta",
+      "liveservice": "https://www.product-safety-database.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKGovernmentBEIS/beis-opss-psd"
+        }
+      ],
+      "filename": "product-safety-database.json",
+      "slug": "product-safety-database",
+      "start-page": [],
+      "screenshot": true
+    },
+    "beis-report-official-development-assistance": {
+      "name": "Report your Official Development Assistance",
+      "description": "This service is for reporting research and innovation Official Development Assistance.",
+      "organisation": [
+        "Department for Business and Trade"
+      ],
+      "theme": "Business and self-employed",
+      "phase": "Beta",
+      "liveservice": "https://www.report-official-development-assistance.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKGovernmentBEIS/beis-report-official-development-assistance"
+        }
+      ],
+      "filename": "report-official-development-assistance.json",
+      "slug": "report-official-development-assistance",
+      "start-page": [],
+      "screenshot": true
+    },
+    "beis-opss-cosmetics": {
+      "name": "Submit cosmetic product notifications",
+      "description": "Notify the Office for Product Safety and Standards (OPSS) about cosmetic products available to consumers in Great Britain (GB).",
+      "organisation": [
+        "Office for Product Safety and Standards"
+      ],
+      "theme": "Business and self-employed",
+      "phase": "Beta",
+      "liveservice": "https://submit.cosmetic-product-notifications.service.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/guidance/submit-a-cosmetic-product-notification"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKGovernmentBEIS/beis-opss-cosmetics"
+        }
+      ],
+      "filename": "submit-cosmetic-product-notifications.json",
+      "slug": "submit-cosmetic-product-notifications",
+      "screenshot": true
+    }
+  },
+  "alphagov": {
+    "paas-product-pages": {
+      "name": "GOV.UK Platform as a Service",
+      "synonyms": [
+        "GOV.UK Platform as a Service (PaaS)",
+        "Platform as a Service (PaaS)"
+      ],
+      "description": "Modern web hosting for government services. You can get something up on the Internet in minutes, without depending on a webops team.",
+      "theme": "Government Internal",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "phase": "Live",
+      "facing": "internal",
+      "liveservice": "https://www.cloud.service.gov.uk/",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed live assessment",
+            "date": "2021-02-10",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-dot-uk-platform-as-a-service-paas-live-assessment",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2016-06-23",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/platform-as-a-service-paas",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "Service retirement announced",
+            "date": "2022-07-12",
+            "links": [
+              {
+                "href": "https://gds.blog.gov.uk/2022/07/12/why-weve-decided-to-decommission-gov-uk-paas-platform-as-a-service/",
+                "text": "Why we’ve decided to decommission GOV.UK PaaS (Platform as a Service)"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/paas-product-pages"
+        }
+      ],
+      "filename": "cloud.json",
+      "slug": "cloud",
+      "start-page": [],
+      "screenshot": true
+    },
+    "govuk-coronavirus-business-volunteer-form": {
+      "name": "Offer coronavirus support from your business",
+      "description": "Use this service to tell us how your business might be able to help with the response to coronavirus (COVID-19).",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "theme": "Coronavirus (COVID-19)",
+      "phase": "Retired",
+      "liveservice": "https://coronavirus-business-volunteers.service.gov.uk/accommodation",
+      "start-page": [
+        "https://www.gov.uk/coronavirus-support-from-business"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/govuk-coronavirus-business-volunteer-form"
+        }
+      ],
+      "filename": "coronavirus-business-volunteers.json",
+      "slug": "coronavirus-business-volunteers"
+    },
+    "govuk-shielded-vulnerable-people-service": {
+      "name": "Get support if you’re clinically extremely vulnerable to coronavirus",
+      "description": "Use this service if you have a medical condition which means you’re classed as being clinically extremely vulnerable to coronavirus.",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "theme": "Coronavirus (COVID-19)",
+      "phase": "Retired",
+      "liveservice": "https://coronavirus-shielding-support.service.gov.uk/start",
+      "start-page": [
+        "https://www.gov.uk/coronavirus-shielding-support"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/govuk-shielded-vulnerable-people-service"
+        }
+      ],
+      "filename": "coronavirus-shielding-support.json",
+      "slug": "coronavirus-shielding-support"
+    },
+    "govuk-design-system": {
+      "name": "GOV.UK Design System",
+      "description": "Use this design system to make your service consistent with GOV.UK. Learn from the research and experience of other service teams and avoid repeating work that’s already been done.",
+      "theme": "Government Internal",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://design-system.service.gov.uk",
+      "facing": "internal",
+      "sourceCode": [
+        {
+          "text": "Website source code",
+          "href": "https://github.com/alphagov/govuk-design-system"
+        },
+        {
+          "text": "govuk-frontend source code",
+          "href": "https://github.com/alphagov/govuk-frontend"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed alpha assessment",
+            "date": "2017-08-31",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-uk-design-system-alpha-reassessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "Did not pass alpha assessment",
+            "date": "2017-06-05",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-uk-design-system-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for failed alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "Did not pass live assessment",
+            "date": "2021-03-11",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-dot-uk-design-system-live-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed live reassessment",
+            "date": "2021-11-16",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-uk-design-system-live-reassessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for live reassessment"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "design-system.json",
+      "slug": "design-system",
+      "start-page": [],
+      "screenshot": true
+    },
+    "govuk-coronavirus-find-support": {
+      "name": "Find out what support you can get if you’re affected by coronavirus",
+      "description": "Use this service to find out what help and advice you can get from the government and other organisations. You can use it for yourself or someone else.",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "theme": "Coronavirus (COVID-19)",
+      "phase": "Retired",
+      "liveservice": "https://find-coronavirus-support.service.gov.uk/need-help-with",
+      "start-page": [
+        "https://www.gov.uk/find-coronavirus-support"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/govuk-coronavirus-find-support"
+        }
+      ],
+      "filename": "find-coronavirus-support.json",
+      "slug": "find-coronavirus-support"
+    },
+    "travel-advice-publisher": {
+      "name": "Foreign travel advice",
+      "synonyms": [
+        "Use the Travel Advice Service"
+      ],
+      "description": "Get advice about travelling abroad, including the latest information on coronavirus, safety and security, entry requirements and travel warnings.",
+      "organisation": [
+        "Foreign, Commonwealth & Development Office"
+      ],
+      "theme": "Passports, travel and living abroad",
+      "phase": "Live",
+      "liveservice": "https://www.gov.uk/foreign-travel-advice",
+      "tags": [
+        "Top 75"
+      ],
+      "sourceCode": [
+        {
+          "text": "Publisher source code",
+          "href": "https://github.com/alphagov/travel-advice-publisher"
+        }
+      ],
+      "filename": "foreign-travel-advice.json",
+      "slug": "foreign-travel-advice",
+      "start-page": [],
+      "screenshot": true
+    },
+    "forms-api-prototype": {
+      "name": "GOV.UK Forms",
+      "description": "Create an accessible online form in minutes without needing technical knowledge.",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "theme": "Government Internal",
+      "phase": "Beta",
+      "liveservice": "https://www.forms.service.gov.uk/",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed alpha assessment",
+            "date": "2022-03-03",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-dot-uk-forms-alpha-assessment-report",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "First form launches",
+            "date": "2022-10-06",
+            "links": [
+              {
+                "href": "https://gds.blog.gov.uk/2022/10/06/making-it-easy-to-create-and-publish-digital-forms-on-gov-uk/",
+                "text": "Blog post: Making it easy to create and publish digital forms on GOV.UK"
+              },
+              {
+                "href": "https://www.gov.uk/government/news/new-online-claims-form-launched-to-benefit-redundancy-claimants",
+                "text": "News story: New online claims form launched to benefit redundancy claimants"
+              }
+            ]
+          },
+          {
+            "label": "Assessed as amber at beta stage",
+            "date": "2024-04-22",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-dot-uk-forms-beta-assessment-report",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Prototype for the API",
+          "href": "https://github.com/alphagov/forms-api-prototype"
+        },
+        {
+          "text": "Product pages",
+          "href": "https://github.com/alphagov/forms-product-page"
+        },
+        {
+          "text": "Admin application",
+          "href": "https://github.com/alphagov/forms-admin"
+        },
+        {
+          "text": "Forms runner",
+          "href": "https://github.com/alphagov/forms-runner"
+        }
+      ],
+      "filename": "forms.json",
+      "slug": "forms",
+      "start-page": [],
+      "screenshot": true
+    },
+    "frontend": {
+      "name": "GOV.UK",
+      "description": "The best place to find government services and information.",
+      "theme": "Government Internal",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "phase": "Live",
+      "facing": "internal",
+      "liveservice": "https://www.gov.uk/",
+      "sourceCode": [
+        {
+          "text": "Source code for the homepage, transactions and some index pages",
+          "href": "https://github.com/alphagov/frontend"
+        },
+        {
+          "text": "Source code for finder and search pages for GOV.UK",
+          "href": "https://github.com/alphagov/finder-frontend"
+        }
+      ],
+      "filename": "govuk.json",
+      "slug": "govuk",
+      "start-page": [],
+      "screenshot": true
+    },
+    "notifications-admin": {
+      "name": "GOV.UK Notify",
+      "description": "Try GOV.UK Notify now if you work in central government, a local authority, or the NHS.",
+      "theme": "Government Internal",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "phase": "Beta",
+      "facing": "internal",
+      "liveservice": "https://www.notifications.service.gov.uk/",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed live assessment",
+            "date": "2020-11-10",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-dot-uk-notify-live-assessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed beta assessment",
+            "date": "2017-02-01",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-uk-notify-beta-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2016-03-22",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-uk-notify",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/notifications-admin"
+        }
+      ],
+      "filename": "notifications.json",
+      "slug": "notifications",
+      "start-page": [],
+      "screenshot": true
+    },
+    "datagovuk_find": {
+      "name": "Find open data",
+      "synonyms": [
+        "Data.gov.uk",
+        "Find UK government data"
+      ],
+      "description": "Find data published by central government, local authorities and public bodies to help you build products and services",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "theme": "Government Internal",
+      "phase": "Beta",
+      "liveservice": "https://data.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/datagovuk_find"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed alpha assessment",
+            "date": "2017-03-31",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/data-gov-uk-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha reassessment",
+            "date": "2017-05-30",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/find-uk-government-data-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha reassessment"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "open-data.json",
+      "slug": "open-data",
+      "start-page": [],
+      "screenshot": true
+    },
+    "pay-frontend": {
+      "name": "GOV.UK Pay",
+      "description": "GOV.UK Pay is a secure payment service that is easy to integrate with and designed to meet the Digital Service Standard. Give your users a trusted GOV.UK-branded payment experience.",
+      "theme": "Government Internal",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "phase": "Beta",
+      "facing": "internal",
+      "liveservice": "https://www.payments.service.gov.uk/",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed live assessment",
+            "date": "2021-02-09",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-dot-uk-pay-live-assessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/pay-frontend"
+        }
+      ],
+      "filename": "payments.json",
+      "slug": "payments",
+      "start-page": [],
+      "screenshot": true
+    },
+    "platforms-product-page": {
+      "name": "GOV.UK UK Government Security",
+      "description": "This website is where people across the UK government can find security-related strategies, standards, and guidance, along with the organisations involved in the security profession.",
+      "theme": "Government Internal",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "phase": "Live",
+      "liveservice": "https://www.security.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/platforms-product-page"
+        }
+      ],
+      "filename": "security.json",
+      "slug": "security",
+      "start-page": [],
+      "screenshot": true
+    },
+    "govuk-prototype-kit": {
+      "name": "GOV.UK Prototype Kit",
+      "description": "Rapidly create HTML prototypes of GOV.UK services.",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "theme": "Government Internal",
+      "phase": "Beta",
+      "liveservice": "https://prototype-kit.service.gov.uk",
+      "timeline": {
+        "items": [
+          {
+            "label": "Version 13 released with significant changes",
+            "date": "2022-11-21",
+            "links": [
+              {
+                "href": "https://github.com/alphagov/govuk-prototype-kit/releases/tag/v13.0.0",
+                "text": "Release notes",
+                "visuallyHiddenText": " for version 13"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/govuk-prototype-kit"
+        }
+      ],
+      "filename": "prototype-kit.json",
+      "slug": "prototype-kit",
+      "start-page": [],
+      "screenshot": true
+    },
+    "govwifi-product-page": {
+      "name": "GovWifi",
+      "description": "GovWifi is a wifi authentication service allowing staff and visitors to use a single username and password to connect to guest wifi across the public sector.",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "theme": "Government Internal",
+      "phase": "Live",
+      "liveservice": "https://www.wifi.service.gov.uk",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed live assessment",
+            "date": "2021-09-16",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/govwifi",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed beta reassessment",
+            "date": "2017-04-27",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-wifi-beta-reassessment",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for beta reassessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/alphagov/govwifi-product-page"
+        }
+      ],
+      "filename": "wifi.json",
+      "slug": "wifi",
+      "start-page": [],
+      "screenshot": true
+    }
+  },
+  "UKForeignOffice": {
+    "fco-consular-appointments-slotpicker": {
+      "name": "Book consular appointments",
+      "description": "The British consulate can provide a range of notarial and documentary services for British nationals",
+      "organisation": [
+        "Foreign, Commonwealth & Development Office"
+      ],
+      "theme": "Passports, travel and living abroad",
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/guidance/notarial-and-documentary-services-guide-for-laos"
+      ],
+      "liveservice": "https://www.book-consular-appointment.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKForeignOffice/fco-consular-appointments-slotpicker"
+        }
+      ],
+      "filename": "consular-appointments.json",
+      "slug": "consular-appointments"
+    },
+    "legalisation-prototype": {
+      "name": "Get your document legalised",
+      "description": "You can get certain official UK documents ‘legalised’ by asking the Legalisation Office to confirm that the signature, stamp or seal is from a UK public official. You might need to do this if an official in another country has asked you to provide a UK document and they’ve said it must be legalised. The Legalisation Office will check the document, including whether the signature, stamp or seal is genuine. They’ll legalise the document by attaching a stamped official certificate (an ‘apostille’) to it. You can’t get documents issued outside the UK legalised using this service - get them legalised in the country they were issued.",
+      "organisation": [
+        "Foreign, Commonwealth & Development Office"
+      ],
+      "theme": "Passports, travel and living abroad",
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/get-document-legalised"
+      ],
+      "liveservice": "https://www.get-document-legalised.service.gov.uk/select-service",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKForeignOffice/legalisation-prototype"
+        }
+      ],
+      "filename": "document-legalisation.json",
+      "slug": "document-legalisation",
+      "screenshot": true
+    },
+    "emergency-travel-documents": {
+      "name": "Apply for an emergency travel document",
+      "description": "You can only get an emergency travel document if you're abroad. If the person needing to travel is currently in the UK they should apply for a passport. An emergency travel document is normally issued within 2 working days and can sometimes be done within 24 hours. It costs £100 or the equivalent in local currency which can be paid online or in the consulate.",
+      "organisation": [
+        "Foreign, Commonwealth & Development Office"
+      ],
+      "theme": "Passports, travel and living abroad",
+      "phase": "Beta",
+      "liveservice": "https://www.apply-emergency-travel-document.service.gov.uk/",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKForeignOffice/emergency-travel-documents"
+        }
+      ],
+      "filename": "emergency-travel-document.json",
+      "slug": "emergency-travel-document",
+      "start-page": [],
+      "screenshot": true
+    },
+    "verify-apostille-service": {
+      "name": "Verify an apostille",
+      "description": "Use this service if you want to verify an Apostille certificate issued in the UK.",
+      "organisation": [
+        "Foreign, Commonwealth & Development Office"
+      ],
+      "theme": "Passports, travel and living abroad",
+      "phase": "Live",
+      "liveservice": "https://www.verifyapostille.service.gov.uk/",
+      "start-page": [
+        "https://www.gov.uk/verify-apostille"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKForeignOffice/verify-apostille-service"
+        }
+      ],
+      "filename": "verify-apostille.json",
+      "slug": "verify-apostille",
+      "screenshot": true
+    }
+  },
+  "publichealthengland": {
+    "coronavirus-dashboard": {
+      "name": "Coronavirus (COVID-19) in the UK ",
+      "description": "The official UK Government website for data and insights on Coronavirus (COVID-19).",
+      "organisation": [
+        "Public Health England"
+      ],
+      "theme": "Coronavirus (COVID-19)",
+      "phase": "Live",
+      "liveservice": "https://coronavirus.data.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/guidance/coronavirus-covid-19-statistics-and-analysis"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/publichealthengland/coronavirus-dashboard"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Retired",
+            "date": "2023-12-21",
+            "links": [
+              {
+                "href": "https://ukhsa.blog.gov.uk/2023/12/21/ukhsa-data-dashboard-takes-over-from-the-coronavirus-covid-19-dashboard/",
+                "text": "Blog post: UKHSA data dashboard takes over from the Coronavirus (COVID-19) dashboard"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "coronavirus-data.json",
+      "slug": "coronavirus-data",
+      "screenshot": true
+    }
+  },
+  "Crown-Commercial-Service": {
+    "digitalmarketplace-supplier-frontend": {
+      "name": "Digital Marketplace",
+      "description": "Find technology or people for digital projects in the public sector.",
+      "theme": "Government Internal",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "phase": "Retired",
+      "liveservice": "https://www.digitalmarketplace.service.gov.uk/",
+      "start-page": [
+        "https://www.gov.uk/digital-marketplace"
+      ],
+      "sourceCode": [
+        {
+          "text": "Supplier frontend",
+          "href": "https://github.com/Crown-Commercial-Service/digitalmarketplace-supplier-frontend"
+        },
+        {
+          "text": "Buyer frontend",
+          "href": "https://github.com/Crown-Commercial-Service/digitalmarketplace-buyer-frontend"
+        },
+        {
+          "text": "Supplier briefs frontend",
+          "href": "https://github.com/Crown-Commercial-Service/digitalmarketplace-briefs-frontend"
+        },
+        {
+          "text": "API",
+          "href": "https://github.com/Crown-Commercial-Service/digitalmarketplace-api"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Service closed",
+            "date": "2023-04-20"
+          }
+        ]
+      },
+      "filename": "digital-marketplace.json",
+      "slug": "digital-marketplace",
+      "screenshot": true
+    }
+  },
+  "dvla": {
+    "Fitness-to-Drive-Pageflow": {
+      "name": "Driving with a medical condition",
+      "synonyms": [
+        "Fitness 2 Drive",
+        "Fitness to Drive",
+        "Check if a health condition affects your driving",
+        "Renew your short-term medical driving licence"
+      ],
+      "description": "The service allows citizens who are drivers to tell DVLA about a relevant medical condition or renew their existing medical driving licence. The project is delivering a new online notification service enabling customers to tell DVLA about their medical condition, and a similar service enabling customers to renew their existing medical driving licence.",
+      "organisation": [
+        "Driver and Vehicle Licensing Agency"
+      ],
+      "theme": "Driving and transport",
+      "phase": "Beta",
+      "liveservice": "https://www.driving-medical-condition.service.gov.uk/report",
+      "start-page": [
+        "https://www.gov.uk/report-driving-medical-condition",
+        "https://www.gov.uk/renew-medical-driving-licence"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2016-08-24",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/fitness-to-drive",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2015-10-05",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/fitness-2-drive-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/dvla/Fitness-to-Drive-Pageflow"
+        }
+      ],
+      "filename": "driving-medical-condition.json",
+      "slug": "driving-medical-condition",
+      "screenshot": true
+    },
+    "vdr-core": {
+      "name": "View your driving licence information",
+      "synonyms": [
+        "View or share your driving licence information",
+        "Share Driving Record",
+        "Add a driving licence check code to your mobile phone"
+      ],
+      "description": "You can use this service to view your driving record, for example vehicles you can drive, check your penalty points or disqualifications or create a licence ‘check code’ to share your driving record with someone, for example a car hire company.",
+      "theme": "Driving and transport",
+      "organisation": [
+        "Driver and Vehicle Licensing Agency"
+      ],
+      "phase": "Live",
+      "start-page": [
+        "https://www.gov.uk/view-driving-licence"
+      ],
+      "liveservice": "https://www.viewdrivingrecord.service.gov.uk/driving-record/licence-number",
+      "tags": [
+        "Top 75",
+        "Original 25 exemplars"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2018-06-14",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/add-a-driving-licence-check-code-to-your-mobile-phone-beta-assessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2014-07-07",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/share-driving-record-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/dvla/vdr-core"
+        }
+      ],
+      "filename": "view-driving-record.json",
+      "slug": "view-driving-record",
+      "screenshot": true
+    }
+  },
+  "AcasDigital": {
+    "tellacas": {
+      "name": "Find a solution for your employment dispute",
+      "description": "This service allows claimants or their representatives to notify ACAS of a workplace dispute and choose whether they want early conciliation or to get a certificate to the employment tribunal for a judge to decide.",
+      "organisation": [
+        "Advisory, Conciliation and Arbitration Service"
+      ],
+      "theme": "Employing people",
+      "phase": "Alpha",
+      "sourceCode": [
+        {
+          "text": "Source code for prototype",
+          "href": "https://github.com/AcasDigital/tellacas"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed alpha assessment",
+            "date": "2022-02-10",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/find-a-solution-for-your-employment-dispute-alpha-assessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "find-a-solution-for-your-employment-dispute.json",
+      "slug": "find-a-solution-for-your-employment-dispute",
+      "start-page": []
+    }
+  },
+  "communitiesuk": {
+    "epb-frontend": {
+      "name": "Get a new energy certificate",
+      "description": "To get a new energy certificate for your home, business property or a public building, you need to have it assessed. Find an accredited assessor for your home, business property or a public building.",
+      "organisation": [
+        "Ministry of Housing, Communities & Local Government"
+      ],
+      "theme": "Housing and local services",
+      "phase": "Live",
+      "liveservice": "https://getting-new-energy-certificate.service.gov.uk/find-an-assessor/type-of-property",
+      "start-page": [
+        "https://www.gov.uk/get-new-energy-certificate"
+      ],
+      "sourceCode": [
+        {
+          "text": "Energy performance of buildings register front end",
+          "href": "https://github.com/communitiesuk/epb-frontend"
+        },
+        {
+          "text": "Energy performance of buildings register api",
+          "href": "https://github.com/communitiesuk/epb-register-api"
+        },
+        {
+          "text": "Energy performance of buildings register auth server",
+          "href": "https://github.com/communitiesuk/epb-auth-server"
+        },
+        {
+          "text": "Energy performance of buildings register data warehouse",
+          "href": "https://github.com/communitiesuk/epb-data-warehouse"
+        },
+        {
+          "text": "Energy performance of buildings register infrastructure",
+          "href": "https://github.com/communitiesuk/epb-aws-infrastructure"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Did not pass alpha assessment",
+            "date": "2019-04-04",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/find-an-energy-certificate-alpha-assessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2019-06-13",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/find-an-energy-certificate-alpha-re-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha re-assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed beta assessment",
+            "date": "2020-11-19",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/energy-performance-of-buildings-register-beta-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed live assessment",
+            "date": "2021-12-09",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/energy-performance-of-buildings-register-live-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "get-new-energy-certificate.json",
+      "slug": "get-new-energy-certificate",
+      "screenshot": true
+    },
+    "submit-social-housing-lettings-and-sales-data": {
+      "name": "Submit social housing lettings and sales data (CORE)",
+      "synonyms": [
+        "Submit Data On Social Housing Sales And Lettings"
+      ],
+      "description": "Staff at Local Authorities and Housing Associations use this service to submit data about each new social housing letting or sale in England. This data is collected by DLUHC on an annual basis, is released as official national statistics on GOV.UK and informs social housing and homelessness policy.",
+      "theme": "Housing and local services",
+      "organisation": [
+        "Ministry of Housing, Communities & Local Government"
+      ],
+      "phase": "Beta",
+      "liveservice": "https://submit-social-housing-data.levellingup.gov.uk",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed beta assessment",
+            "date": "2022-07-27",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/submit-social-housing-lettings-and-sales-data-beta-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha reassessment",
+            "date": "2021-09-03",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/submit-data-on-social-housing-sales-and-lettings-alpha-reassessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha reassessment"
+              }
+            ]
+          },
+          {
+            "label": "Did not pass alpha assessment",
+            "date": "2021-07-08",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/submit-data-on-social-housing-sales-and-lettings-alpha-assessment-report",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/communitiesuk/submit-social-housing-lettings-and-sales-data"
+        }
+      ],
+      "filename": "submit-social-housing-lettings-and-sales-data.json",
+      "slug": "submit-social-housing-lettings-and-sales-data",
+      "start-page": [],
+      "screenshot": true
+    }
+  },
+  "cabinetoffice": {
+    "gap-find-apply-web": {
+      "name": "Find a grant",
+      "synonyms": [
+        "Find government grants",
+        "Apply for a grand"
+      ],
+      "description": "Browse a list of available government grants and see if you're eligible to apply for them.",
+      "organisation": [
+        "Cabinet Office"
+      ],
+      "theme": "Money and tax",
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/guidance/find-government-grants"
+      ],
+      "liveservice": "https://www.find-government-grants.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/cabinetoffice/gap-find-apply-web"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Apply for a grant feature launched",
+            "date": "2022-11-14",
+            "links": [
+              {
+                "href": "https://grantscommunity.blog.gov.uk/2022/11/14/an-update-to-find-a-grant-apply-for-a-grant/",
+                "text": "Blog post: An update to Find a Grant - Apply for a Grant!"
+              }
+            ]
+          },
+          {
+            "label": "Launched as a public beta",
+            "date": "2022-04-12",
+            "links": [
+              {
+                "href": "https://grantscommunity.blog.gov.uk/2022/04/12/the-first-gov-uk-release-of-the-find-a-grant-pilot-is-now-open-for-everyone/",
+                "text": "Blog post: The first GOV.UK release of the Find a Grant pilot is now open - for everyone"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "find-government-grants.json",
+      "slug": "find-government-grants",
+      "screenshot": true
+    },
+    "gender-pay-gap": {
+      "name": "Gender pay gap service",
+      "synonyms": [
+        "Gender pay gap reporting"
+      ],
+      "description": "Use this service to find gender pay gap data for organisations in the UK.",
+      "theme": "Working, jobs and pensions",
+      "organisation": [
+        "Government Equalities Office"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/find-gender-pay-gap-data"
+      ],
+      "liveservice": "https://gender-pay-gap.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/cabinetoffice/gender-pay-gap"
+        }
+      ],
+      "filename": "gender-pay-gap.json",
+      "slug": "gender-pay-gap",
+      "screenshot": true
+    },
+    "life-chances-fund": {
+      "name": "Access life chances fund",
+      "description": "",
+      "organisation": [
+        "Cabinet Office"
+      ],
+      "theme": "Citizenship and living in the UK",
+      "phase": "Retired",
+      "liveservice": "https://access-life-chances-fund.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/cabinetoffice/life-chances-fund"
+        }
+      ],
+      "filename": "life-chances-fund.json",
+      "slug": "life-chances-fund",
+      "start-page": []
+    },
+    "has-nomination-form": {
+      "name": "Honours nomination",
+      "description": "ou can nominate someone for an honour online.",
+      "organisation": [
+        "Cabinet Office"
+      ],
+      "theme": "Citizenship and living in the UK",
+      "phase": "Beta",
+      "liveservice": "https://nominate-uk-honour.service.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/honours/nominate-someone-in-the-uk"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/cabinetoffice/has-nomination-form"
+        }
+      ],
+      "filename": "nominate-uk-honour.json",
+      "slug": "nominate-uk-honour",
+      "screenshot": true
+    }
+  },
+  "UKHomeOfficeForms": {
+    "hof": {
+      "name": "Home Office Forms",
+      "description": "HOF (Home Office Forms) is a framework designed to assist developers in creating form-based workflows in a rapid, repeatable and secure way. It aims to reduce simple applications as much as possible to being configuration-only.",
+      "theme": "Government Internal",
+      "organisation": [
+        "Home Office"
+      ],
+      "phase": "unknown",
+      "liveservice": "https://ukhomeofficeforms.github.io/hof-guide/",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/UKHomeOfficeForms/hof"
+        }
+      ],
+      "filename": "home-office-forms.json",
+      "slug": "home-office-forms",
+      "start-page": [],
+      "screenshot": true
+    }
+  },
+  "dvsa": {
+    "mot": {
+      "name": "MOT testing service",
+      "synonyms": [
+        "Record MOT test results"
+      ],
+      "description": "Use this service if you’re an MOT tester and you need to record results of MOTs you carry out, print MOT certificates or buy test slots and check your test station’s balance.",
+      "theme": "Driving and transport",
+      "organisation": [
+        "Driver and Vehicle Standards Agency"
+      ],
+      "phase": "unknown",
+      "liveservice": "https://www.mot-testing.service.gov.uk",
+      "start-page": [
+        "https://www.gov.uk/mot-testing-service"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed live reassessment",
+            "date": "2018-10-30",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/record-mot-test-results-live-reassessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for live reassessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/dvsa/mot"
+        }
+      ],
+      "filename": "mot-testing.json",
+      "slug": "mot-testing",
+      "screenshot": true
+    }
+  },
+  "111Online": {
+    "undefined": {
+      "name": "111 online",
+      "synonyms": [
+        "NHS 111 online",
+        "111 online (Get urgent help with 111 online)",
+        "Accessing NHS 111 Service"
+      ],
+      "description": "111 online can help if you have a medical problem and you're not sure what to do.",
+      "theme": "Births, deaths, marriages and care",
+      "phase": "Live",
+      "organisation": [
+        "NHS England"
+      ],
+      "liveservice": "https://111.nhs.uk",
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed second alpha assessment",
+            "date": "2016-04-28",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/nhs-111",
+                "text": "Service assessment report",
+                "visuallyHiddenText": " for second alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2015-07-03",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/nhs-111-service-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed live assessment",
+            "date": "2019-09-17",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/nhs-111-online-live-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for live assessment"
+              }
+            ]
+          },
+          {
+            "label": "Passed beta re-assessment",
+            "date": "2018-01-30",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/111-online-get-urgent-help-with-111-online-beta-reassessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta re-assessment"
+              }
+            ]
+          },
+          {
+            "label": "Did not pass beta assessment",
+            "date": "2017-07-18",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/accessing-nhs-111-service-beta-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for beta assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/111Online"
+        }
+      ],
+      "filename": "nhs-111.json",
+      "slug": "nhs-111",
+      "start-page": [],
+      "screenshot": true
+    }
+  },
+  "digital-land": {
+    "digital-land.info": {
+      "name": "planning.data.gov.uk",
+      "synonyms": [
+        "Planning Data",
+        "Planning data platform"
+      ],
+      "description": "A platform to help you create services to inform planning and housing decisions in England.",
+      "organisation": [
+        "Ministry of Housing, Communities & Local Government"
+      ],
+      "theme": "Housing and local services",
+      "phase": "Beta",
+      "liveservice": "https://www.planning.data.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/digital-land/digital-land.info"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed alpha assessment",
+            "date": "2022-01-18",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/digital-land-alpha-assessment-report",
+                "text": "Service assessment report"
+              }
+            ]
+          },
+          {
+            "label": "Service launched",
+            "date": "2022-09-28",
+            "links": [
+              {
+                "href": "https://dluhcdigital.blog.gov.uk/2022/09/28/introducing-the-planning-data-platform/",
+                "text": "Introducing the planning data platform"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "planning-data.json",
+      "slug": "planning-data",
+      "start-page": [],
+      "screenshot": true
+    }
+  },
+  "bitzesty": {
+    "qae": {
+      "name": "King's Awards for Enterprise",
+      "synonyms": [
+        "The Queen's Awards for Enterprise"
+      ],
+      "description": "The King’s Awards for Enterprise are for outstanding achievement by UK businesses in the categories of: innovation, international trade, sustainable development, promoting opportunity through social mobility",
+      "organisation": [
+        "Department for Business and Trade"
+      ],
+      "theme": "Business and self-employed",
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/kings-awards-for-enterprise/how-to-apply"
+      ],
+      "liveservice": "https://www.kings-awards-enterprise.service.gov.uk/users/sign_up",
+      "tags": [
+        "Top 75"
+      ],
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/bitzesty/qae"
+        }
+      ],
+      "filename": "queens-award-for-enterprise.json",
+      "slug": "queens-award-for-enterprise",
+      "screenshot": true
+    },
+    "qavs-v2": {
+      "name": "The King’s Award for Voluntary Service",
+      "synonyms": [
+        "The Queen’s Award for Voluntary Service"
+      ],
+      "description": "The King’s Award for Voluntary Service is the highest award given to volunteer groups across the UK.",
+      "organisation": [
+        "Department for Digital, Culture, Media and Sport"
+      ],
+      "theme": "Citizenship and living in the UK",
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/kings-award-for-voluntary-service"
+      ],
+      "liveservice": "https://kavs.dcms.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/bitzesty/qavs-v2"
+        }
+      ],
+      "filename": "queens-awards-for-voluntary-service.json",
+      "slug": "queens-awards-for-voluntary-service",
+      "screenshot": true
+    }
+  },
+  "InsolvencyService": {
+    "rps-alpha": {
+      "name": "Claim for redundancy and monies owed",
+      "synonyms": [
+        "Claim for redundancy and other money you’re owed by an employer",
+        "Redundancy Payments"
+      ],
+      "description": "Use this service to claim money if your employer owes you a redundancy payment or other money like wages, holiday and commission.",
+      "theme": "Employing people",
+      "organisation": [
+        "Insolvency Service"
+      ],
+      "phase": "Beta",
+      "start-page": [
+        "https://www.gov.uk/claim-redundancy"
+      ],
+      "liveservice": "https://claim.redundancy-payments.service.gov.uk/claims/choose-how-to-verify",
+      "tags": [
+        "Original 25 exemplars"
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Passed alpha assessment",
+            "date": "2013-12-18",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/redundancy-payments-alpha-assessment",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/InsolvencyService/rps-alpha"
+        }
+      ],
+      "filename": "redundancy-payments.json",
+      "slug": "redundancy-payments",
+      "screenshot": true
+    }
+  },
+  "govuk-one-login": {
+    "onboarding-product-page": {
+      "name": "GOV.UK One Login",
+      "synonyms": [
+        "GOV.UK Sign in",
+        "GOV.UK Sign in: End-user digital identity checks",
+        "Authentication and Digital Identity"
+      ],
+      "description": "GOV.UK One Login in is the new way for government services to sign in their users",
+      "organisation": [
+        "Government Digital Service"
+      ],
+      "theme": "Government Internal",
+      "phase": "Beta",
+      "liveservice": "https://www.sign-in.service.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Product page source code",
+          "href": "https://github.com/govuk-one-login/onboarding-product-page"
+        },
+        {
+          "text": "Admin tool source code",
+          "href": "https://github.com/govuk-one-login/onboarding-self-service-experience"
+        },
+        {
+          "text": "Account management frontend source code",
+          "href": "https://github.com/govuk-one-login/di-account-management-frontend"
+        },
+        {
+          "text": "Authentication frontend source code",
+          "href": "https://github.com/govuk-one-login/authentication-frontend"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Service renamed as GOV.UK One Login",
+            "date": "2022-12-07"
+          },
+          {
+            "label": "Passed alpha assessment: End-user digital identity checks",
+            "date": "2021-09-15",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/gov-dot-uk-sign-in-end-user-digital-identity-checks",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment (end-user digital identity checks)"
+              }
+            ]
+          },
+          {
+            "label": "Passed alpha assessment",
+            "date": "2021-07-07",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/authentication-and-digital-identity",
+                "text": "service assessment report",
+                "visuallyHiddenText": " for alpha assessment"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "sign-in.json",
+      "slug": "sign-in",
+      "start-page": [],
+      "screenshot": true
+    }
+  },
+  "trade-tariff": {
+    "trade-tariff-frontend": {
+      "name": "Look up commodity codes, import duties, taxes and controls (UK Integrated Online Tariff)",
+      "synonyms": [
+        "UK Integrated Online Tariff",
+        "Trade Tariff: look up commodity codes, duty and VAT rates"
+      ],
+      "description": "Commodity codes classify goods for import and export so you can: fill in declarations and other paperwork, check if there’s duty or VAT to pay, find out about duty reliefs.",
+      "theme": "Money and tax",
+      "organisation": [
+        "HM Revenue and Customs"
+      ],
+      "phase": "Live",
+      "start-page": [
+        "https://www.gov.uk/trade-tariff"
+      ],
+      "liveservice": "https://www.trade-tariff.service.gov.uk/trade-tariff/sections",
+      "sourceCode": [
+        {
+          "text": "Front end source code",
+          "href": "https://github.com/trade-tariff/trade-tariff-frontend"
+        },
+        {
+          "text": "Back end source code",
+          "href": "https://github.com/trade-tariff/trade-tariff-backend"
+        },
+        {
+          "text": "Calculator front end source code",
+          "href": "https://github.com/trade-tariff/trade-tariff-duty-calculator"
+        }
+      ],
+      "filename": "trade-tariff.json",
+      "slug": "trade-tariff",
+      "screenshot": true
+    }
+  },
+  "acteng": {
+    "update-your-capital-schemes": {
+      "name": "Update your capital schemes",
+      "description": "Service for local authorities to provide updates on the progress of their Active Travel Fund capital projects",
+      "organisation": [
+        "Active Travel England"
+      ],
+      "theme": "Transport",
+      "phase": "beta",
+      "liveservice": "https://update-your-capital-schemes.activetravelengland.gov.uk/",
+      "sourceCode": [
+        {
+          "text": "Source code",
+          "href": "https://github.com/acteng/update-your-capital-schemes"
+        }
+      ],
+      "filename": "update-your-capital-schemes.json",
+      "slug": "update-your-capital-schemes",
+      "start-page": [],
+      "screenshot": true
+    }
+  }
+}

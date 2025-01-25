@@ -57,12 +57,12 @@ async function filterDeps () {
   }
 
   if (builtData.length > 0) {
-    await writeBatchToFiles(builtData)
+    writeBatchToFiles(builtData)
   }
 
   const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
 
-  await appendFileSync(
+  appendFileSync(
     `data/${yyyymmdd}-${timestamp}-unprocessedItems.json`,
     JSON.stringify(unprocessedItems, null, 2)
   )
@@ -119,15 +119,15 @@ export async function analyseRepo (repo) {
   return result.getResult(repoData)
 }
 
-async function writeBatchToFiles (builtData) {
+function writeBatchToFiles (builtData) {
   // Write JSON file
-  await appendFileSync(
+  appendFileSync(
     `data/${yyyymmdd}-${timestamp}-filtered-data.json`,
     JSON.stringify(builtData, null, 2)
   )
   // Write CSV file
   const csv = json2csv(builtData)
-  await appendFileSync(`data/${yyyymmdd}-${timestamp}-filtered-data.csv`, csv)
+  appendFileSync(`data/${yyyymmdd}-${timestamp}-filtered-data.csv`, csv)
   console.log('Data file updated with batch of entries')
 }
 

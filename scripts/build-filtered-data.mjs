@@ -113,8 +113,8 @@ export async function analyseRepo (repo) {
     }
   } catch (error) {
     repoData.handleError(error)
-    result.errorsThrown = repoData.errorsThrown
   }
+  result.errorsThrown = repoData.errorsThrown
 
   return result.getResult(repoData)
 }

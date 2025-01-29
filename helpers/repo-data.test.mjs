@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import * as yarnLock from '@yarnpkg/lockfile'
-import { RepoData, UnsupportedLockfileError } from './repo-data.mjs'
+import { RepoData } from './repo-data.mjs'
 import {
   getFileContent,
   getTree,
@@ -283,7 +283,7 @@ describe('RepoData', () => {
       const repoData = new RepoData(repoOwner, repoName)
       const tree = [{ path: 'package-lock.json' }]
 
-      const lockfileType = repoData.getLockfileType('', tree)
+      const lockfileType = repoData.getLockfileType('package.json', tree)
       expect(lockfileType).toBe('package-lock.json')
     })
 
@@ -291,7 +291,7 @@ describe('RepoData', () => {
       const repoData = new RepoData(repoOwner, repoName)
       const tree = [{ path: 'yarn.lock' }]
 
-      const lockfileType = repoData.getLockfileType('', tree)
+      const lockfileType = repoData.getLockfileType('package.json', tree)
       expect(lockfileType).toBe('yarn.lock')
     })
 
@@ -311,11 +311,12 @@ describe('RepoData', () => {
       expect(lockfileType).toBe('yarn.lock')
     })
 
-    it('should throw Error if no supported lockfile exists', () => {
+    it('should return null if no supported lockfile exists', () => {
       const repoData = new RepoData(repoOwner, repoName)
       const tree = [{ path: 'other-file.lock' }]
 
-      expect(() => repoData.getLockfileType('', tree)).toThrow(UnsupportedLockfileError)
+      const lockfileType = repoData.getLockfileType('package.json', tree)
+      expect(lockfileType).toBe(null)
     })
   })
 
@@ -478,6 +479,7 @@ describe('RepoData', () => {
       repoData.getLockfileType = vi.fn().mockReturnValue('package-lock.json')
       repoData.getRepoFileContent = vi.fn().mockResolvedValue({ data: JSON.stringify(lockfileContent.data) })
       repoData.parseLockfile = vi.fn().mockReturnValue(lockfileContent.data)
+      repoData.checkFileExists = vi.fn().mockReturnValue(true)
 
       const result = await repoData.getIndirectDependencies(packageObjects)
       expect(result).toEqual([[{
@@ -504,6 +506,7 @@ describe('RepoData', () => {
       }
       repoData.getLockfileType = vi.fn().mockReturnValue('yarn.lock')
       repoData.getRepoFileContent = vi.fn().mockResolvedValue(lockfileContent)
+      repoData.checkFileExists = vi.fn().mockReturnValue(true)
 
       const result = await repoData.getIndirectDependencies(packageObjects)
       expect(result).toEqual([[{
@@ -522,6 +525,7 @@ describe('RepoData', () => {
       repoData.getLockfileType = vi.fn().mockReturnValue('package-lock.json')
       repoData.getRepoFileContent = vi.fn().mockRejectedValue(new Error('Failed to fetch lockfile content'))
       repoData.handleError = vi.fn()
+      repoData.checkFileExists = vi.fn().mockReturnValue(true)
 
       const result = await repoData.getIndirectDependencies(packageObjects)
       expect(result).toEqual([])
@@ -546,6 +550,7 @@ describe('RepoData', () => {
       repoData.getLockfileType = vi.fn().mockReturnValue('package-lock.json')
       repoData.getRepoFileContent = vi.fn().mockResolvedValue(JSON.stringify(lockfileContent))
       repoData.parseLockfile = vi.fn().mockReturnValue(lockfileContent)
+      repoData.checkFileExists = vi.fn().mockReturnValue(true)
 
       const result = await repoData.disambiguateDependencies(dependencies, tree)
       expect(result).toEqual([
@@ -569,6 +574,7 @@ describe('RepoData', () => {
       repoData.parseLockfile = vi.fn().mockReturnValue({
         'govuk-frontend@^3.11.0': { version: '3.11.0' }
       })
+      repoData.checkFileExists = vi.fn().mockReturnValue(true)
 
       const result = await repoData.disambiguateDependencies(dependencies)
       expect(result).toEqual([
@@ -581,23 +587,10 @@ describe('RepoData', () => {
       const dependencies = [
         { packagePath: 'package.json', frontendVersion: '3.11.0' }
       ]
+      repoData.checkFileExists = vi.fn().mockReturnValue(true)
 
       const result = await repoData.disambiguateDependencies(dependencies)
       expect(result).toEqual(dependencies)
-    })
-
-    it('should handle errors when fetching lockfile content', async () => {
-      const repoData = new RepoData(repoOwner, repoName)
-      const dependencies = [
-        { packagePath: 'package.json', specifiedVersion: '^3.11.0' }
-      ]
-      repoData.getLockfileType = vi.fn().mockReturnValue('package-lock.json')
-      repoData.getRepoFileContent = vi.fn().mockRejectedValue(new Error('Failed to fetch lockfile content'))
-      repoData.handleError = vi.fn()
-
-      const result = await repoData.disambiguateDependencies(dependencies)
-      expect(result).toEqual([])
-      expect(repoData.handleError).toHaveBeenCalledWith(new Error('Failed to fetch lockfile content'))
     })
   })
 

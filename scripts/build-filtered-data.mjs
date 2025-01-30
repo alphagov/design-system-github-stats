@@ -45,14 +45,14 @@ async function filterDeps () {
       }
     }
     if (batchCounter >= batchSize) {
-      await writeBatchToFiles(builtData)
+      await writeBatchToFiles(builtData, batchCounter, batchSize)
       builtData.length = 0
       batchCounter = 0
     }
   }
 
   if (builtData.length > 0) {
-    writeBatchToFiles(builtData)
+    writeBatchToFiles(builtData, batchCounter, batchSize)
   }
 
   const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
@@ -114,12 +114,22 @@ export async function analyseRepo (repo) {
   return result.getResult(repoData)
 }
 
-function writeBatchToFiles (builtData) {
+function writeBatchToFiles (builtData, batchCounter, batchSize) {
   // Write JSON file
-  appendFileSync(
-    'data/filtered-data.json',
-    JSON.stringify(builtData, null, 2)
-  )
+  const jsonFilePath = 'data/filtered-data.json'
+  const jsonData = JSON.stringify(builtData, null, 2)
+
+  if (batchCounter === 0) {
+    // First batch, write the opening bracket
+    appendFileSync(jsonFilePath, jsonData.slice(0, -1) + ',')
+  } else if (builtData.length < batchSize) {
+    // Final batch, include the closing bracket
+    appendFileSync(jsonFilePath, jsonData.slice(1))
+  } else {
+    // Subsequent batches, replace the opening bracket with a comma
+    appendFileSync(jsonFilePath, ',' + jsonData.slice(1, -1))
+  }
+
   // Write CSV file
   const csv = json2csv(builtData)
   appendFileSync('data/filtered-data.csv', csv)

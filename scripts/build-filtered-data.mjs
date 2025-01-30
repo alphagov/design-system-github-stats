@@ -10,11 +10,6 @@ import { Result } from '../helpers/result.mjs'
 
 import rawDeps from '../data/raw-deps.json' with { type: 'json' }
 
-// Set up date for file naming
-const currentDate = new Date()
-const yyyymmdd = currentDate.toISOString().split('T')[0]
-const timestamp = currentDate.getTime()
-
 async function filterDeps () {
   const builtData = []
   const batchSize = 500
@@ -63,7 +58,7 @@ async function filterDeps () {
   const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
 
   appendFileSync(
-    `data/${yyyymmdd}-${timestamp}-unprocessedItems.json`,
+    'data/unprocessedItems.json',
     JSON.stringify(unprocessedItems, null, 2)
   )
   console.log("We're done!")
@@ -122,12 +117,12 @@ export async function analyseRepo (repo) {
 function writeBatchToFiles (builtData) {
   // Write JSON file
   appendFileSync(
-    `data/${yyyymmdd}-${timestamp}-filtered-data.json`,
+    'data/filtered-data.json',
     JSON.stringify(builtData, null, 2)
   )
   // Write CSV file
   const csv = json2csv(builtData)
-  appendFileSync(`data/${yyyymmdd}-${timestamp}-filtered-data.csv`, csv)
+  appendFileSync('data/filtered-data.csv', csv)
   console.log('Data file updated with batch of entries')
 }
 

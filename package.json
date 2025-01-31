@@ -13,6 +13,7 @@
   "scripts": {
     "build-filtered-data": "node ./scripts/build-filtered-data.mjs",
     "update-service-owners": "node ./scripts/update-service-owners.mjs",
+    "generate-key-data": "node ./scripts/generate-key-data.mjs --verbose",
     "lint": "eslint",
     "test": "npm run lint && vitest --coverage",
     "jsdoc": "jsdoc --configure jsdoc.config.js"

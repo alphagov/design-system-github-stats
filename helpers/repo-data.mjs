@@ -303,7 +303,10 @@ export class RepoData {
           if (this.checkFileExists(lockfilePath, tree)) {
             const lockfile = await this.getRepoFileContent(packageObject.path.replace('package.json', lockfileType))
             const lockfileObject = this.parseLockfile(lockfile, lockfileType)
-            results.push(await this.getIndirectDependencyFromLockfile(lockfileObject, lockfileType, lockfilePath))
+            const deps = await this.getIndirectDependencyFromLockfile(lockfileObject, lockfileType, lockfilePath)
+            if (deps.length > 0) {
+              results.push(deps)
+            }
           }
         }
       } catch (error) {
@@ -311,8 +314,9 @@ export class RepoData {
       }
     }
     this.log(`${results.length} indirect dependencies found.`)
-
-    return results
+    if (results.length > 0) {
+      return results
+    }
   }
 
   /**

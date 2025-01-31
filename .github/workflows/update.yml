@@ -51,6 +51,10 @@ jobs:
 
       - name: Update service owners
         run: npm run update-service-owners
+      
+      - name: Clean data files
+        run: |
+          rm -f ./data/filtered-data.json
 
       - name: Build filtered data
         run: npm run build-filtered-data

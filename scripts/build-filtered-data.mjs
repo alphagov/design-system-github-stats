@@ -1,4 +1,4 @@
-import { appendFileSync } from 'fs'
+import { writeFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 import { RequestError } from 'octokit'
 
@@ -12,9 +12,7 @@ import rawDeps from '../data/raw-deps.json' with { type: 'json' }
 
 async function filterDeps () {
   const builtData = []
-  const batchSize = 500
   const processedIndexes = []
-  let batchCounter = 0
   console.log('Beginning dependency analysis...')
 
   for (const repo of rawDeps.all_public_dependent_repos) {
@@ -23,7 +21,6 @@ async function filterDeps () {
       const repoData = await analyseRepo(repo)
       if (repoData) {
         builtData.push(repoData)
-        batchCounter++
       }
       console.log(`${repo.name}: Analysis complete`)
 
@@ -44,23 +41,11 @@ async function filterDeps () {
         continue
       }
     }
-    if (batchCounter >= batchSize) {
-      await writeBatchToFiles(builtData, batchCounter, batchSize)
-      builtData.length = 0
-      batchCounter = 0
-    }
   }
 
   if (builtData.length > 0) {
-    writeBatchToFiles(builtData, batchCounter, batchSize)
+    writeToFiles(builtData, processedIndexes)
   }
-
-  const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
-
-  appendFileSync(
-    'data/unprocessedItems.json',
-    JSON.stringify(unprocessedItems, null, 2)
-  )
   console.log("We're done!")
 }
 
@@ -114,26 +99,22 @@ export async function analyseRepo (repo) {
   return result.getResult(repoData)
 }
 
-function writeBatchToFiles (builtData, batchCounter, batchSize) {
+function writeToFiles (builtData, processedIndexes) {
   // Write JSON file
-  const jsonFilePath = 'data/filtered-data.json'
   const jsonData = JSON.stringify(builtData, null, 2)
-
-  if (batchCounter === 0) {
-    // First batch, write the opening bracket
-    appendFileSync(jsonFilePath, jsonData.slice(0, -1) + ',')
-  } else if (builtData.length < batchSize) {
-    // Final batch, include the closing bracket
-    appendFileSync(jsonFilePath, jsonData.slice(1))
-  } else {
-    // Subsequent batches, replace the opening bracket with a comma
-    appendFileSync(jsonFilePath, ',' + jsonData.slice(1, -1))
-  }
+  writeFileSync('data/filtered-data.json', jsonData)
 
   // Write CSV file
   const csv = json2csv(builtData)
-  appendFileSync('data/filtered-data.csv', csv)
+  writeFileSync('data/filtered-data.csv', csv)
   console.log('Data file updated with batch of entries')
+
+  // Write Unprocessed Items file
+  const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
+  writeFileSync(
+    'data/unprocessedItems.json',
+    JSON.stringify(unprocessedItems, null, 2)
+  )
 }
 
 filterDeps()

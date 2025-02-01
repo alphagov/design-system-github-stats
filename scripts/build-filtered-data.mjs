@@ -1,6 +1,8 @@
-import { writeFileSync } from 'fs'
+import { writeFileSync, readdirSync, readFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 import { RequestError } from 'octokit'
+import { fileURLToPath } from 'url'
+import { path, dirname } from 'path'
 
 import denyList from '../helpers/data/deny-list.json' with { type: 'json' }
 import governmentServiceOwners from '../helpers/data/service-owners.json' with { type: 'json' }
@@ -10,12 +12,27 @@ import { Result } from '../helpers/result.mjs'
 
 import rawDeps from '../data/raw-deps.json' with { type: 'json' }
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 async function filterDeps () {
   const builtData = []
   const processedIndexes = []
+
+  // Add port raw deps
+  const allDeps = new Set()
+
+  const rawDepFiles = readdirSync(path.resolve(__dirname, '../data')).filter(file => file.startsWith('raw-deps'))
+  if (rawDepFiles && rawDepFiles.length > 0) {
+    for (const file of rawDepFiles) {
+      const rawDepData = JSON.parse(readFileSync(path.resolve(__dirname, `../data/${file}`), 'utf8'))
+      rawDepData.all_public_dependent_repos.forEach(repo => allDeps.add(repo))
+    }
+  }
+
   console.log('Beginning dependency analysis...')
 
-  for (const repo of rawDeps.all_public_dependent_repos) {
+  for (const repo of allDeps) {
     try {
       console.log(`${repo.name}: Getting repo data...`)
       const repoData = await analyseRepo(repo)
@@ -24,13 +41,13 @@ async function filterDeps () {
       }
       console.log(`${repo.name}: Analysis complete`)
 
-      const index = rawDeps.all_public_dependent_repos.findIndex(
+      const index = allDeps.findIndex(
         (item) => item === repo
       )
       processedIndexes.push(index)
       console.log(
         `This was repo number ${index + 1} of ${
-          rawDeps.all_public_dependent_repos.length
+          allDeps.length
         }`
       )
 

@@ -48,6 +48,15 @@ jobs:
       # something like json which we can programmatically interogate.
       - name: Pipe our deps to a json file
         run: github-dependents-info --repo alphagov/govuk-frontend --json > ./data/raw-deps.json
+      
+      - name: Pipe port deps
+        run: |
+          github-dependents-info --repo LandRegistry/govuk-frontend-jinja --json > ./data/raw-deps-govuk-frontend-jinja.json
+          github-dependents-info --repo LandRegistry/govuk-frontend-wtf --json > ./data/raw-deps-govuk-frontend-wtf.json
+          github-dependents-info --repo LandRegistry/govuk-frontend-flask --json > ./data/raw-deps-govuk-frontend-flask.json
+          github-dependents-info --repo x-govuk/govuk-form-builder --json > ./data/raw-deps-govuk-form-builder.json
+          github-dependents-info --repo x-govuk/govuk-components --json > ./data/raw-deps-govuk-components.json
+          github-dependents-info --repo govuk-react/govuk-react --json > ./data/raw-deps-govuk-react.json
 
       - name: Update service owners
         run: npm run update-service-owners

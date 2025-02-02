@@ -1,0 +1,1296 @@
+{
+    "all_public_dependent_repos": [
+        {
+            "name": "AdeoluAdeyemi/DevOps-Group-2-CI_CD-Project",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/98715389?s=40&v=4",
+            "owner": "AdeoluAdeyemi",
+            "repo_name": "DevOps-Group-2-CI_CD-Project"
+        },
+        {
+            "name": "BenNBEIS/help-to-heat-1",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/116082217?s=40&v=4",
+            "owner": "BenNBEIS",
+            "repo_name": "help-to-heat-1"
+        },
+        {
+            "name": "Crown-Commercial-Service/digitalmarketplace-briefs-frontend",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/20661562?s=40&v=4",
+            "owner": "Crown-Commercial-Service",
+            "repo_name": "digitalmarketplace-briefs-frontend"
+        },
+        {
+            "name": "Crown-Commercial-Service/digitalmarketplace-govuk-frontend",
+            "stars": 7,
+            "img": "https://avatars.githubusercontent.com/u/20661562?s=40&v=4",
+            "owner": "Crown-Commercial-Service",
+            "repo_name": "digitalmarketplace-govuk-frontend"
+        },
+        {
+            "name": "GSA/notifications-admin",
+            "stars": 12,
+            "img": "https://avatars.githubusercontent.com/u/643070?s=40&v=4",
+            "owner": "GSA",
+            "repo_name": "notifications-admin"
+        },
+        {
+            "name": "Glenn-Clarke/help-to-heat-GBIS-dependabot-test",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/152421975?s=40&v=4",
+            "owner": "Glenn-Clarke",
+            "repo_name": "help-to-heat-GBIS-dependabot-test"
+        },
+        {
+            "name": "Harriet-Hall/hard_to_heat_homes",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/161617232?s=40&v=4",
+            "owner": "Harriet-Hall",
+            "repo_name": "hard_to_heat_homes"
+        },
+        {
+            "name": "LandRegistry/ddat-capability-assessment",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+            "owner": "LandRegistry",
+            "repo_name": "ddat-capability-assessment"
+        },
+        {
+            "name": "LandRegistry/govuk-frontend-flask",
+            "stars": 15,
+            "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+            "owner": "LandRegistry",
+            "repo_name": "govuk-frontend-flask"
+        },
+        {
+            "name": "LandRegistry/govuk-frontend-jinja-demo",
+            "stars": 8,
+            "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+            "owner": "LandRegistry",
+            "repo_name": "govuk-frontend-jinja-demo"
+        },
+        {
+            "name": "LandRegistry/govuk-frontend-wtf",
+            "stars": 17,
+            "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+            "owner": "LandRegistry",
+            "repo_name": "govuk-frontend-wtf"
+        },
+        {
+            "name": "LandRegistry/govuk-frontend-wtf-demo",
+            "stars": 6,
+            "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+            "owner": "LandRegistry",
+            "repo_name": "govuk-frontend-wtf-demo"
+        },
+        {
+            "name": "LandRegistry/hmlr-design-system-legacy",
+            "stars": 7,
+            "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+            "owner": "LandRegistry",
+            "repo_name": "hmlr-design-system-legacy"
+        },
+        {
+            "name": "LandRegistry/search-local-land-charges-ui",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+            "owner": "LandRegistry",
+            "repo_name": "search-local-land-charges-ui"
+        },
+        {
+            "name": "Lyn4ever29/pipy_server",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/25952589?s=40&v=4",
+            "owner": "Lyn4ever29",
+            "repo_name": "pipy_server"
+        },
+        {
+            "name": "Nyzl/HaaS",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/8989590?s=40&v=4",
+            "owner": "Nyzl",
+            "repo_name": "HaaS"
+        },
+        {
+            "name": "OpenGovDataMirror/A_gsa_notifications-admin",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/120501740?s=40&v=4",
+            "owner": "OpenGovDataMirror",
+            "repo_name": "A_gsa_notifications-admin"
+        },
+        {
+            "name": "Temmy-01/Python-Project-for-Devops",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/69118025?s=40&v=4",
+            "owner": "Temmy-01",
+            "repo_name": "Python-Project-for-Devops"
+        },
+        {
+            "name": "UKGovernmentBEIS/help-to-heat-GBIS",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/19221939?s=40&v=4",
+            "owner": "UKGovernmentBEIS",
+            "repo_name": "help-to-heat-GBIS"
+        },
+        {
+            "name": "abid-madetech/hard-to-heat-homes-demo",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/161617215?s=40&v=4",
+            "owner": "abid-madetech",
+            "repo_name": "hard-to-heat-homes-demo"
+        },
+        {
+            "name": "acteng/update-your-capital-schemes",
+            "stars": 4,
+            "img": "https://avatars.githubusercontent.com/u/126861706?s=40&v=4",
+            "owner": "acteng",
+            "repo_name": "update-your-capital-schemes"
+        },
+        {
+            "name": "activebiz/capabilityframework",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2632440?s=40&v=4",
+            "owner": "activebiz",
+            "repo_name": "capabilityframework"
+        },
+        {
+            "name": "activebiz/govuk-frontend-flask",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2632440?s=40&v=4",
+            "owner": "activebiz",
+            "repo_name": "govuk-frontend-flask"
+        },
+        {
+            "name": "activebiz/govuk-frontend-flask-example",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2632440?s=40&v=4",
+            "owner": "activebiz",
+            "repo_name": "govuk-frontend-flask-example"
+        },
+        {
+            "name": "alphagov/circuits_2.0",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "circuits_2.0"
+        },
+        {
+            "name": "alphagov/consent-api",
+            "stars": 8,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "consent-api"
+        },
+        {
+            "name": "alphagov/disco_prep",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "disco_prep"
+        },
+        {
+            "name": "alphagov/document-download-frontend",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "document-download-frontend"
+        },
+        {
+            "name": "alphagov/emergency-alerts-admin",
+            "stars": 5,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "emergency-alerts-admin"
+        },
+        {
+            "name": "alphagov/emergency-alerts-govuk",
+            "stars": 8,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "emergency-alerts-govuk"
+        },
+        {
+            "name": "alphagov/govuk-shielded-vulnerable-people-service",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "govuk-shielded-vulnerable-people-service"
+        },
+        {
+            "name": "alphagov/insights-interface",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "insights-interface"
+        },
+        {
+            "name": "alphagov/notifications-admin",
+            "stars": 43,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "notifications-admin"
+        },
+        {
+            "name": "alphagov/sde-prototype-govuk",
+            "stars": 4,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "sde-prototype-govuk"
+        },
+        {
+            "name": "alphagov/sde-prototype-haas",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+            "owner": "alphagov",
+            "repo_name": "sde-prototype-haas"
+        },
+        {
+            "name": "alphavector/all",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/11805788?s=40&v=4",
+            "owner": "alphavector",
+            "repo_name": "all"
+        },
+        {
+            "name": "betagouv/notification-admin",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/7874148?s=40&v=4",
+            "owner": "betagouv",
+            "repo_name": "notification-admin"
+        },
+        {
+            "name": "chrisstorey/govuk-frontend-wtf-demo",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/24782792?s=40&v=4",
+            "owner": "chrisstorey",
+            "repo_name": "govuk-frontend-wtf-demo"
+        },
+        {
+            "name": "co-cddo/domains-register-a-govuk-domain",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+            "owner": "co-cddo",
+            "repo_name": "domains-register-a-govuk-domain"
+        },
+        {
+            "name": "communitiesuk/dluhc-prpp-alpha-application",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+            "owner": "communitiesuk",
+            "repo_name": "dluhc-prpp-alpha-application"
+        },
+        {
+            "name": "communitiesuk/funding-service-design-fund-application-builder",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+            "owner": "communitiesuk",
+            "repo_name": "funding-service-design-fund-application-builder"
+        },
+        {
+            "name": "communitiesuk/funding-service-design-fund-discovery-frontend",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+            "owner": "communitiesuk",
+            "repo_name": "funding-service-design-fund-discovery-frontend"
+        },
+        {
+            "name": "communitiesuk/funding-service-design-post-award-data-frontend",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+            "owner": "communitiesuk",
+            "repo_name": "funding-service-design-post-award-data-frontend"
+        },
+        {
+            "name": "communitiesuk/funding-service-design-post-award-data-store",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+            "owner": "communitiesuk",
+            "repo_name": "funding-service-design-post-award-data-store"
+        },
+        {
+            "name": "communitiesuk/funding-service-design-post-award-submit",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+            "owner": "communitiesuk",
+            "repo_name": "funding-service-design-post-award-submit"
+        },
+        {
+            "name": "communitiesuk/funding-service-pre-award",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+            "owner": "communitiesuk",
+            "repo_name": "funding-service-pre-award"
+        },
+        {
+            "name": "dalepotter/govuk-frontend-wtf",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/8247168?s=40&v=4",
+            "owner": "dalepotter",
+            "repo_name": "govuk-frontend-wtf"
+        },
+        {
+            "name": "dalepotter/govuk-frontend-wtf-demo",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/8247168?s=40&v=4",
+            "owner": "dalepotter",
+            "repo_name": "govuk-frontend-wtf-demo"
+        },
+        {
+            "name": "digital-land/app-template",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "app-template"
+        },
+        {
+            "name": "digital-land/check-data-prototype",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "check-data-prototype"
+        },
+        {
+            "name": "digital-land/config-manager",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "config-manager"
+        },
+        {
+            "name": "digital-land/data-standards",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "data-standards"
+        },
+        {
+            "name": "digital-land/design-code-explorer",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "design-code-explorer"
+        },
+        {
+            "name": "digital-land/design.digital-land.info",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "design.digital-land.info"
+        },
+        {
+            "name": "digital-land/development-plan-timetable-prototype",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "development-plan-timetable-prototype"
+        },
+        {
+            "name": "digital-land/digital-land-application",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "digital-land-application"
+        },
+        {
+            "name": "digital-land/digital-land-frontend",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "digital-land-frontend"
+        },
+        {
+            "name": "digital-land/digital-land.info",
+            "stars": 8,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "digital-land.info"
+        },
+        {
+            "name": "digital-land/dluhc-datasets",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "dluhc-datasets"
+        },
+        {
+            "name": "digital-land/feedback-prototype",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "feedback-prototype"
+        },
+        {
+            "name": "digital-land/local-plans-explorer",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "local-plans-explorer"
+        },
+        {
+            "name": "digital-land/performance-prototype",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "performance-prototype"
+        },
+        {
+            "name": "digital-land/planning-application-poc",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "planning-application-poc"
+        },
+        {
+            "name": "digital-land/planning-data-design",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "planning-data-design"
+        },
+        {
+            "name": "digital-land/standards-manager",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+            "owner": "digital-land",
+            "repo_name": "standards-manager"
+        },
+        {
+            "name": "harrybest-softwire/django-gds-test",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/150065627?s=40&v=4",
+            "owner": "harrybest-softwire",
+            "repo_name": "django-gds-test"
+        },
+        {
+            "name": "harryyo/funding-service-design-frontend",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/56394038?s=40&v=4",
+            "owner": "harryyo",
+            "repo_name": "funding-service-design-frontend"
+        },
+        {
+            "name": "i-dot-ai/consult",
+            "stars": 13,
+            "img": "https://avatars.githubusercontent.com/u/105285801?s=40&v=4",
+            "owner": "i-dot-ai",
+            "repo_name": "consult"
+        },
+        {
+            "name": "initialspark/technical-exercise",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/5718223?s=40&v=4",
+            "owner": "initialspark",
+            "repo_name": "technical-exercise"
+        },
+        {
+            "name": "matthew-shaw/awesome-service",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/2802973?s=40&v=4",
+            "owner": "matthew-shaw",
+            "repo_name": "awesome-service"
+        },
+        {
+            "name": "ministryofjustice/fala",
+            "stars": 5,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "fala"
+        },
+        {
+            "name": "ministryofjustice/laa-access-civil-legal-aid",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "laa-access-civil-legal-aid"
+        },
+        {
+            "name": "ministryofjustice/moj-flask-govuk-skeleton",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "moj-flask-govuk-skeleton"
+        },
+        {
+            "name": "ministryofjustice/operations-engineering-find-a-github-repository-owner",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "operations-engineering-find-a-github-repository-owner"
+        },
+        {
+            "name": "ministryofjustice/operations-engineering-reports",
+            "stars": 5,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "operations-engineering-reports"
+        },
+        {
+            "name": "ministryofjustice/opg-flask-apps",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "opg-flask-apps"
+        },
+        {
+            "name": "nationalarchives/da-ayr-beta-webapp",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/10154228?s=40&v=4",
+            "owner": "nationalarchives",
+            "repo_name": "da-ayr-beta-webapp"
+        },
+        {
+            "name": "nepnep83/Flask-test",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/100413206?s=40&v=4",
+            "owner": "nepnep83",
+            "repo_name": "Flask-test"
+        },
+        {
+            "name": "nepnep83/Project",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/100413206?s=40&v=4",
+            "owner": "nepnep83",
+            "repo_name": "Project"
+        },
+        {
+            "name": "paulpepper-trade/app_start",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/85895113?s=40&v=4",
+            "owner": "paulpepper-trade",
+            "repo_name": "app_start"
+        },
+        {
+            "name": "psweeting1/cla_frontend_prototype",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/9356160?s=40&v=4",
+            "owner": "psweeting1",
+            "repo_name": "cla_frontend_prototype"
+        },
+        {
+            "name": "psweeting1/proof-of-concept",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/9356160?s=40&v=4",
+            "owner": "psweeting1",
+            "repo_name": "proof-of-concept"
+        },
+        {
+            "name": "salmoni/govuk-frontend-flask-",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/644538?s=40&v=4",
+            "owner": "salmoni",
+            "repo_name": "govuk-frontend-flask-"
+        },
+        {
+            "name": "satyajitsingh/demo-aws-file-reader",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/15819712?s=40&v=4",
+            "owner": "satyajitsingh",
+            "repo_name": "demo-aws-file-reader"
+        },
+        {
+            "name": "sentienthouseplant/funding-service-design-frontend",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/65361824?s=40&v=4",
+            "owner": "sentienthouseplant",
+            "repo_name": "funding-service-design-frontend"
+        },
+        {
+            "name": "uktrade/govuk-frontend-django",
+            "stars": 7,
+            "img": "https://avatars.githubusercontent.com/u/15107524?s=40&v=4",
+            "owner": "uktrade",
+            "repo_name": "govuk-frontend-django"
+        },
+        {
+            "name": "uktrade/icms",
+            "stars": 7,
+            "img": "https://avatars.githubusercontent.com/u/15107524?s=40&v=4",
+            "owner": "uktrade",
+            "repo_name": "icms"
+        },
+        {
+            "name": "uktrade/jml",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/15107524?s=40&v=4",
+            "owner": "uktrade",
+            "repo_name": "jml"
+        },
+        {
+            "name": "zilnhoj/disco_prep",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/1894097?s=40&v=4",
+            "owner": "zilnhoj",
+            "repo_name": "disco_prep"
+        },
+        {
+            "name": "zilnhoj/flak_forms_wtf",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/1894097?s=40&v=4",
+            "owner": "zilnhoj",
+            "repo_name": "flak_forms_wtf"
+        }
+    ],
+    "total_dependents_number": 90,
+    "public_dependents_number": 90,
+    "private_dependents_number": -90,
+    "public_dependents_stars": 123,
+    "badges": {
+        "total_doc_url": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by&message=90&color=informational&logo=slickpic)](https://github.com/nvuillam/github-dependents-info)",
+        "total": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by&message=90&color=informational&logo=slickpic)](https://github.com/LandRegistry/govuk-frontend-jinja/network/dependents)",
+        "public": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(public)&message=90&color=informational&logo=slickpic)](https://github.com/LandRegistry/govuk-frontend-jinja/network/dependents)",
+        "private": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(private)&message=-90&color=informational&logo=slickpic)](https://github.com/LandRegistry/govuk-frontend-jinja/network/dependents)",
+        "stars": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(stars)&message=123&color=informational&logo=slickpic)](https://github.com/LandRegistry/govuk-frontend-jinja/network/dependents)"
+    },
+    "packages": [
+        [
+            {
+                "id": null,
+                "name": "LandRegistry/govuk-frontend-jinja",
+                "url": "https://github.com/LandRegistry/govuk-frontend-jinja/network/dependents",
+                "public_dependent_stars": 123,
+                "public_dependents": [
+                    {
+                        "name": "AdeoluAdeyemi/DevOps-Group-2-CI_CD-Project",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/98715389?s=40&v=4",
+                        "owner": "AdeoluAdeyemi",
+                        "repo_name": "DevOps-Group-2-CI_CD-Project"
+                    },
+                    {
+                        "name": "BenNBEIS/help-to-heat-1",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/116082217?s=40&v=4",
+                        "owner": "BenNBEIS",
+                        "repo_name": "help-to-heat-1"
+                    },
+                    {
+                        "name": "Crown-Commercial-Service/digitalmarketplace-briefs-frontend",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/20661562?s=40&v=4",
+                        "owner": "Crown-Commercial-Service",
+                        "repo_name": "digitalmarketplace-briefs-frontend"
+                    },
+                    {
+                        "name": "Crown-Commercial-Service/digitalmarketplace-govuk-frontend",
+                        "stars": 7,
+                        "img": "https://avatars.githubusercontent.com/u/20661562?s=40&v=4",
+                        "owner": "Crown-Commercial-Service",
+                        "repo_name": "digitalmarketplace-govuk-frontend"
+                    },
+                    {
+                        "name": "GSA/notifications-admin",
+                        "stars": 12,
+                        "img": "https://avatars.githubusercontent.com/u/643070?s=40&v=4",
+                        "owner": "GSA",
+                        "repo_name": "notifications-admin"
+                    },
+                    {
+                        "name": "Glenn-Clarke/help-to-heat-GBIS-dependabot-test",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/152421975?s=40&v=4",
+                        "owner": "Glenn-Clarke",
+                        "repo_name": "help-to-heat-GBIS-dependabot-test"
+                    },
+                    {
+                        "name": "Harriet-Hall/hard_to_heat_homes",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/161617232?s=40&v=4",
+                        "owner": "Harriet-Hall",
+                        "repo_name": "hard_to_heat_homes"
+                    },
+                    {
+                        "name": "LandRegistry/ddat-capability-assessment",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+                        "owner": "LandRegistry",
+                        "repo_name": "ddat-capability-assessment"
+                    },
+                    {
+                        "name": "LandRegistry/govuk-frontend-flask",
+                        "stars": 15,
+                        "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+                        "owner": "LandRegistry",
+                        "repo_name": "govuk-frontend-flask"
+                    },
+                    {
+                        "name": "LandRegistry/govuk-frontend-jinja-demo",
+                        "stars": 8,
+                        "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+                        "owner": "LandRegistry",
+                        "repo_name": "govuk-frontend-jinja-demo"
+                    },
+                    {
+                        "name": "LandRegistry/govuk-frontend-wtf",
+                        "stars": 17,
+                        "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+                        "owner": "LandRegistry",
+                        "repo_name": "govuk-frontend-wtf"
+                    },
+                    {
+                        "name": "LandRegistry/govuk-frontend-wtf-demo",
+                        "stars": 6,
+                        "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+                        "owner": "LandRegistry",
+                        "repo_name": "govuk-frontend-wtf-demo"
+                    },
+                    {
+                        "name": "LandRegistry/hmlr-design-system-legacy",
+                        "stars": 7,
+                        "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+                        "owner": "LandRegistry",
+                        "repo_name": "hmlr-design-system-legacy"
+                    },
+                    {
+                        "name": "LandRegistry/search-local-land-charges-ui",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/6876797?s=40&v=4",
+                        "owner": "LandRegistry",
+                        "repo_name": "search-local-land-charges-ui"
+                    },
+                    {
+                        "name": "Lyn4ever29/pipy_server",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/25952589?s=40&v=4",
+                        "owner": "Lyn4ever29",
+                        "repo_name": "pipy_server"
+                    },
+                    {
+                        "name": "Nyzl/HaaS",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/8989590?s=40&v=4",
+                        "owner": "Nyzl",
+                        "repo_name": "HaaS"
+                    },
+                    {
+                        "name": "OpenGovDataMirror/A_gsa_notifications-admin",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/120501740?s=40&v=4",
+                        "owner": "OpenGovDataMirror",
+                        "repo_name": "A_gsa_notifications-admin"
+                    },
+                    {
+                        "name": "Temmy-01/Python-Project-for-Devops",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/69118025?s=40&v=4",
+                        "owner": "Temmy-01",
+                        "repo_name": "Python-Project-for-Devops"
+                    },
+                    {
+                        "name": "UKGovernmentBEIS/help-to-heat-GBIS",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/19221939?s=40&v=4",
+                        "owner": "UKGovernmentBEIS",
+                        "repo_name": "help-to-heat-GBIS"
+                    },
+                    {
+                        "name": "abid-madetech/hard-to-heat-homes-demo",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/161617215?s=40&v=4",
+                        "owner": "abid-madetech",
+                        "repo_name": "hard-to-heat-homes-demo"
+                    },
+                    {
+                        "name": "acteng/update-your-capital-schemes",
+                        "stars": 4,
+                        "img": "https://avatars.githubusercontent.com/u/126861706?s=40&v=4",
+                        "owner": "acteng",
+                        "repo_name": "update-your-capital-schemes"
+                    },
+                    {
+                        "name": "activebiz/capabilityframework",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2632440?s=40&v=4",
+                        "owner": "activebiz",
+                        "repo_name": "capabilityframework"
+                    },
+                    {
+                        "name": "activebiz/govuk-frontend-flask",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2632440?s=40&v=4",
+                        "owner": "activebiz",
+                        "repo_name": "govuk-frontend-flask"
+                    },
+                    {
+                        "name": "activebiz/govuk-frontend-flask-example",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2632440?s=40&v=4",
+                        "owner": "activebiz",
+                        "repo_name": "govuk-frontend-flask-example"
+                    },
+                    {
+                        "name": "alphagov/circuits_2.0",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "circuits_2.0"
+                    },
+                    {
+                        "name": "alphagov/consent-api",
+                        "stars": 8,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "consent-api"
+                    },
+                    {
+                        "name": "alphagov/disco_prep",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "disco_prep"
+                    },
+                    {
+                        "name": "alphagov/document-download-frontend",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "document-download-frontend"
+                    },
+                    {
+                        "name": "alphagov/emergency-alerts-admin",
+                        "stars": 5,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "emergency-alerts-admin"
+                    },
+                    {
+                        "name": "alphagov/emergency-alerts-govuk",
+                        "stars": 8,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "emergency-alerts-govuk"
+                    },
+                    {
+                        "name": "alphagov/govuk-shielded-vulnerable-people-service",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "govuk-shielded-vulnerable-people-service"
+                    },
+                    {
+                        "name": "alphagov/insights-interface",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "insights-interface"
+                    },
+                    {
+                        "name": "alphagov/notifications-admin",
+                        "stars": 43,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "notifications-admin"
+                    },
+                    {
+                        "name": "alphagov/sde-prototype-govuk",
+                        "stars": 4,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "sde-prototype-govuk"
+                    },
+                    {
+                        "name": "alphagov/sde-prototype-haas",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/596977?s=40&v=4",
+                        "owner": "alphagov",
+                        "repo_name": "sde-prototype-haas"
+                    },
+                    {
+                        "name": "alphavector/all",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/11805788?s=40&v=4",
+                        "owner": "alphavector",
+                        "repo_name": "all"
+                    },
+                    {
+                        "name": "betagouv/notification-admin",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/7874148?s=40&v=4",
+                        "owner": "betagouv",
+                        "repo_name": "notification-admin"
+                    },
+                    {
+                        "name": "chrisstorey/govuk-frontend-wtf-demo",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/24782792?s=40&v=4",
+                        "owner": "chrisstorey",
+                        "repo_name": "govuk-frontend-wtf-demo"
+                    },
+                    {
+                        "name": "co-cddo/domains-register-a-govuk-domain",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+                        "owner": "co-cddo",
+                        "repo_name": "domains-register-a-govuk-domain"
+                    },
+                    {
+                        "name": "communitiesuk/dluhc-prpp-alpha-application",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+                        "owner": "communitiesuk",
+                        "repo_name": "dluhc-prpp-alpha-application"
+                    },
+                    {
+                        "name": "communitiesuk/funding-service-design-fund-application-builder",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+                        "owner": "communitiesuk",
+                        "repo_name": "funding-service-design-fund-application-builder"
+                    },
+                    {
+                        "name": "communitiesuk/funding-service-design-fund-discovery-frontend",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+                        "owner": "communitiesuk",
+                        "repo_name": "funding-service-design-fund-discovery-frontend"
+                    },
+                    {
+                        "name": "communitiesuk/funding-service-design-post-award-data-frontend",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+                        "owner": "communitiesuk",
+                        "repo_name": "funding-service-design-post-award-data-frontend"
+                    },
+                    {
+                        "name": "communitiesuk/funding-service-design-post-award-data-store",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+                        "owner": "communitiesuk",
+                        "repo_name": "funding-service-design-post-award-data-store"
+                    },
+                    {
+                        "name": "communitiesuk/funding-service-design-post-award-submit",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+                        "owner": "communitiesuk",
+                        "repo_name": "funding-service-design-post-award-submit"
+                    },
+                    {
+                        "name": "communitiesuk/funding-service-pre-award",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+                        "owner": "communitiesuk",
+                        "repo_name": "funding-service-pre-award"
+                    },
+                    {
+                        "name": "dalepotter/govuk-frontend-wtf",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/8247168?s=40&v=4",
+                        "owner": "dalepotter",
+                        "repo_name": "govuk-frontend-wtf"
+                    },
+                    {
+                        "name": "dalepotter/govuk-frontend-wtf-demo",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/8247168?s=40&v=4",
+                        "owner": "dalepotter",
+                        "repo_name": "govuk-frontend-wtf-demo"
+                    },
+                    {
+                        "name": "digital-land/app-template",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "app-template"
+                    },
+                    {
+                        "name": "digital-land/check-data-prototype",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "check-data-prototype"
+                    },
+                    {
+                        "name": "digital-land/config-manager",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "config-manager"
+                    },
+                    {
+                        "name": "digital-land/data-standards",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "data-standards"
+                    },
+                    {
+                        "name": "digital-land/design-code-explorer",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "design-code-explorer"
+                    },
+                    {
+                        "name": "digital-land/design.digital-land.info",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "design.digital-land.info"
+                    },
+                    {
+                        "name": "digital-land/development-plan-timetable-prototype",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "development-plan-timetable-prototype"
+                    },
+                    {
+                        "name": "digital-land/digital-land-application",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "digital-land-application"
+                    },
+                    {
+                        "name": "digital-land/digital-land-frontend",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "digital-land-frontend"
+                    },
+                    {
+                        "name": "digital-land/digital-land.info",
+                        "stars": 8,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "digital-land.info"
+                    },
+                    {
+                        "name": "digital-land/dluhc-datasets",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "dluhc-datasets"
+                    },
+                    {
+                        "name": "digital-land/feedback-prototype",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "feedback-prototype"
+                    },
+                    {
+                        "name": "digital-land/local-plans-explorer",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "local-plans-explorer"
+                    },
+                    {
+                        "name": "digital-land/performance-prototype",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "performance-prototype"
+                    },
+                    {
+                        "name": "digital-land/planning-application-poc",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "planning-application-poc"
+                    },
+                    {
+                        "name": "digital-land/planning-data-design",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "planning-data-design"
+                    },
+                    {
+                        "name": "digital-land/standards-manager",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/44060760?s=40&v=4",
+                        "owner": "digital-land",
+                        "repo_name": "standards-manager"
+                    },
+                    {
+                        "name": "harrybest-softwire/django-gds-test",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/150065627?s=40&v=4",
+                        "owner": "harrybest-softwire",
+                        "repo_name": "django-gds-test"
+                    },
+                    {
+                        "name": "harryyo/funding-service-design-frontend",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/56394038?s=40&v=4",
+                        "owner": "harryyo",
+                        "repo_name": "funding-service-design-frontend"
+                    },
+                    {
+                        "name": "i-dot-ai/consult",
+                        "stars": 13,
+                        "img": "https://avatars.githubusercontent.com/u/105285801?s=40&v=4",
+                        "owner": "i-dot-ai",
+                        "repo_name": "consult"
+                    },
+                    {
+                        "name": "initialspark/technical-exercise",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/5718223?s=40&v=4",
+                        "owner": "initialspark",
+                        "repo_name": "technical-exercise"
+                    },
+                    {
+                        "name": "matthew-shaw/awesome-service",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/2802973?s=40&v=4",
+                        "owner": "matthew-shaw",
+                        "repo_name": "awesome-service"
+                    },
+                    {
+                        "name": "ministryofjustice/fala",
+                        "stars": 5,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "fala"
+                    },
+                    {
+                        "name": "ministryofjustice/laa-access-civil-legal-aid",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "laa-access-civil-legal-aid"
+                    },
+                    {
+                        "name": "ministryofjustice/moj-flask-govuk-skeleton",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "moj-flask-govuk-skeleton"
+                    },
+                    {
+                        "name": "ministryofjustice/operations-engineering-find-a-github-repository-owner",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "operations-engineering-find-a-github-repository-owner"
+                    },
+                    {
+                        "name": "ministryofjustice/operations-engineering-reports",
+                        "stars": 5,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "operations-engineering-reports"
+                    },
+                    {
+                        "name": "ministryofjustice/opg-flask-apps",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "opg-flask-apps"
+                    },
+                    {
+                        "name": "nationalarchives/da-ayr-beta-webapp",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/10154228?s=40&v=4",
+                        "owner": "nationalarchives",
+                        "repo_name": "da-ayr-beta-webapp"
+                    },
+                    {
+                        "name": "nepnep83/Flask-test",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/100413206?s=40&v=4",
+                        "owner": "nepnep83",
+                        "repo_name": "Flask-test"
+                    },
+                    {
+                        "name": "nepnep83/Project",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/100413206?s=40&v=4",
+                        "owner": "nepnep83",
+                        "repo_name": "Project"
+                    },
+                    {
+                        "name": "paulpepper-trade/app_start",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/85895113?s=40&v=4",
+                        "owner": "paulpepper-trade",
+                        "repo_name": "app_start"
+                    },
+                    {
+                        "name": "psweeting1/cla_frontend_prototype",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/9356160?s=40&v=4",
+                        "owner": "psweeting1",
+                        "repo_name": "cla_frontend_prototype"
+                    },
+                    {
+                        "name": "psweeting1/proof-of-concept",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/9356160?s=40&v=4",
+                        "owner": "psweeting1",
+                        "repo_name": "proof-of-concept"
+                    },
+                    {
+                        "name": "salmoni/govuk-frontend-flask-",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/644538?s=40&v=4",
+                        "owner": "salmoni",
+                        "repo_name": "govuk-frontend-flask-"
+                    },
+                    {
+                        "name": "satyajitsingh/demo-aws-file-reader",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/15819712?s=40&v=4",
+                        "owner": "satyajitsingh",
+                        "repo_name": "demo-aws-file-reader"
+                    },
+                    {
+                        "name": "sentienthouseplant/funding-service-design-frontend",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/65361824?s=40&v=4",
+                        "owner": "sentienthouseplant",
+                        "repo_name": "funding-service-design-frontend"
+                    },
+                    {
+                        "name": "uktrade/govuk-frontend-django",
+                        "stars": 7,
+                        "img": "https://avatars.githubusercontent.com/u/15107524?s=40&v=4",
+                        "owner": "uktrade",
+                        "repo_name": "govuk-frontend-django"
+                    },
+                    {
+                        "name": "uktrade/icms",
+                        "stars": 7,
+                        "img": "https://avatars.githubusercontent.com/u/15107524?s=40&v=4",
+                        "owner": "uktrade",
+                        "repo_name": "icms"
+                    },
+                    {
+                        "name": "uktrade/jml",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/15107524?s=40&v=4",
+                        "owner": "uktrade",
+                        "repo_name": "jml"
+                    },
+                    {
+                        "name": "zilnhoj/disco_prep",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/1894097?s=40&v=4",
+                        "owner": "zilnhoj",
+                        "repo_name": "disco_prep"
+                    },
+                    {
+                        "name": "zilnhoj/flak_forms_wtf",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/1894097?s=40&v=4",
+                        "owner": "zilnhoj",
+                        "repo_name": "flak_forms_wtf"
+                    }
+                ],
+                "public_dependents_number": 90,
+                "private_dependents_number": -90,
+                "total_dependents_number": 90,
+                "badges": {
+                    "total": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by&message=90&color=informational&logo=slickpic)](https://github.com/LandRegistry/govuk-frontend-jinja/network/dependents)",
+                    "public": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(public)&message=90&color=informational&logo=slickpic)](https://github.com/LandRegistry/govuk-frontend-jinja/network/dependents)",
+                    "private": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(private)&message=-90&color=informational&logo=slickpic)](https://github.com/LandRegistry/govuk-frontend-jinja/network/dependents)",
+                    "stars": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(stars)&message=123&color=informational&logo=slickpic)](https://github.com/LandRegistry/govuk-frontend-jinja/network/dependents)"
+                }
+            }
+        ]
+    ]
+}

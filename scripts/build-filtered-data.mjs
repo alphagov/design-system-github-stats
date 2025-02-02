@@ -2,7 +2,7 @@ import { writeFileSync, readdirSync, readFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 import { RequestError } from 'octokit'
 import { fileURLToPath } from 'url'
-import { path, dirname } from 'path'
+import path, { dirname } from 'path'
 
 import denyList from '../helpers/data/deny-list.json' with { type: 'json' }
 import governmentServiceOwners from '../helpers/data/service-owners.json' with { type: 'json' }

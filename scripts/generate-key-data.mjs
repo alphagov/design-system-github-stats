@@ -46,7 +46,7 @@ function countVersions (data) {
   const versions = { missingVersions: 0 }
   for (const repo of data) {
     if (repo.directDependencies.length === 0 && repo.indirectDependencies.flat().length === 0) {
-      versions.missingVersions.push(`${repo.repoOwner}/${repo.repoName}`)
+      versions.missingVersions++
     } else {
       if (repo.directDependencies.length > 0) {
         for (const dep of repo.directDependencies) {

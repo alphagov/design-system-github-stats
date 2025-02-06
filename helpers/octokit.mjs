@@ -51,8 +51,8 @@ const graphQLAuth = graphql.defaults({
  * actually count against the GraphQL rate limit.
  *
  * This contrasts with the REST API which would require 2 requests to get the same information:
- *   1. Get the repo-level info like created_at and updated_at
- *   2. Get the latest commit SHA
+ * 1. Get the repo-level info like created_at and updated_at
+ * 2. Get the latest commit SHA
  *
  * In testing, this query sped up the build script from 80 minutes to 60 minutes.
  *
@@ -61,25 +61,24 @@ const graphQLAuth = graphql.defaults({
  *
  * Repo info is returned in the format:
  * {
- *   repository: {
- *     createdAt: '2022-01-01T00:00:00Z',
- *     updatedAt: '2023-01-01T00:00:00Z',
- *     defaultBranchRef: {
- *       target: {
- *         oid: 'sha-123'
- *       }
- *     }
- *   },
- *   rateLimit: {
- *     cost: 1,
- *     remaining: 5000,
- *     resetAt: '2023-01-01T00:00:00Z'
- *   }
+ * repository: {
+ * createdAt: '2022-01-01T00:00:00Z',
+ * updatedAt: '2023-01-01T00:00:00Z',
+ * defaultBranchRef: {
+ * target: {
+ * oid: 'sha-123'
  * }
- *
+ * }
+ * },
+ * rateLimit: {
+ * cost: 1,
+ * remaining: 5000,
+ * resetAt: '2023-01-01T00:00:00Z'
+ * }
+ * }
  * @param {string} owner - the repo owners
  * @param {string} name - the repo name
- * @returns {Promise<import('@octokit/graphql').GraphQlQueryResponse>} - the repo info
+ * @returns {Promise<import('@octokit/graphql').GraphQlQueryResponseData>} - the repo info
  */
 export async function getRepo (owner, name) {
   const query = `
@@ -113,12 +112,10 @@ export async function getRepo (owner, name) {
 
 /**
  * Gets the tree for a repo with a given sha
- *
  * @param {string} repoOwner - The owner of the repo
  * @param {string} repoName - The name of the repo
  * @param {string} treeSha - The sha of the tree
- * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').GitGetTreeResponse>>}
- * @throws {RequestError} - If the request fails
+ * @returns {Promise<import('@octokit/rest').RestEndpointMethodTypes['git']['getTree']['response']>} - the response
  */
 export async function getTree (repoOwner, repoName, treeSha) {
   return await octokit.rest.git.getTree({
@@ -131,12 +128,10 @@ export async function getTree (repoOwner, repoName, treeSha) {
 
 /**
  * Gets the contents of a file in a repo
- *
  * @param {string} repoOwner - The owner of the repo
  * @param {string} repoName - The name of the repo
  * @param {string} filePath - The path to the file
- * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposGetContentResponse>>} - the file content
- * @throws {RequestError} - If the request fails
+ * @returns {Promise<import('@octokit/rest').RestEndpointMethodTypes['repos']['getContent']['response']>} - the file content
  */
 export async function getFileContent (repoOwner, repoName, filePath) {
   return await octokit.rest.repos.getContent({
@@ -149,9 +144,7 @@ export async function getFileContent (repoOwner, repoName, filePath) {
 
 /**
  * Check rate limit
- *
- * @returns {number} - The number of remaining requests
- * @throws {RequestError} - If the request fails
+ * @returns {Promise<number>} - The number of remaining requests
  */
 export async function getRemainingRateLimit () {
   const rateLimit = await octokit.rest.rateLimit.get()

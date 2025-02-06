@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
-import { RequestError } from 'octokit'
+import { RequestError } from '@octokit/request-error'
 
 import denyList from './helpers/data/deny-list.json' with { type: 'json' }
 import governmentServiceOwners from './helpers/data/service-owners.json' with { type: 'json' }
@@ -10,6 +10,10 @@ import { Result } from './helpers/result.mjs'
 
 import rawDeps from './data/raw-deps.json' with { type: 'json' }
 
+/**
+ * Analyses all public dependent repos
+ *
+ */
 async function filterDeps () {
   const builtData = []
   const processedIndexes = []
@@ -48,6 +52,11 @@ async function filterDeps () {
   console.log("We're done!")
 }
 
+/**
+ * Analyses a repo
+ * @param {object} repo - the repo to analyse
+ * @returns {Promise<object>} - the result of the analysis
+ */
 export async function analyseRepo (repo) {
   const repoOwner = repo.owner
   const repoName = repo.repo_name
@@ -94,6 +103,11 @@ export async function analyseRepo (repo) {
   return result.getResult(repoData)
 }
 
+/**
+ * Writes the data to files
+ * @param {Array} builtData - the analysed repo data
+ * @param {Array} processedIndexes - indexes of repos which have been processed
+ */
 function writeToFiles (builtData, processedIndexes) {
   // Write JSON file
   const jsonData = JSON.stringify(builtData, null, 2)

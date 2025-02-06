@@ -1,17 +1,16 @@
 export class Result {
   /**
    * For storing and sharing results.
-   *
    * @param {string} repoOwner - The owner of the repository.
    * @param {string} repoName - The name of the repository.
    */
   constructor (repoOwner, repoName) {
     if (!repoOwner) {
-      this.log('repoOwner must be provided', 'error')
+      console.log('ERROR: repoOwner must be provided')
       throw new Error('repoOwner must be provided')
     }
     if (!repoName) {
-      this.log('repoName must be provided', 'error')
+      console.log('ERROR: repoName must be provided')
       throw new Error('repoName must be provided')
     }
     this.repoOwner = repoOwner

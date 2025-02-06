@@ -14,10 +14,9 @@ import JSON5 from 'json5'
 export class RepoData {
   /**
    * Creates an instance of RepoData.
-   *
    * @param {string} repoOwner - The owner of the repository.
    * @param {string} repoName - The name of the repository.
-   * @param {Array<string>} [serviceOwners=[]] - The list of service owners.
+   * @param {Array<string>} [serviceOwners] - The list of service owners.
    */
   constructor (repoOwner, repoName, serviceOwners = []) {
     if (!repoOwner) {
@@ -34,8 +33,7 @@ export class RepoData {
 
   /**
    * Checks if repo on denyList
-   *
-   * @param {array} denyList - An array of objects with owner and name properties
+   * @param {Array} denyList - An array of objects with owner and name properties
    * @returns {boolean} - Whether the repo is on the deny list
    */
   checkDenyList (denyList) {
@@ -51,7 +49,7 @@ export class RepoData {
 
   /**
    * Checks if the repo owner is in the serviceOwners list
-   * @param {Array<string>} serviceOwners
+   * @param {Array<string>} serviceOwners - The list of service owners
    * @returns {boolean} - Whether the repo owner is in the serviceOwners list
    */
   checkServiceOwner (serviceOwners) {
@@ -68,11 +66,8 @@ export class RepoData {
 
   /**
    * Fetches metadata using GraphQL
-   *
    * @returns {Promise<{createdAt: string, updatedAt: string, latestCommitSHA: string, graphQLRateLimit: object}>} - The metadata
-   * @throws {NoMetaDataError} - If metadata could not be fetched
-   * @throws {NoRepoTreeError} - If the tree could not be fetched
-   * @throws {RequestError} - If the request fails
+   * @throws {Error} - If metadata or tree could not be fetched
    */
   async getRepoInfo () {
     this.log('fetching repository information')
@@ -101,11 +96,9 @@ export class RepoData {
 
   /**
    * Fetches and validates repo tree
-   *
    * @param {string} commitSHA - The SHA of the commit to fetch the tree for
-   * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').GitGetTreeResponse>>} - The repo tree
-   * @throws {NoRepoTreeError} - If the tree could not be fetched
-   * @throws {RequestError} - If the request fails
+   * @returns {Promise<import('@octokit/rest').RestEndpointMethodTypes['git']['getTree']['response']['data']['tree']>} - The repo tree
+   * @throws {Error} - If the tree could not be fetched
    */
   async getRepoTree (commitSHA) {
     this.log('fetching repository tree')
@@ -126,8 +119,8 @@ export class RepoData {
 
   /**
    * Asynchronously retrieves and parses the content of all 'package.json' files.
-   * @param {Array<Object>} tree - The repo tree
-   * @returns {Promise<Array<{content: Object, path: string}>>} - The package.json objects
+   * @param {import('@octokit/rest').RestEndpointMethodTypes['git']['getTree']['response']['data']['tree']} tree - The repo tree
+   * @returns {Promise<Array<{content: object, path: string}>>} - The package.json objects
    */
   async getPackageFiles (tree) {
     this.log('fetching package.json files')
@@ -156,9 +149,8 @@ export class RepoData {
 
   /**
    * Checks if repo is a prototype
-   *
-   * @param {array} packageObjects - an array of packageObjects
-   * @param {array} tree - the repo tree
+   * @param {Array} packageObjects - an array of packageObjects
+   * @param {Array} tree - the repo tree
    * @returns {boolean} - Whether the repo is a prototype
    */
   checkPrototype (packageObjects, tree) {
@@ -189,15 +181,8 @@ export class RepoData {
 
   /**
    * Retrieves all instances of 'govuk-frontend' in the dependencies of the package.json files.
-   *
-   * @param {Array<Object>} packageObjects - An array of package objects to inspect.
-   * @param {Object} packageObjects[].content - The content of the package object.
-   * @param {Object} [packageObjects[].content.dependencies] - The dependencies of the package.
-   * @param {Object} [packageObjects[].content.devDependencies] - The devDependencies of the package.
-   * @param {string} packageObjects[].path - The path of the package.
-   * @returns {Array<Object>} The frontend versions found in the package.json files.
-   * @returns {string} results[].packagePath - The path of the package.
-   * @returns {string} results[].frontendVersion - The version of 'govuk-frontend' dependency.
+   * @param {Array} packageObjects - An array of package objects to inspect.
+   * @returns {Array<{packagePath, specifiedVersion}>} The paths and versions found in the package.json files.
    */
   getDirectDependencies (packageObjects) {
     this.log('searching for govuk-frontend direct dependencies in package.json files')
@@ -226,10 +211,8 @@ export class RepoData {
 
   /**
    * Gets the content of a file in the repo
-   *
    * @param {string} filePath - The path to the file
-   * @returns {Promise<import('@octokit/rest').Response<import('@octokit/rest').ReposGetContentsResponse>>} - The file content
-   * @throws {RequestError} - If the request fails
+   * @returns {Promise<import('@octokit/rest').RestEndpointMethodTypes['repos']['getContent']['response']>} - The file content
    */
   async getRepoFileContent (filePath) {
     return await getFileContent(this.repoOwner, this.repoName, filePath)
@@ -237,10 +220,9 @@ export class RepoData {
 
   /**
    * Gets the content from a repo for all files with a given file name.
-   *
    * @param {string} fileName - The filename.
-   * @param {Array<Object>} tree - The repo tree.
-   * @returns {Promise<Array<{path: string, content: string}>>} - An array of objects containing the file path and content.
+   * @param {Array<object>} tree - The repo tree.
+   * @returns {Promise<Array<{path, content}>>} - An array of objects containing the file path and content.
    */
   async getAllFilesContent (fileName, tree) {
     const files = tree.filter(
@@ -258,9 +240,8 @@ export class RepoData {
 
   /**
    * Checks if a file exists in the repo tree
-   *
-   * @param {string} filePath
-   * @param {Array<Object>} tree
+   * @param {string} filePath - The path to the file
+   * @param {Array<object>} tree - The repo tree
    * @returns {boolean} - Whether the file exists
    */
   checkFileExists (filePath, tree) {
@@ -269,9 +250,8 @@ export class RepoData {
 
   /**
    * Logs messages consistently
-   *
    * @param {string} message - the message to log
-   * @param {[string]} type - type of message (error)
+   * @param {string} type - type of message (error)
    */
   log (message, type = '') {
     const typeMsg = type === 'error' ? ' ERROR:' : ''
@@ -280,12 +260,9 @@ export class RepoData {
 
   /**
    * Retrieves indirect dependencies from the provided package objects.
-   *
-   * @param {Array<Object>} packageObjects - An array of package objects.
-   * @param {string} packageObjects[].path - The path to the package file.
-   * @param {Object} packageObjects[].content - The content of the package file.
-   * @param {Array<Object>} tree - The repo tree.
-   * @returns {Promise<Array<Object>>} A promise that resolves to an array of indirect dependencies.
+   * @param {Array<{path, content}>} packageObjects - An array of package objects.
+   * @param {Array<object>} tree - The repo tree.
+   * @returns {Promise<Array<object>>} A promise that resolves to an array of indirect dependencies.
    */
   async getIndirectDependencies (packageObjects, tree) {
     this.log('searching for govuk-frontend indirect dependencies in lockfiles')
@@ -321,9 +298,8 @@ export class RepoData {
 
   /**
    * Disambiguates the given dependencies by resolving their versions from the lockfile if necessary.
-   *
    * @param {Array} dependencies - An array of dependency objects, each containing a `packagePath` and `specifiedVersion`.
-   * @param {Array<Object>} tree - The repo tree.
+   * @param {Array<object>} tree - The repo tree.
    * @returns {Promise<Array>} A promise that resolves to an array of disambiguated dependencies.
    */
   async disambiguateDependencies (dependencies, tree) {
@@ -368,11 +344,11 @@ export class RepoData {
 
   /**
    * Retrieves the version of the 'govuk-frontend' dependency from a lockfile object.
-   *
-   * @param {Object} lockfileObject - The parsed lockfile object.
+   * @param {object} lockfileObject - The parsed lockfile object.
    * @param {string} lockfileType - The type of lockfile ('package-lock.json' or 'yarn.lock').
    * @param {string} path - The path to the package.
-   * @returns {Promise<String>} The lockfile govuk-frontend semver string.
+   * @param {Array<object>} tree - The repo tree
+   * @returns {Promise<string>} The lockfile govuk-frontend semver string.
    */
   async getLockfileVersion (lockfileObject, lockfileType, path, tree) {
     let version
@@ -391,14 +367,10 @@ export class RepoData {
 
   /**
    * Retrieves indirect dependencies from a lockfile object.
-   *
-   * @param {Object} lockfileObject - The parsed lockfile object.
+   * @param {object} lockfileObject - The parsed lockfile object.
    * @param {string} lockfileType - The type of lockfile ('package-lock.json' or 'yarn.lock').
    * @param {string} path - The path to the lockfile.
-   * @returns {Promise<Array<Object>>} A promise that resolves to an array of indirect dependencies.
-   * @returns {string} results[].parent - The parent package name.
-   * @returns {string} results[].frontendVersion - The version of 'govuk-frontend' dependency.
-   * @returns {string} results[].packagePath - The path of the package.
+   * @returns {Promise<Array<{parent, specifiedVersion, lockfilePath, actualVersion}>>} A promise that resolves to an array of indirect dependencies.
    */
   async getIndirectDependencyFromLockfile (lockfileObject, lockfileType, path) {
     const deps = []
@@ -438,28 +410,27 @@ export class RepoData {
 
   /**
    * Parses a lockfile based on its type and returns the parsed object.
-   *
-   * @param {Object} lockfile - The lockfile object containing the data to be parsed.
-   * @param {string} lockfile.data - The raw data of the lockfile.
+   * @param {object} lockfile - The lockfile object containing the data to be parsed.
+   * @param {import('@octokit/rest').RestEndpointMethodTypes['repos']['getContent']['response']['data']} lockfile.data - The raw data of the lockfile.
    * @param {string} lockfileType - The type of the lockfile, either 'package-lock.json' or 'yarn.lock'.
-   * @returns {Object|undefined} The parsed lockfile object, or undefined if parsing fails.
+   * @returns {object | undefined} The parsed lockfile object, or undefined if parsing fails.
    */
   parseLockfile (lockfile, lockfileType) {
     let parsedLockfile
 
     if (lockfileType === 'package-lock.json') {
       try {
-        parsedLockfile = JSON5.parse(lockfile.data)
+        parsedLockfile = JSON5.parse(lockfile.data.toString())
       } catch (error) {
         this.log('problem parsing package-lock.json', 'error')
       }
     } else if (lockfileType === 'yarn.lock') {
       try {
         // First, try the old yarn.lock format
-        parsedLockfile = yarnLock.parse(lockfile.data).object
+        parsedLockfile = yarnLock.parse(lockfile.data.toString()).object
       } catch (error) {
         // Otherwise, try the new format
-        parsedLockfile = parseYaml(lockfile.data)
+        parsedLockfile = parseYaml(lockfile.data.toString())
       }
     }
 
@@ -468,10 +439,8 @@ export class RepoData {
 
   /**
    * Checks for the type of lockfile
-   *
    * @param {string} packagePath - the path to the package.json file
-   * @param {Array<Object>} tree - the repo tree
-   *
+   * @param {Array<object>} tree - the repo tree
    * @returns {string} - the lockfile type
    */
   getLockfileType (packagePath = 'package.json', tree) {
@@ -488,9 +457,7 @@ export class RepoData {
 
   /**
    * Logs errors
-   *
    * @param {Error} error - The error to handle
-   *
    * @throws {Error} - If the error is not an expected type
    */
   handleError (error) {

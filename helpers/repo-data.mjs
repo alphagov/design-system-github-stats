@@ -76,6 +76,11 @@ export class RepoData {
     const result = {
       createdAt: response.repository?.createdAt,
       updatedAt: response.repository?.updatedAt,
+      description: response.repository?.description,
+      homepage: response.repository?.homepageUrl,
+      archived: response.repository?.isArchived,
+      stargazerCount: response.repository?.stargazerCount,
+      forksCount: response.repository?.forkCount,
       latestCommitSHA: response.repository?.defaultBranchRef?.target?.oid,
       graphQLRateLimit: response.rateLimit
     }

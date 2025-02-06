@@ -15,6 +15,11 @@ export class Result {
     }
     this.repoOwner = repoOwner
     this.repoName = repoName
+    this.description = ''
+    this.homepage = ''
+    this.archived = false
+    this.stargazerCount = 0
+    this.forksCount = 0
     this.builtByGovernment = false
     this.isPrototype = false
     this.updatedAt = ''
@@ -55,6 +60,11 @@ export class Result {
     const result = {
       repoOwner: this.repoOwner,
       repoName: this.repoName,
+      description: this.description,
+      homepage: this.homepage,
+      archived: this.archived,
+      stargazerCount: this.stargazerCount,
+      forksCount: this.forksCount,
       builtByGovernment: this.builtByGovernment,
       updatedAt: this.updatedAt,
       createdAt: this.createdAt,
@@ -68,7 +78,7 @@ export class Result {
     }
     if (this.service) {
       result.name = this.service.name
-      result.description = this.service.description
+      result['service-description'] = this.service.description
       result.synonyms = this.service.synonyms
       result.organisation = this.service.organisation
       result.phase = this.service.phase

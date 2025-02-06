@@ -11,7 +11,8 @@
     "url": "https://github.com/alphagov/design-system-github-stats/issues"
   },
   "scripts": {
-    "build-filtered-data": "node build-filtered-data.mjs",
+    "build-filtered-data": "node ./scripts/build-filtered-data.mjs",
+    "update-service-owners": "node ./scripts/update-service-owners.mjs",
     "lint": "eslint",
     "typecheck": "tsc --project tsconfig.json",
     "test": "npm run lint && vitest --coverage",

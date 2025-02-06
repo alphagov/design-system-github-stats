@@ -15,6 +15,11 @@ export class Result {
     }
     this.repoOwner = repoOwner
     this.repoName = repoName
+    this.description = ''
+    this.homepage = ''
+    this.archived = false
+    this.stargazerCount = 0
+    this.forksCount = 0
     this.builtByGovernment = false
     this.isPrototype = false
     this.updatedAt = ''
@@ -24,6 +29,7 @@ export class Result {
     this.errorsThrown = []
     this.unknownLockFileType = false
     this.isValid = false
+    this.service = null
 
     // Non returned values
     this.latestCommitSHA = ''
@@ -51,9 +57,14 @@ export class Result {
     this.isIndirect = this.directDependencies.length === 0
     this.isValid = this.validate()
 
-    return {
+    const result = {
       repoOwner: this.repoOwner,
       repoName: this.repoName,
+      description: this.description,
+      homepage: this.homepage,
+      archived: this.archived,
+      stargazerCount: this.stargazerCount,
+      forksCount: this.forksCount,
       builtByGovernment: this.builtByGovernment,
       updatedAt: this.updatedAt,
       createdAt: this.createdAt,
@@ -65,5 +76,19 @@ export class Result {
       unknownLockFileType: this.unknownLockFileType,
       isValid: this.isValid
     }
+    if (this.service) {
+      result.name = this.service.name
+      result['service-description'] = this.service.description
+      result.synonyms = this.service.synonyms
+      result.organisation = this.service.organisation
+      result.phase = this.service.phase
+      result.theme = this.service.theme
+      result['start-page'] = this.service.startPage
+      result.liveservice = this.service.liveservice
+      result.timeline = this.service.timeline
+      result.tags = this.service.tags
+    }
+
+    return result
   }
 }

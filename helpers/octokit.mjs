@@ -86,6 +86,11 @@ export async function getRepo (owner, name) {
       repository(owner: $owner, name: $name) {
         createdAt
         updatedAt
+        description
+        homepageUrl
+        isArchived
+        stargazerCount
+        forkCount
         defaultBranchRef {
           target {
             ... on Commit {

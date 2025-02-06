@@ -47,7 +47,11 @@ jobs:
       # github action which doesn't give us the option to output this data as
       # something like json which we can programmatically interogate.
       - name: Pipe our deps to a json file
-        run: github-dependents-info --repo alphagov/govuk-frontend --sort stars --json > ./data/raw-deps.json
+        run: github-dependents-info --repo alphagov/govuk-frontend --json > ./data/raw-deps.json
+
+      - name: Clean data files
+        run: |
+          rm -f ./data/filtered-data.json
 
       - name: Build filtered data
         run: npm run build-filtered-data
@@ -56,9 +60,9 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: update-filtered-data
+          branch: update-filtered-data-${{ github.ref_name }}
           delete-branch: true
-          commit-message: "Get latest filtered dependents data and rejections"
-          title: "Get latest filtered dependents data and rejections"
+          commit-message: "Get latest filtered dependents data and rejections - ${{ github.ref_name }}"
+          title: "Get latest filtered dependents data and rejections - ${{ github.ref_name }}"
           body: "Generated automatically by github action"
           base: ${{ github.head_ref }}

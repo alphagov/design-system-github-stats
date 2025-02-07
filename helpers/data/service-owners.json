@@ -286,6 +286,56 @@
       "start-page": [],
       "screenshot": true
     },
+    "formbuilder-product-page": {
+      "name": "MoJ Forms",
+      "description": "Prototype, test and publish online forms quickly and easily",
+      "theme": "Government Internal",
+      "organisation": [
+        "Ministry of Justice"
+      ],
+      "phase": "Live",
+      "liveservice": "https://moj-forms-editor.service.justice.gov.uk",
+      "sourceCode": [
+        {
+          "text": "Product page source code",
+          "href": "https://github.com/ministryofjustice/formbuilder-product-page"
+        },
+        {
+          "text": "Form builder source code",
+          "href": "https://github.com/ministryofjustice/fb-editor"
+        }
+      ],
+      "timeline": {
+        "items": [
+          {
+            "label": "Assessed as red at beta assessment",
+            "date": "2023-12-06",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/moj-forms-beta-assessment",
+                "text": "Service assessment report",
+                "visuallyHiddenText": "for beta assessment"
+              }
+            ]
+          },
+          {
+            "label": "Assessed as amber at beta reassessment",
+            "date": "2024-06-14",
+            "links": [
+              {
+                "href": "https://www.gov.uk/service-standard-reports/moj-forms-beta-reassessment",
+                "text": "Service assessment report",
+                "visuallyHiddenText": "for beta reassessment"
+              }
+            ]
+          }
+        ]
+      },
+      "filename": "moj-forms.json",
+      "slug": "moj-forms",
+      "start-page": [],
+      "screenshot": true
+    },
     "peoplefinder": {
       "name": "MoJ People Finder",
       "description": "Find contact details.",
@@ -500,6 +550,9 @@
           "href": "https://github.com/DFE-Digital/apply-for-teacher-training"
         }
       ],
+      "tags": [
+        "GOV.UK One Login"
+      ],
       "filename": "apply-for-teacher-training.json",
       "slug": "apply-for-teacher-training",
       "screenshot": true
@@ -539,6 +592,9 @@
           "href": "https://github.com/DFE-Digital/early-years-foundation-recovery"
         }
       ],
+      "tags": [
+        "GOV.UK One Login"
+      ],
       "filename": "child-development-training.json",
       "slug": "child-development-training",
       "start-page": [],
@@ -565,6 +621,9 @@
           "href": "https://github.com/DFE-Digital/claim-additional-payments-for-teaching"
         }
       ],
+      "tags": [
+        "GOV.UK One Login"
+      ],
       "filename": "claim-additional-teaching-payment.json",
       "slug": "claim-additional-teaching-payment",
       "screenshot": true
@@ -578,6 +637,9 @@
       "theme": "Childcare and parenting",
       "phase": "Beta",
       "liveservice": "https://manage-family-support-services-and-accounts.education.gov.uk/",
+      "tags": [
+        "GOV.UK One Login"
+      ],
       "sourceCode": [
         {
           "text": "Source code",
@@ -621,6 +683,9 @@
       "theme": "Education, training and skills",
       "phase": "Alpha",
       "liveservice": "https://find-and-use-an-api.education.gov.uk",
+      "tags": [
+        "GOV.UK One Login"
+      ],
       "timeline": {
         "items": [
           {
@@ -3173,6 +3238,9 @@
           "text": "Source code",
           "href": "https://github.com/cabinetoffice/gap-find-apply-web"
         }
+      ],
+      "tags": [
+        "GOV.UK One Login"
       ],
       "timeline": {
         "items": [

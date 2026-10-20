@@ -80,11 +80,18 @@ export class RepoData {
     this.log('fetching repository information')
 
     const response = await getRepo(this.repoOwner, this.repoName)
+    const repository = response.repository || {}
     const result = {
-      createdAt: response.repository?.createdAt,
-      updatedAt: response.repository?.updatedAt,
-      latestCommitSHA: response.repository?.defaultBranchRef?.target?.oid,
-      graphQLRateLimit: response.rateLimit
+      createdAt: repository.createdAt,
+      updatedAt: repository.updatedAt,
+      latestCommitSHA: repository.defaultBranchRef?.target?.oid,
+      graphQLRateLimit: response.rateLimit,
+      rootFiles: {
+        packageJson: repository.packageJson,
+        packageLock: repository.packageLock,
+        yarnLock: repository.yarnLock,
+        hasUsageStatsFile: Boolean(repository.usageStats)
+      }
     }
 
     if (!result.createdAt) {
@@ -99,6 +106,67 @@ export class RepoData {
     this.log(`GraphQL rate limit remaining: ${result.graphQLRateLimit.remaining}`)
 
     return result
+  }
+
+  /**
+   * Builds a file tree from the root files fetched with the repo metadata,
+   * avoiding REST calls to walk the repo tree and fetch files individually.
+   *
+   * Returns null (meaning: fall back to fetching the full tree) when:
+   * - there's no root package.json, so package files may be nested
+   * - the root package.json is truncated or unparseable
+   * - the root package.json declares workspaces, so there are nested packages
+   *
+   * File contents are primed into the cache, so methods like
+   * disambiguateDependencies and getIndirectDependencies use the blob contents
+   * instead of making REST calls. Truncated blobs (eg very large lockfiles)
+   * are left uncached so those files fall back to a REST fetch.
+   *
+   * @param {object} rootFiles - The root files from getRepoInfo
+   * @returns {Array<{path: string}>|null} - A tree-shaped array, or null
+   */
+  buildTreeFromRootFiles (rootFiles) {
+    const packageJson = rootFiles?.packageJson
+    if (!packageJson || packageJson.isTruncated || packageJson.text === undefined) {
+      return null
+    }
+
+    let content
+    try {
+      content = JSON5.parse(packageJson.text)
+    } catch (error) {
+      return null
+    }
+
+    if (content.workspaces) {
+      this.log('root package.json declares workspaces - fetching full repo tree')
+      return null
+    }
+
+    const tree = [{ path: 'package.json' }]
+    this.fileContentCache.set('package.json', Promise.resolve({ data: packageJson.text }))
+
+    const rootFilePaths = {
+      packageLock: 'package-lock.json',
+      yarnLock: 'yarn.lock'
+    }
+    for (const [key, filePath] of Object.entries(rootFilePaths)) {
+      const blob = rootFiles[key]
+      if (blob) {
+        tree.push({ path: filePath })
+        if (!blob.isTruncated && blob.text !== undefined) {
+          this.fileContentCache.set(filePath, Promise.resolve({ data: blob.text }))
+        }
+      }
+    }
+
+    if (rootFiles.hasUsageStatsFile) {
+      tree.push({ path: 'lib/usage_data.js' })
+    }
+
+    this.log('analysing root files fetched with repo metadata - skipping tree fetch')
+
+    return tree
   }
 
   /**

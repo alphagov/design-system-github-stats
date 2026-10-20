@@ -87,6 +87,11 @@ async function graphqlWithRetry (query, variables, retries = 2) {
 /**
  * Gets Repo created_at, updated_at and latest commit SHA, as well as rate limit info
  *
+ * Also fetches the contents of the root package.json, package-lock.json and
+ * yarn.lock (and whether lib/usage_data.js exists) as blobs in the same query.
+ * For most repos this is everything the analysis needs, saving several REST
+ * calls (repo tree + individual file fetches) per repo.
+ *
  * Note that this GraphQL query is essentially FREE in terms of rate limiting as it is only 1 point cost, which won't
  * actually count against the GraphQL rate limit.
  *
@@ -108,7 +113,11 @@ async function graphqlWithRetry (query, variables, retries = 2) {
  *       target: {
  *         oid: 'sha-123'
  *       }
- *     }
+ *     },
+ *     packageJson: { text: '...', byteSize: 123, isTruncated: false },
+ *     packageLock: { text: '...', byteSize: 123, isTruncated: false },
+ *     yarnLock: null,
+ *     usageStats: null
  *   },
  *   rateLimit: {
  *     cost: 1,
@@ -132,6 +141,32 @@ export async function getRepo (owner, name) {
             ... on Commit {
               oid
             }
+          }
+        }
+        packageJson: object(expression: "HEAD:package.json") {
+          ... on Blob {
+            byteSize
+            isTruncated
+            text
+          }
+        }
+        packageLock: object(expression: "HEAD:package-lock.json") {
+          ... on Blob {
+            byteSize
+            isTruncated
+            text
+          }
+        }
+        yarnLock: object(expression: "HEAD:yarn.lock") {
+          ... on Blob {
+            byteSize
+            isTruncated
+            text
+          }
+        }
+        usageStats: object(expression: "HEAD:lib/usage_data.js") {
+          ... on Blob {
+            byteSize
           }
         }
       }

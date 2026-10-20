@@ -150,11 +150,14 @@ export async function analyseRepo (repo) {
     }
 
     // Get the repo metadata
-    const repoInfo = await repoData.getRepoInfo()
+    const { rootFiles, ...repoInfo } = await repoData.getRepoInfo()
     Object.assign(result, repoInfo)
 
-    // Get the repo tree
-    result.repoTree = await repoData.getRepoTree(result.latestCommitSHA)
+    // Analyse the root files we already fetched with the metadata if we can,
+    // and only fall back to fetching the whole repo tree when the root files
+    // aren't enough (eg monorepos with workspaces, nested package.json files)
+    result.repoTree = repoData.buildTreeFromRootFiles(rootFiles) ||
+      await repoData.getRepoTree(result.latestCommitSHA)
 
     // Get the package.json files
     const packageObjects = await repoData.getPackageFiles(result.repoTree)

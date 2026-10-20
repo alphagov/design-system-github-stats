@@ -1,15 +1,15 @@
-import { writeFileSync, mkdirSync, readdirSync, readFileSync } from 'fs'
+import { writeFileSync, mkdirSync } from 'fs'
 import { json2csv } from 'json-2-csv'
 import { fileURLToPath } from 'url'
-import path, { dirname } from 'path'
+import path from 'path'
 
 import denyList from '../helpers/data/deny-list.json' with { type: 'json' }
 import governmentServiceOwners from '../helpers/data/service-owners.json' with { type: 'json' }
+import { getAllDeps, repoKey } from '../helpers/raw-deps.mjs'
 import { RepoData } from '../helpers/repo-data.mjs'
 import { Result } from '../helpers/result.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
 
 // GitHub asks API consumers to stay under ~100 concurrent requests and will
 // apply secondary rate limits well below that. 10 workers keeps us well
@@ -41,29 +41,6 @@ function parseArgs (argv) {
   }
 
   return options
-}
-
-function repoKey (repo) {
-  return `${repo.owner}/${repo.repo_name}`
-}
-
-function getAllDeps () {
-  const dataDir = path.resolve(__dirname, '../data')
-  const rawDepFiles = readdirSync(dataDir).filter(file => file.startsWith('raw-deps'))
-
-  // Dedupe by owner/name: the same repo can appear in the dependents list
-  // of both govuk-frontend and one of the ports
-  const allDeps = new Map()
-  for (const file of rawDepFiles) {
-    const rawDepData = JSON.parse(readFileSync(path.join(dataDir, file), 'utf8'))
-    for (const repo of rawDepData.all_public_dependent_repos) {
-      const key = repoKey(repo)
-      if (!allDeps.has(key)) {
-        allDeps.set(key, repo)
-      }
-    }
-  }
-  return allDeps
 }
 
 async function filterDeps ({ limit, shuffle, outDir, concurrency }) {

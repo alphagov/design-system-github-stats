@@ -7,6 +7,9 @@ jsdoc
 # Node.js modules
 node_modules/
 
+# Local environment and run outputs
+.env
+tmp/
 
 # Editors
 .vscode/

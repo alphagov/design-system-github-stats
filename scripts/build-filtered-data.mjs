@@ -1,69 +1,133 @@
-import { writeFileSync, readdirSync, readFileSync } from 'fs'
+import { writeFileSync, mkdirSync, readdirSync, readFileSync } from 'fs'
 import { json2csv } from 'json-2-csv'
-import { RequestError } from 'octokit'
 import { fileURLToPath } from 'url'
 import path, { dirname } from 'path'
 
 import denyList from '../helpers/data/deny-list.json' with { type: 'json' }
 import governmentServiceOwners from '../helpers/data/service-owners.json' with { type: 'json' }
-import { getRemainingRateLimit } from '../helpers/octokit.mjs'
 import { RepoData } from '../helpers/repo-data.mjs'
 import { Result } from '../helpers/result.mjs'
-
-import rawDeps from '../data/raw-deps.json' with { type: 'json' }
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-async function filterDeps () {
+// GitHub asks API consumers to stay under ~100 concurrent requests and will
+// apply secondary rate limits well below that. 10 workers keeps us well
+// within limits while still parallelising the bulk of the work.
+const DEFAULT_CONCURRENCY = 10
+const CHECKPOINT_EVERY = 200
+
+function parseArgs (argv) {
+  const options = {
+    limit: null,
+    shuffle: false,
+    outDir: 'data',
+    concurrency: Number.parseInt(process.env.CONCURRENCY || DEFAULT_CONCURRENCY, 10)
+  }
+
+  for (const arg of argv) {
+    const [flag, value] = arg.split('=')
+    if (flag === '--limit') {
+      options.limit = Number.parseInt(value, 10)
+    } else if (flag === '--out') {
+      options.outDir = value
+    } else if (flag === '--concurrency') {
+      options.concurrency = Number.parseInt(value, 10)
+    } else if (flag === '--shuffle') {
+      options.shuffle = true
+    } else {
+      throw new Error(`Unknown option: ${arg}`)
+    }
+  }
+
+  return options
+}
+
+function repoKey (repo) {
+  return `${repo.owner}/${repo.repo_name}`
+}
+
+function getAllDeps () {
+  const dataDir = path.resolve(__dirname, '../data')
+  const rawDepFiles = readdirSync(dataDir).filter(file => file.startsWith('raw-deps'))
+
+  // Dedupe by owner/name: the same repo can appear in the dependents list
+  // of both govuk-frontend and one of the ports
+  const allDeps = new Map()
+  for (const file of rawDepFiles) {
+    const rawDepData = JSON.parse(readFileSync(path.join(dataDir, file), 'utf8'))
+    for (const repo of rawDepData.all_public_dependent_repos) {
+      const key = repoKey(repo)
+      if (!allDeps.has(key)) {
+        allDeps.set(key, repo)
+      }
+    }
+  }
+  return allDeps
+}
+
+async function filterDeps ({ limit, shuffle, outDir, concurrency }) {
+  const startTime = performance.now()
+  let repos = [...getAllDeps().values()]
+
+  if (shuffle) {
+    // Fisher-Yates, so --limit gives a representative sample rather than
+    // whichever repos happen to be listed first
+    for (let i = repos.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [repos[i], repos[j]] = [repos[j], repos[i]]
+    }
+  }
+  if (limit) {
+    repos = repos.slice(0, limit)
+  }
+
   const builtData = []
-  const processedIndexes = []
+  const processed = new Set()
+  const failed = new Set()
+  let nextIndex = 0
+  let finishedCount = 0
 
-  // Add port raw deps
-  const allDeps = new Set()
+  console.log(`Beginning analysis of ${repos.length} repos (concurrency: ${concurrency})...`)
 
-  const rawDepFiles = readdirSync(path.resolve(__dirname, '../data')).filter(file => file.startsWith('raw-deps'))
-  if (rawDepFiles && rawDepFiles.length > 0) {
-    for (const file of rawDepFiles) {
-      const rawDepData = JSON.parse(readFileSync(path.resolve(__dirname, `../data/${file}`), 'utf8'))
-      rawDepData.all_public_dependent_repos.forEach(repo => allDeps.add(repo))
-    }
-  }
+  async function worker () {
+    while (nextIndex < repos.length) {
+      const repo = repos[nextIndex++]
+      const key = repoKey(repo)
 
-  console.log('Beginning dependency analysis...')
-
-  for (const repo of allDeps) {
-    try {
-      console.log(`${repo.name}: Getting repo data...`)
-      const repoData = await analyseRepo(repo)
-      if (repoData) {
-        builtData.push(repoData)
+      try {
+        console.log(`${key}: Getting repo data...`)
+        const repoData = await analyseRepo(repo)
+        processed.add(key)
+        if (repoData) {
+          builtData.push(repoData)
+        }
+        console.log(`${key}: Analysis complete`)
+      } catch (error) {
+        failed.add(key)
+        console.log(`${key}: ERROR: ${error.message}. Skipping.`)
       }
-      console.log(`${repo.name}: Analysis complete`)
 
-      const index = allDeps.findIndex(
-        (item) => item === repo
-      )
-      processedIndexes.push(index)
-      console.log(
-        `This was repo number ${index + 1} of ${
-          allDeps.length
-        }`
-      )
+      finishedCount++
+      console.log(`Finished ${finishedCount} of ${repos.length}`)
 
-      const remaining = await getRemainingRateLimit()
-      console.log(`${remaining} remaining on rate limit`)
-    } catch (error) {
-      if (error instanceof RequestError) {
-        continue
+      if (finishedCount % CHECKPOINT_EVERY === 0) {
+        writeToFiles(builtData, repos, processed, outDir)
       }
     }
   }
+
+  await Promise.all(Array.from({ length: concurrency }, () => worker()))
 
   if (builtData.length > 0) {
-    writeToFiles(builtData, processedIndexes)
+    writeToFiles(builtData, repos, processed, outDir)
   }
-  console.log("We're done!")
+
+  const durationMinutes = ((performance.now() - startTime) / 60000).toFixed(1)
+  console.log(
+    `We're done! Processed ${processed.size} of ${repos.length} repos in ${durationMinutes} minutes ` +
+    `(${builtData.length} results saved, ${failed.size} failed, ${repos.length - processed.size - failed.size} not attempted)`
+  )
 }
 
 export async function analyseRepo (repo) {
@@ -116,22 +180,37 @@ export async function analyseRepo (repo) {
   return result.getResult(repoData)
 }
 
-function writeToFiles (builtData, processedIndexes) {
+function writeToFiles (builtData, repos, processed, outDir) {
+  mkdirSync(outDir, { recursive: true })
+
   // Write JSON file
   const jsonData = JSON.stringify(builtData, null, 2)
-  writeFileSync('data/filtered-data.json', jsonData)
+  writeFileSync(path.join(outDir, 'filtered-data.json'), jsonData)
 
   // Write CSV file
   const csv = json2csv(builtData)
-  writeFileSync('data/filtered-data.csv', csv)
+  writeFileSync(path.join(outDir, 'filtered-data.csv'), csv)
   console.log('Data file updated with batch of entries')
 
   // Write Unprocessed Items file
-  const unprocessedItems = rawDeps.all_public_dependent_repos.filter((_, index) => !processedIndexes.includes(index))
+  const unprocessedItems = repos.filter((repo) => !processed.has(repoKey(repo)))
   writeFileSync(
-    'data/unprocessedItems.json',
+    path.join(outDir, 'unprocessedItems.json'),
     JSON.stringify(unprocessedItems, null, 2)
   )
 }
 
-filterDeps()
+// Only run when executed directly, not when imported (eg by tests)
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  try {
+    // Load GITHUB_AUTH_TOKEN etc from a local .env file if there is one
+    process.loadEnvFile()
+  } catch {
+    // No .env file - rely on the environment
+  }
+
+  filterDeps(parseArgs(process.argv.slice(2))).catch((error) => {
+    console.error('Analysis failed:', error)
+    process.exitCode = 1
+  })
+}

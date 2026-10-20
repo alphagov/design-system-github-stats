@@ -112,8 +112,12 @@ function countOtherVersions (versions) {
 }
 
 function hasDependencyOnVersion (version, repo) {
-  const directDep = repo.directDependencies.some(dep => dep.actualVersion && dep.actualVersion.match(/\d/)[0] === version)
-  const indirectDep = repo.indirectDependencies.flat().some(dep => dep.actualVersion && dep.actualVersion.match(/\d/)[0] === version)
+  // First digit of the resolved version, if it has one - versions like
+  // 'latest' or 'workspace:*' contain no digits and never match
+  const majorVersionOf = (dep) => dep.actualVersion?.match(/\d/)?.[0]
+
+  const directDep = repo.directDependencies.some(dep => majorVersionOf(dep) === version)
+  const indirectDep = repo.indirectDependencies.flat().some(dep => majorVersionOf(dep) === version)
 
   return directDep || indirectDep
 }

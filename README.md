@@ -50,3 +50,22 @@ We analyse our dependents by looping through them in `build-filtered-data.mjs` a
 10. We save the results to a dated file ending `filtered-data.json`
 11. If an error is thrown at any point during analysis, we log that to the result.
 
+## Running the analysis locally
+
+1. Install dependencies with `npm ci`
+2. Provide a token for the GitHub API. Either set the `GITHUB_AUTH_TOKEN` environment variable, or create a `.env` file (see `.env.example`). If you use the GitHub CLI, `echo "GITHUB_AUTH_TOKEN=$(gh auth token)" > .env` will do.
+3. Run `npm run build-filtered-data`
+
+A full run analyses every known dependent and overwrites the committed files in `data/`. For quicker test runs the script accepts some options:
+
+- `--limit=100` - only analyse the first 100 repos
+- `--shuffle` - randomise the repo order first, so `--limit` gives a representative sample
+- `--out=tmp/sample` - write output files somewhere else, leaving `data/` untouched
+- `--concurrency=5` - override how many repos are analysed in parallel (default 10, or the `CONCURRENCY` environment variable)
+
+For example, to analyse a random sample of 100 repos without touching the committed data:
+
+```sh
+node ./scripts/build-filtered-data.mjs --shuffle --limit=100 --out=tmp/sample
+```
+

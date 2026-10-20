@@ -30,6 +30,8 @@ export class RepoData {
     this.repoName = repoName
     this.errorsThrown = []
     this.rootLockfileVersion = null
+    // Cache file contents so we never fetch the same file (eg a lockfile) twice
+    this.fileContentCache = new Map()
   }
 
   /**
@@ -232,7 +234,10 @@ export class RepoData {
    * @throws {RequestError} - If the request fails
    */
   async getRepoFileContent (filePath) {
-    return await getFileContent(this.repoOwner, this.repoName, filePath)
+    if (!this.fileContentCache.has(filePath)) {
+      this.fileContentCache.set(filePath, getFileContent(this.repoOwner, this.repoName, filePath))
+    }
+    return this.fileContentCache.get(filePath)
   }
 
   /**
@@ -314,9 +319,7 @@ export class RepoData {
       }
     }
     this.log(`${results.length} indirect dependencies found.`)
-    if (results.length > 0) {
-      return results
-    }
+    return results
   }
 
   /**

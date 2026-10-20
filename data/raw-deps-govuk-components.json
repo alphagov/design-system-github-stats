@@ -1,0 +1,1229 @@
+{
+    "all_public_dependent_repos": [
+        {
+            "name": "DFE-Digital/access-your-teaching-profile",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "access-your-teaching-profile"
+        },
+        {
+            "name": "DFE-Digital/access-your-teaching-qualifications",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "access-your-teaching-qualifications"
+        },
+        {
+            "name": "DFE-Digital/apply-for-qualified-teacher-status",
+            "stars": 7,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "apply-for-qualified-teacher-status"
+        },
+        {
+            "name": "DFE-Digital/apply-for-teacher-training",
+            "stars": 38,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "apply-for-teacher-training"
+        },
+        {
+            "name": "DFE-Digital/buy-for-your-school",
+            "stars": 8,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "buy-for-your-school"
+        },
+        {
+            "name": "DFE-Digital/check-childrens-barred-list",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "check-childrens-barred-list"
+        },
+        {
+            "name": "DFE-Digital/claim-additional-payments-for-teaching",
+            "stars": 15,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "claim-additional-payments-for-teaching"
+        },
+        {
+            "name": "DFE-Digital/dfe-autocomplete",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "dfe-autocomplete"
+        },
+        {
+            "name": "DFE-Digital/dfe-complete-conversions-transfers-and-changes",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "dfe-complete-conversions-transfers-and-changes"
+        },
+        {
+            "name": "DFE-Digital/dfe-reference-data-webapp",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "dfe-reference-data-webapp"
+        },
+        {
+            "name": "DFE-Digital/dfe-wizard",
+            "stars": 5,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "dfe-wizard"
+        },
+        {
+            "name": "DFE-Digital/early-years-foundation-recovery",
+            "stars": 5,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "early-years-foundation-recovery"
+        },
+        {
+            "name": "DFE-Digital/early-years-foundation-reform",
+            "stars": 5,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "early-years-foundation-reform"
+        },
+        {
+            "name": "DFE-Digital/find-a-buying-solution",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "find-a-buying-solution"
+        },
+        {
+            "name": "DFE-Digital/find-a-lost-trn",
+            "stars": 4,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "find-a-lost-trn"
+        },
+        {
+            "name": "DFE-Digital/find-placement-schools",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "find-placement-schools"
+        },
+        {
+            "name": "DFE-Digital/find-teacher-training",
+            "stars": 6,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "find-teacher-training"
+        },
+        {
+            "name": "DFE-Digital/get-into-teaching-app",
+            "stars": 25,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "get-into-teaching-app"
+        },
+        {
+            "name": "DFE-Digital/get-into-teaching-interface-api",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "get-into-teaching-interface-api"
+        },
+        {
+            "name": "DFE-Digital/govuk-rails-boilerplate",
+            "stars": 25,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "govuk-rails-boilerplate"
+        },
+        {
+            "name": "DFE-Digital/help-for-early-years-providers",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "help-for-early-years-providers"
+        },
+        {
+            "name": "DFE-Digital/incident-response-tool",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "incident-response-tool"
+        },
+        {
+            "name": "DFE-Digital/itt-mentor-services",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "itt-mentor-services"
+        },
+        {
+            "name": "DFE-Digital/npq-registration",
+            "stars": 8,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "npq-registration"
+        },
+        {
+            "name": "DFE-Digital/publish-teacher-training",
+            "stars": 12,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "publish-teacher-training"
+        },
+        {
+            "name": "DFE-Digital/publish-teacher-training-2022",
+            "stars": 5,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "publish-teacher-training-2022"
+        },
+        {
+            "name": "DFE-Digital/refer-serious-misconduct",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "refer-serious-misconduct"
+        },
+        {
+            "name": "DFE-Digital/register-early-career-teachers-public",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "register-early-career-teachers-public"
+        },
+        {
+            "name": "DFE-Digital/register-trainee-teachers",
+            "stars": 12,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "register-trainee-teachers"
+        },
+        {
+            "name": "DFE-Digital/register-training-providers",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "register-training-providers"
+        },
+        {
+            "name": "DFE-Digital/schools-experience",
+            "stars": 16,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "schools-experience"
+        },
+        {
+            "name": "DFE-Digital/teacher-pay-calculator",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "teacher-pay-calculator"
+        },
+        {
+            "name": "DFE-Digital/teacher-success",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "teacher-success"
+        },
+        {
+            "name": "DFE-Digital/teacher-training-entitlement",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "teacher-training-entitlement"
+        },
+        {
+            "name": "DFE-Digital/teaching-school-hub-finder",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "teaching-school-hub-finder"
+        },
+        {
+            "name": "DFE-Digital/teaching-vacancies",
+            "stars": 27,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "teaching-vacancies"
+        },
+        {
+            "name": "DFE-Digital/tv-okr-viewer-prototype",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+            "owner": "DFE-Digital",
+            "repo_name": "tv-okr-viewer-prototype"
+        },
+        {
+            "name": "GovWifi/govwifi-admin",
+            "stars": 12,
+            "img": "https://avatars.githubusercontent.com/u/178180623?s=40&v=4",
+            "owner": "GovWifi",
+            "repo_name": "govwifi-admin"
+        },
+        {
+            "name": "Larisa-Romero/registro-docente",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/119458932?s=40&v=4",
+            "owner": "Larisa-Romero",
+            "repo_name": "registro-docente"
+        },
+        {
+            "name": "cabinetoffice/fb-editor",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/5442909?s=40&v=4",
+            "owner": "cabinetoffice",
+            "repo_name": "fb-editor"
+        },
+        {
+            "name": "chris-groves/hmcts-tasks",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/46629384?s=40&v=4",
+            "owner": "chris-groves",
+            "repo_name": "hmcts-tasks"
+        },
+        {
+            "name": "co-cddo/data-catalogue",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+            "owner": "co-cddo",
+            "repo_name": "data-catalogue"
+        },
+        {
+            "name": "co-cddo/data-ethics-framework-poc",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+            "owner": "co-cddo",
+            "repo_name": "data-ethics-framework-poc"
+        },
+        {
+            "name": "co-cddo/dea-register-frontend",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+            "owner": "co-cddo",
+            "repo_name": "dea-register-frontend"
+        },
+        {
+            "name": "co-cddo/dm-client-demo",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+            "owner": "co-cddo",
+            "repo_name": "dm-client-demo"
+        },
+        {
+            "name": "co-cddo/future-data-architecture",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+            "owner": "co-cddo",
+            "repo_name": "future-data-architecture"
+        },
+        {
+            "name": "co-cddo/metadata-from-api-spec",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+            "owner": "co-cddo",
+            "repo_name": "metadata-from-api-spec"
+        },
+        {
+            "name": "communitiesuk/submit-social-housing-lettings-and-sales-data",
+            "stars": 6,
+            "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+            "owner": "communitiesuk",
+            "repo_name": "submit-social-housing-lettings-and-sales-data"
+        },
+        {
+            "name": "dsp-testing/apply-for-teacher-training",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/30846345?s=40&v=4",
+            "owner": "dsp-testing",
+            "repo_name": "apply-for-teacher-training"
+        },
+        {
+            "name": "duttonw/govuk-forms-admin",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2021232?s=40&v=4",
+            "owner": "duttonw",
+            "repo_name": "govuk-forms-admin"
+        },
+        {
+            "name": "duttonw/govuk-forms-product-page",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2021232?s=40&v=4",
+            "owner": "duttonw",
+            "repo_name": "govuk-forms-product-page"
+        },
+        {
+            "name": "duttonw/govuk-forms-runner",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2021232?s=40&v=4",
+            "owner": "duttonw",
+            "repo_name": "govuk-forms-runner"
+        },
+        {
+            "name": "fumimowdan/irp_policy",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/139925286?s=40&v=4",
+            "owner": "fumimowdan",
+            "repo_name": "irp_policy"
+        },
+        {
+            "name": "govuk-forms/forms-admin",
+            "stars": 21,
+            "img": "https://avatars.githubusercontent.com/u/245156580?s=40&v=4",
+            "owner": "govuk-forms",
+            "repo_name": "forms-admin"
+        },
+        {
+            "name": "govuk-forms/forms-product-page",
+            "stars": 11,
+            "img": "https://avatars.githubusercontent.com/u/245156580?s=40&v=4",
+            "owner": "govuk-forms",
+            "repo_name": "forms-product-page"
+        },
+        {
+            "name": "govuk-forms/forms-runner",
+            "stars": 13,
+            "img": "https://avatars.githubusercontent.com/u/245156580?s=40&v=4",
+            "owner": "govuk-forms",
+            "repo_name": "forms-runner"
+        },
+        {
+            "name": "gpeng/dfe-code-test",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/5216?s=40&v=4",
+            "owner": "gpeng",
+            "repo_name": "dfe-code-test"
+        },
+        {
+            "name": "ministryofjustice/Claim-for-Crown-Court-Defence",
+            "stars": 5,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "Claim-for-Crown-Court-Defence"
+        },
+        {
+            "name": "ministryofjustice/cdpt-deploys-dashboard",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "cdpt-deploys-dashboard"
+        },
+        {
+            "name": "ministryofjustice/correspondence_tool_public",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "correspondence_tool_public"
+        },
+        {
+            "name": "ministryofjustice/disclosure-checker",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "disclosure-checker"
+        },
+        {
+            "name": "ministryofjustice/fb-editor",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "fb-editor"
+        },
+        {
+            "name": "ministryofjustice/find-unclaimed-court-money",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "find-unclaimed-court-money"
+        },
+        {
+            "name": "ministryofjustice/laa-apply-for-criminal-legal-aid",
+            "stars": 7,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "laa-apply-for-criminal-legal-aid"
+        },
+        {
+            "name": "ministryofjustice/laa-assess-crime-forms",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "laa-assess-crime-forms"
+        },
+        {
+            "name": "ministryofjustice/laa-assure-hmrc-data",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "laa-assure-hmrc-data"
+        },
+        {
+            "name": "ministryofjustice/laa-check-client-qualifies",
+            "stars": 6,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "laa-check-client-qualifies"
+        },
+        {
+            "name": "ministryofjustice/laa-court-data-ui",
+            "stars": 7,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "laa-court-data-ui"
+        },
+        {
+            "name": "ministryofjustice/laa-review-criminal-legal-aid",
+            "stars": 4,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "laa-review-criminal-legal-aid"
+        },
+        {
+            "name": "ministryofjustice/moj-components",
+            "stars": 2,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "moj-components"
+        },
+        {
+            "name": "ministryofjustice/parliamentary-questions",
+            "stars": 5,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "parliamentary-questions"
+        },
+        {
+            "name": "ministryofjustice/request-personal-information",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+            "owner": "ministryofjustice",
+            "repo_name": "request-personal-information"
+        },
+        {
+            "name": "nareshdevasani/all_ruby_deps",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/22427191?s=40&v=4",
+            "owner": "nareshdevasani",
+            "repo_name": "all_ruby_deps"
+        },
+        {
+            "name": "sarahcrack/digital-associate-journal-gov-style",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/73823091?s=40&v=4",
+            "owner": "sarahcrack",
+            "repo_name": "digital-associate-journal-gov-style"
+        },
+        {
+            "name": "sarahseewhy/forms-runner",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/6641924?s=40&v=4",
+            "owner": "sarahseewhy",
+            "repo_name": "forms-runner"
+        },
+        {
+            "name": "trade-tariff-archive/ott-agent",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/305769977?s=40&v=4",
+            "owner": "trade-tariff-archive",
+            "repo_name": "ott-agent"
+        },
+        {
+            "name": "trade-tariff/identity",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/79591050?s=40&v=4",
+            "owner": "trade-tariff",
+            "repo_name": "identity"
+        },
+        {
+            "name": "trade-tariff/trade-tariff-admin",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/79591050?s=40&v=4",
+            "owner": "trade-tariff",
+            "repo_name": "trade-tariff-admin"
+        },
+        {
+            "name": "trade-tariff/trade-tariff-dev-hub",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/79591050?s=40&v=4",
+            "owner": "trade-tariff",
+            "repo_name": "trade-tariff-dev-hub"
+        },
+        {
+            "name": "trade-tariff/trade-tariff-frontend",
+            "stars": 3,
+            "img": "https://avatars.githubusercontent.com/u/79591050?s=40&v=4",
+            "owner": "trade-tariff",
+            "repo_name": "trade-tariff-frontend"
+        },
+        {
+            "name": "tvararu/govuk-mockup-kit",
+            "stars": 1,
+            "img": "https://avatars.githubusercontent.com/u/1650875?s=40&v=4",
+            "owner": "tvararu",
+            "repo_name": "govuk-mockup-kit"
+        },
+        {
+            "name": "uk-gov-mirror/DFE-Digital.get-into-teaching-app",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/82280641?s=40&v=4",
+            "owner": "uk-gov-mirror",
+            "repo_name": "DFE-Digital.get-into-teaching-app"
+        },
+        {
+            "name": "unboxed/bops",
+            "stars": 14,
+            "img": "https://avatars.githubusercontent.com/u/47633?s=40&v=4",
+            "owner": "unboxed",
+            "repo_name": "bops"
+        },
+        {
+            "name": "your/status-dashboard",
+            "stars": 0,
+            "img": "https://avatars.githubusercontent.com/u/9043263?s=40&v=4",
+            "owner": "your",
+            "repo_name": "status-dashboard"
+        }
+    ],
+    "total_dependents_number": 155,
+    "public_dependents_number": 84,
+    "private_dependents_number": 71,
+    "public_dependents_stars": 378,
+    "badges": {
+        "total_doc_url": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by&message=155&color=informational&logo=slickpic)](https://github.com/nvuillam/github-dependents-info)",
+        "total": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by&message=155&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents)",
+        "public": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(public)&message=84&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents)",
+        "private": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(private)&message=71&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents)",
+        "stars": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(stars)&message=378&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents)"
+    },
+    "llm_summary": null,
+    "packages": [
+        [
+            {
+                "id": "UGFja2FnZS03MTA1MTQwMjg3",
+                "name": "github.com/x-govuk/govuk-components",
+                "url": "https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS03MTA1MTQwMjg3",
+                "public_dependent_stars": 0,
+                "public_dependents": [],
+                "public_dependents_number": 0,
+                "private_dependents_number": 0,
+                "total_dependents_number": 0,
+                "badges": {
+                    "total": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by&message=0&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS03MTA1MTQwMjg3)",
+                    "public": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(public)&message=0&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS03MTA1MTQwMjg3)",
+                    "private": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(private)&message=0&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS03MTA1MTQwMjg3)",
+                    "stars": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(stars)&message=0&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS03MTA1MTQwMjg3)"
+                }
+            },
+            {
+                "id": "UGFja2FnZS0xMjY4MjM1NTE3",
+                "name": "govuk-components",
+                "url": "https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS0xMjY4MjM1NTE3",
+                "public_dependent_stars": 378,
+                "public_dependents": [
+                    {
+                        "name": "DFE-Digital/access-your-teaching-profile",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "access-your-teaching-profile"
+                    },
+                    {
+                        "name": "DFE-Digital/access-your-teaching-qualifications",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "access-your-teaching-qualifications"
+                    },
+                    {
+                        "name": "DFE-Digital/apply-for-qualified-teacher-status",
+                        "stars": 7,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "apply-for-qualified-teacher-status"
+                    },
+                    {
+                        "name": "DFE-Digital/apply-for-teacher-training",
+                        "stars": 38,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "apply-for-teacher-training"
+                    },
+                    {
+                        "name": "DFE-Digital/buy-for-your-school",
+                        "stars": 8,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "buy-for-your-school"
+                    },
+                    {
+                        "name": "DFE-Digital/check-childrens-barred-list",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "check-childrens-barred-list"
+                    },
+                    {
+                        "name": "DFE-Digital/claim-additional-payments-for-teaching",
+                        "stars": 15,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "claim-additional-payments-for-teaching"
+                    },
+                    {
+                        "name": "DFE-Digital/dfe-autocomplete",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "dfe-autocomplete"
+                    },
+                    {
+                        "name": "DFE-Digital/dfe-complete-conversions-transfers-and-changes",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "dfe-complete-conversions-transfers-and-changes"
+                    },
+                    {
+                        "name": "DFE-Digital/dfe-reference-data-webapp",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "dfe-reference-data-webapp"
+                    },
+                    {
+                        "name": "DFE-Digital/dfe-wizard",
+                        "stars": 5,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "dfe-wizard"
+                    },
+                    {
+                        "name": "DFE-Digital/early-years-foundation-recovery",
+                        "stars": 5,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "early-years-foundation-recovery"
+                    },
+                    {
+                        "name": "DFE-Digital/early-years-foundation-reform",
+                        "stars": 5,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "early-years-foundation-reform"
+                    },
+                    {
+                        "name": "DFE-Digital/find-a-buying-solution",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "find-a-buying-solution"
+                    },
+                    {
+                        "name": "DFE-Digital/find-a-lost-trn",
+                        "stars": 4,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "find-a-lost-trn"
+                    },
+                    {
+                        "name": "DFE-Digital/find-placement-schools",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "find-placement-schools"
+                    },
+                    {
+                        "name": "DFE-Digital/find-teacher-training",
+                        "stars": 6,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "find-teacher-training"
+                    },
+                    {
+                        "name": "DFE-Digital/get-into-teaching-app",
+                        "stars": 25,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "get-into-teaching-app"
+                    },
+                    {
+                        "name": "DFE-Digital/get-into-teaching-interface-api",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "get-into-teaching-interface-api"
+                    },
+                    {
+                        "name": "DFE-Digital/govuk-rails-boilerplate",
+                        "stars": 25,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "govuk-rails-boilerplate"
+                    },
+                    {
+                        "name": "DFE-Digital/help-for-early-years-providers",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "help-for-early-years-providers"
+                    },
+                    {
+                        "name": "DFE-Digital/incident-response-tool",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "incident-response-tool"
+                    },
+                    {
+                        "name": "DFE-Digital/itt-mentor-services",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "itt-mentor-services"
+                    },
+                    {
+                        "name": "DFE-Digital/npq-registration",
+                        "stars": 8,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "npq-registration"
+                    },
+                    {
+                        "name": "DFE-Digital/publish-teacher-training",
+                        "stars": 12,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "publish-teacher-training"
+                    },
+                    {
+                        "name": "DFE-Digital/publish-teacher-training-2022",
+                        "stars": 5,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "publish-teacher-training-2022"
+                    },
+                    {
+                        "name": "DFE-Digital/refer-serious-misconduct",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "refer-serious-misconduct"
+                    },
+                    {
+                        "name": "DFE-Digital/register-early-career-teachers-public",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "register-early-career-teachers-public"
+                    },
+                    {
+                        "name": "DFE-Digital/register-trainee-teachers",
+                        "stars": 12,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "register-trainee-teachers"
+                    },
+                    {
+                        "name": "DFE-Digital/register-training-providers",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "register-training-providers"
+                    },
+                    {
+                        "name": "DFE-Digital/schools-experience",
+                        "stars": 16,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "schools-experience"
+                    },
+                    {
+                        "name": "DFE-Digital/teacher-pay-calculator",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "teacher-pay-calculator"
+                    },
+                    {
+                        "name": "DFE-Digital/teacher-success",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "teacher-success"
+                    },
+                    {
+                        "name": "DFE-Digital/teacher-training-entitlement",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "teacher-training-entitlement"
+                    },
+                    {
+                        "name": "DFE-Digital/teaching-school-hub-finder",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "teaching-school-hub-finder"
+                    },
+                    {
+                        "name": "DFE-Digital/teaching-vacancies",
+                        "stars": 27,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "teaching-vacancies"
+                    },
+                    {
+                        "name": "DFE-Digital/tv-okr-viewer-prototype",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/30029772?s=40&v=4",
+                        "owner": "DFE-Digital",
+                        "repo_name": "tv-okr-viewer-prototype"
+                    },
+                    {
+                        "name": "GovWifi/govwifi-admin",
+                        "stars": 12,
+                        "img": "https://avatars.githubusercontent.com/u/178180623?s=40&v=4",
+                        "owner": "GovWifi",
+                        "repo_name": "govwifi-admin"
+                    },
+                    {
+                        "name": "Larisa-Romero/registro-docente",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/119458932?s=40&v=4",
+                        "owner": "Larisa-Romero",
+                        "repo_name": "registro-docente"
+                    },
+                    {
+                        "name": "cabinetoffice/fb-editor",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/5442909?s=40&v=4",
+                        "owner": "cabinetoffice",
+                        "repo_name": "fb-editor"
+                    },
+                    {
+                        "name": "chris-groves/hmcts-tasks",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/46629384?s=40&v=4",
+                        "owner": "chris-groves",
+                        "repo_name": "hmcts-tasks"
+                    },
+                    {
+                        "name": "co-cddo/data-catalogue",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+                        "owner": "co-cddo",
+                        "repo_name": "data-catalogue"
+                    },
+                    {
+                        "name": "co-cddo/data-ethics-framework-poc",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+                        "owner": "co-cddo",
+                        "repo_name": "data-ethics-framework-poc"
+                    },
+                    {
+                        "name": "co-cddo/dea-register-frontend",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+                        "owner": "co-cddo",
+                        "repo_name": "dea-register-frontend"
+                    },
+                    {
+                        "name": "co-cddo/dm-client-demo",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+                        "owner": "co-cddo",
+                        "repo_name": "dm-client-demo"
+                    },
+                    {
+                        "name": "co-cddo/future-data-architecture",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+                        "owner": "co-cddo",
+                        "repo_name": "future-data-architecture"
+                    },
+                    {
+                        "name": "co-cddo/metadata-from-api-spec",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/94975489?s=40&v=4",
+                        "owner": "co-cddo",
+                        "repo_name": "metadata-from-api-spec"
+                    },
+                    {
+                        "name": "communitiesuk/submit-social-housing-lettings-and-sales-data",
+                        "stars": 6,
+                        "img": "https://avatars.githubusercontent.com/u/12797589?s=40&v=4",
+                        "owner": "communitiesuk",
+                        "repo_name": "submit-social-housing-lettings-and-sales-data"
+                    },
+                    {
+                        "name": "dsp-testing/apply-for-teacher-training",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/30846345?s=40&v=4",
+                        "owner": "dsp-testing",
+                        "repo_name": "apply-for-teacher-training"
+                    },
+                    {
+                        "name": "duttonw/govuk-forms-admin",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2021232?s=40&v=4",
+                        "owner": "duttonw",
+                        "repo_name": "govuk-forms-admin"
+                    },
+                    {
+                        "name": "duttonw/govuk-forms-product-page",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2021232?s=40&v=4",
+                        "owner": "duttonw",
+                        "repo_name": "govuk-forms-product-page"
+                    },
+                    {
+                        "name": "duttonw/govuk-forms-runner",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2021232?s=40&v=4",
+                        "owner": "duttonw",
+                        "repo_name": "govuk-forms-runner"
+                    },
+                    {
+                        "name": "fumimowdan/irp_policy",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/139925286?s=40&v=4",
+                        "owner": "fumimowdan",
+                        "repo_name": "irp_policy"
+                    },
+                    {
+                        "name": "govuk-forms/forms-admin",
+                        "stars": 21,
+                        "img": "https://avatars.githubusercontent.com/u/245156580?s=40&v=4",
+                        "owner": "govuk-forms",
+                        "repo_name": "forms-admin"
+                    },
+                    {
+                        "name": "govuk-forms/forms-product-page",
+                        "stars": 11,
+                        "img": "https://avatars.githubusercontent.com/u/245156580?s=40&v=4",
+                        "owner": "govuk-forms",
+                        "repo_name": "forms-product-page"
+                    },
+                    {
+                        "name": "govuk-forms/forms-runner",
+                        "stars": 13,
+                        "img": "https://avatars.githubusercontent.com/u/245156580?s=40&v=4",
+                        "owner": "govuk-forms",
+                        "repo_name": "forms-runner"
+                    },
+                    {
+                        "name": "gpeng/dfe-code-test",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/5216?s=40&v=4",
+                        "owner": "gpeng",
+                        "repo_name": "dfe-code-test"
+                    },
+                    {
+                        "name": "ministryofjustice/Claim-for-Crown-Court-Defence",
+                        "stars": 5,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "Claim-for-Crown-Court-Defence"
+                    },
+                    {
+                        "name": "ministryofjustice/cdpt-deploys-dashboard",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "cdpt-deploys-dashboard"
+                    },
+                    {
+                        "name": "ministryofjustice/correspondence_tool_public",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "correspondence_tool_public"
+                    },
+                    {
+                        "name": "ministryofjustice/disclosure-checker",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "disclosure-checker"
+                    },
+                    {
+                        "name": "ministryofjustice/fb-editor",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "fb-editor"
+                    },
+                    {
+                        "name": "ministryofjustice/find-unclaimed-court-money",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "find-unclaimed-court-money"
+                    },
+                    {
+                        "name": "ministryofjustice/laa-apply-for-criminal-legal-aid",
+                        "stars": 7,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "laa-apply-for-criminal-legal-aid"
+                    },
+                    {
+                        "name": "ministryofjustice/laa-assess-crime-forms",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "laa-assess-crime-forms"
+                    },
+                    {
+                        "name": "ministryofjustice/laa-assure-hmrc-data",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "laa-assure-hmrc-data"
+                    },
+                    {
+                        "name": "ministryofjustice/laa-check-client-qualifies",
+                        "stars": 6,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "laa-check-client-qualifies"
+                    },
+                    {
+                        "name": "ministryofjustice/laa-court-data-ui",
+                        "stars": 7,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "laa-court-data-ui"
+                    },
+                    {
+                        "name": "ministryofjustice/laa-review-criminal-legal-aid",
+                        "stars": 4,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "laa-review-criminal-legal-aid"
+                    },
+                    {
+                        "name": "ministryofjustice/moj-components",
+                        "stars": 2,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "moj-components"
+                    },
+                    {
+                        "name": "ministryofjustice/parliamentary-questions",
+                        "stars": 5,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "parliamentary-questions"
+                    },
+                    {
+                        "name": "ministryofjustice/request-personal-information",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/2203574?s=40&v=4",
+                        "owner": "ministryofjustice",
+                        "repo_name": "request-personal-information"
+                    },
+                    {
+                        "name": "nareshdevasani/all_ruby_deps",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/22427191?s=40&v=4",
+                        "owner": "nareshdevasani",
+                        "repo_name": "all_ruby_deps"
+                    },
+                    {
+                        "name": "sarahcrack/digital-associate-journal-gov-style",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/73823091?s=40&v=4",
+                        "owner": "sarahcrack",
+                        "repo_name": "digital-associate-journal-gov-style"
+                    },
+                    {
+                        "name": "sarahseewhy/forms-runner",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/6641924?s=40&v=4",
+                        "owner": "sarahseewhy",
+                        "repo_name": "forms-runner"
+                    },
+                    {
+                        "name": "trade-tariff-archive/ott-agent",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/305769977?s=40&v=4",
+                        "owner": "trade-tariff-archive",
+                        "repo_name": "ott-agent"
+                    },
+                    {
+                        "name": "trade-tariff/identity",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/79591050?s=40&v=4",
+                        "owner": "trade-tariff",
+                        "repo_name": "identity"
+                    },
+                    {
+                        "name": "trade-tariff/trade-tariff-admin",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/79591050?s=40&v=4",
+                        "owner": "trade-tariff",
+                        "repo_name": "trade-tariff-admin"
+                    },
+                    {
+                        "name": "trade-tariff/trade-tariff-dev-hub",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/79591050?s=40&v=4",
+                        "owner": "trade-tariff",
+                        "repo_name": "trade-tariff-dev-hub"
+                    },
+                    {
+                        "name": "trade-tariff/trade-tariff-frontend",
+                        "stars": 3,
+                        "img": "https://avatars.githubusercontent.com/u/79591050?s=40&v=4",
+                        "owner": "trade-tariff",
+                        "repo_name": "trade-tariff-frontend"
+                    },
+                    {
+                        "name": "tvararu/govuk-mockup-kit",
+                        "stars": 1,
+                        "img": "https://avatars.githubusercontent.com/u/1650875?s=40&v=4",
+                        "owner": "tvararu",
+                        "repo_name": "govuk-mockup-kit"
+                    },
+                    {
+                        "name": "uk-gov-mirror/DFE-Digital.get-into-teaching-app",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/82280641?s=40&v=4",
+                        "owner": "uk-gov-mirror",
+                        "repo_name": "DFE-Digital.get-into-teaching-app"
+                    },
+                    {
+                        "name": "unboxed/bops",
+                        "stars": 14,
+                        "img": "https://avatars.githubusercontent.com/u/47633?s=40&v=4",
+                        "owner": "unboxed",
+                        "repo_name": "bops"
+                    },
+                    {
+                        "name": "your/status-dashboard",
+                        "stars": 0,
+                        "img": "https://avatars.githubusercontent.com/u/9043263?s=40&v=4",
+                        "owner": "your",
+                        "repo_name": "status-dashboard"
+                    }
+                ],
+                "public_dependents_number": 84,
+                "private_dependents_number": 71,
+                "total_dependents_number": 155,
+                "badges": {
+                    "total": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by&message=155&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS0xMjY4MjM1NTE3)",
+                    "public": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(public)&message=84&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS0xMjY4MjM1NTE3)",
+                    "private": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(private)&message=71&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS0xMjY4MjM1NTE3)",
+                    "stars": "[![Generated by github-dependents-info](https://img.shields.io/static/v1?label=Used%20by%20(stars)&message=378&color=informational&logo=slickpic)](https://github.com/x-govuk/govuk-components/network/dependents?package_id=UGFja2FnZS0xMjY4MjM1NTE3)"
+                }
+            }
+        ]
+    ]
+}

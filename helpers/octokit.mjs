@@ -19,30 +19,70 @@ const octokit = new MyOctokit({
         } ${options.url}`
       )
 
-      if (retryCount < 1) {
-        // only retries once
+      if (retryCount < 2) {
         octokit.log.info(
           `${performance.now()}: Retrying after ${retryAfter} seconds!`
         )
         return true
       }
     },
-    onSecondaryRateLimit: (retryAfter, options, octokit) => {
-      // does not retry, only logs a warning
+    onSecondaryRateLimit: (retryAfter, options, octokit, retryCount) => {
       octokit.log.warn(
         `${performance.now()}: SecondaryRateLimit detected for request ${
           options.method
         } ${options.url}`
       )
+
+      if (retryCount < 2) {
+        octokit.log.info(
+          `${performance.now()}: Retrying after ${retryAfter} seconds!`
+        )
+        return true
+      }
     }
   }
 })
 
+// Deliberately NOT routed through the throttled octokit instance: the
+// throttling plugin forces all GraphQL requests through a limiter of
+// maxConcurrent 1 and minTime 1s (GraphQL counts as a "write"), which would
+// cap the whole analysis at 1 repo per second.
 const graphQLAuth = graphql.defaults({
   headers: {
     authorization: `token ${process.env.GITHUB_AUTH_TOKEN}`
   }
 })
+
+/**
+ * GraphQL request with rate limit retries, mirroring what the throttling
+ * plugin does for REST requests
+ *
+ * @param {string} query - The GraphQL query
+ * @param {object} variables - The query variables
+ * @param {number} [retries=2] - How many times to retry after a rate limit response
+ * @returns {Promise<import('@octokit/graphql').GraphQlQueryResponse>}
+ */
+async function graphqlWithRetry (query, variables, retries = 2) {
+  try {
+    return await graphQLAuth(query, variables)
+  } catch (error) {
+    const isRateLimited = error.status === 403 || error.status === 429 ||
+      (error.errors || []).some((responseError) => responseError.type === 'RATE_LIMITED')
+
+    if (!isRateLimited || retries === 0) {
+      throw error
+    }
+
+    const resetAt = Number(error.headers?.['x-ratelimit-reset']) * 1000
+    const retryAfter = Number(error.headers?.['retry-after']) ||
+      Math.max(Math.ceil((resetAt - Date.now()) / 1000), 0) ||
+      60
+
+    console.warn(`GraphQL rate limited. Retrying after ${retryAfter} seconds!`)
+    await new Promise((resolve) => setTimeout(resolve, retryAfter * 1000))
+    return graphqlWithRetry(query, variables, retries - 1)
+  }
+}
 
 /**
  * Gets Repo created_at, updated_at and latest commit SHA, as well as rate limit info
@@ -108,7 +148,7 @@ export async function getRepo (owner, name) {
     name
   }
 
-  return await graphQLAuth(query, variables)
+  return await graphqlWithRetry(query, variables)
 }
 
 /**
